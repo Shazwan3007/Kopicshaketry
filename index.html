@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+
+  <!-- =====================================================
+       BASIC
+  ====================================================== -->
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <meta
+    name="description"
+    id="metaDescription"
+    content="Website perniagaan makanan dan minuman."
+  >
+
+  <meta
+    name="theme-color"
+    content="#111111"
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+
+  <!-- =====================================================
+       OPEN GRAPH
+       WhatsApp / Facebook / Social Sharing
+  ====================================================== -->
+
+  <meta
+    property="og:title"
+    id="ogTitle"
+    content="Nama Perniagaan"
+  >
+
+  <meta
+    property="og:description"
+    id="ogDescription"
+    content="Website perniagaan makanan dan minuman."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:image"
+    id="ogImage"
+    content=""
+  >
+
+
+  <!-- =====================================================
+       PAGE TITLE
+  ====================================================== -->
+
+  <title id="pageTitle">
+    Nama Perniagaan
+  </title>
+
+
+  <!-- =====================================================
+       GOOGLE FONT
+       Inter
+  ====================================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =====================================================
+       LUCIDE ICONS
+  ====================================================== -->
+
+  <script
+    src="https://unpkg.com/lucide@latest"
+    defer
+  ></script>
+
+
+  <!-- =====================================================
+       MAIN CSS
+  ====================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
+  <header
+    class="site-header"
+    id="siteHeader"
+  >
+
+    <div class="container header-inner">
+
+
+      <!-- -------------------------------------------------
+           BRAND
+      -------------------------------------------------- -->
+
+      <a
+        href="#home"
+        class="brand"
+        aria-label="Kembali ke halaman utama"
+      >
+
+        <div
+          class="brand-logo"
+          id="brandLogo"
+          aria-hidden="true"
+        ></div>
+
+
+        <span
+          class="brand-name"
+          id="brandName"
+        >
+          Nama Perniagaan
+        </span>
+
+      </a>
+
+
+      <!-- -------------------------------------------------
+           DESKTOP NAVIGATION
+      -------------------------------------------------- -->
+
+      <nav
+        class="desktop-nav"
+        aria-label="Navigasi utama"
+      >
+
+        <a href="#menu">
+          Menu
+        </a>
+
+        <a
+          href="#location"
+          id="navLocation"
+        >
+          Lokasi
+        </a>
+
+      </nav>
+
+
+      <!-- -------------------------------------------------
+           MOBILE MENU BUTTON
+      -------------------------------------------------- -->
+
+      <button
+        type="button"
+        class="mobile-menu-button"
+        id="mobileMenuButton"
+        aria-label="Buka menu"
+        aria-expanded="false"
+        aria-controls="mobileNav"
+      >
+
+        <i
+          data-lucide="menu"
+          aria-hidden="true"
+        ></i>
+
+      </button>
+
+    </div>
+
+
+    <!-- ===================================================
+         MOBILE NAVIGATION
+    ==================================================== -->
+
+    <nav
+      class="mobile-nav"
+      id="mobileNav"
+      aria-label="Navigasi mudah alih"
+    >
+
+      <a href="#menu">
+        Menu
+      </a>
+
+      <a
+        href="#location"
+        id="mobileLocationLink"
+      >
+        Lokasi
+      </a>
+
+      <a
+        href="#contact"
+        id="mobileOrderLink"
+      >
+        Tempahan
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================================
+       MAIN CONTENT
+  ====================================================== -->
+
+  <main id="main-content">
+
+
+    <!-- ===================================================
+         HERO
+    ==================================================== -->
+
+    <section
+      class="hero"
+      id="home"
+      aria-labelledby="businessName"
+    >
+
+      <div class="container hero-content">
+
+
+        <!-- HERO BADGE -->
+
+        <div
+          class="hero-badge"
+          id="heroBadge"
+        >
+
+          <span
+            class="badge-dot"
+            aria-hidden="true"
+          ></span>
+
+          <span id="businessType">
+            MAKANAN & MINUMAN
+          </span>
+
+        </div>
+
+
+        <!-- BUSINESS NAME -->
+
+        <h1 id="businessName">
+          Nama Perniagaan
+        </h1>
+
+
+        <!-- TAGLINE -->
+
+        <p
+          class="hero-tagline"
+          id="tagline"
+        >
+          Sedap, berkualiti dan berbaloi.
+        </p>
+
+
+        <!-- HERO ACTIONS -->
+
+        <div class="hero-actions">
+
+
+          <!-- MENU -->
+
+          <a
+            href="#menu"
+            class="btn btn-primary"
+          >
+
+            Lihat Menu
+
+            <i
+              data-lucide="arrow-down"
+              aria-hidden="true"
+            ></i>
+
+          </a>
+
+
+          <!-- LOCATION -->
+
+          <a
+            href="#location"
+            class="btn btn-secondary"
+            id="heroLocationButton"
+          >
+
+            <i
+              data-lucide="map-pin"
+              aria-hidden="true"
+            ></i>
+
+            Lokasi
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         QUICK INFORMATION
+    ==================================================== -->
+
+    <section
+      class="quick-info"
+      id="quickInfo"
+      aria-label="Maklumat perniagaan"
+    >
+
+      <div class="container quick-grid">
+
+
+        <!-- OPENING HOURS -->
+
+        <div
+          class="quick-card"
+          id="hoursCard"
+        >
+
+          <div
+            class="quick-icon"
+            aria-hidden="true"
+          >
+
+            <i data-lucide="clock-3"></i>
+
+          </div>
+
+
+          <div>
+
+            <span>
+              Waktu Operasi
+            </span>
+
+            <strong id="openingHours">
+              10:00 AM – 10:00 PM
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <!-- LOCATION -->
+
+        <div
+          class="quick-card"
+          id="quickLocationCard"
+        >
+
+          <div
+            class="quick-icon"
+            aria-hidden="true"
+          >
+
+            <i data-lucide="map-pin"></i>
+
+          </div>
+
+
+          <div>
+
+            <span>
+              Lokasi
+            </span>
+
+            <strong id="locationName">
+              Lokasi Perniagaan
+            </strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         MENU
+    ==================================================== -->
+
+    <section
+      class="section menu-section"
+      id="menu"
+      aria-labelledby="menuHeading"
+    >
+
+      <div class="container">
+
+
+        <!-- SECTION HEADING -->
+
+        <div class="section-heading">
+
+
+          <div>
+
+            <span class="section-label">
+              MENU
+            </span>
+
+            <h2 id="menuHeading">
+              Pilihan untuk anda
+            </h2>
+
+          </div>
+
+
+          <p id="menuIntro">
+            Pilih menu kegemaran anda dan terus buat tempahan melalui WhatsApp.
+          </p>
+
+        </div>
+
+
+        <!-- MENU CARDS
+             Akan dijana oleh script.js -->
+
+        <div
+          class="menu-grid"
+          id="menuContainer"
+        ></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         LOCATION
+    ==================================================== -->
+
+    <section
+      class="location-section"
+      id="location"
+      aria-labelledby="locationHeading"
+    >
+
+      <div class="container">
+
+
+        <div class="location-card">
+
+
+          <!-- LOCATION INFORMATION -->
+
+          <div class="location-content">
+
+
+            <span class="section-label">
+              LOKASI
+            </span>
+
+
+            <h2 id="locationHeading">
+              Kunjungi kami
+            </h2>
+
+
+            <p id="locationDescription">
+              Datang dan nikmati hidangan kegemaran anda.
+            </p>
+
+
+            <!-- LOCATION BUTTONS -->
+
+            <div
+              class="location-buttons"
+              id="locationButtons"
+            >
+
+
+              <!-- GOOGLE MAPS -->
+
+              <a
+                href="#"
+                class="location-btn"
+                id="googleMapsButton"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Buka lokasi di Google Maps"
+              >
+
+                <i
+                  data-lucide="map"
+                  aria-hidden="true"
+                ></i>
+
+                Google Maps
+
+              </a>
+
+
+              <!-- WAZE -->
+
+              <a
+                href="#"
+                class="location-btn"
+                id="wazeButton"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Buka lokasi di Waze"
+              >
+
+                <i
+                  data-lucide="navigation"
+                  aria-hidden="true"
+                ></i>
+
+                Waze
+
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- MAP VISUAL -->
+
+          <div
+            class="map-visual"
+            id="mapVisual"
+            aria-hidden="true"
+          >
+
+            <div class="map-icon">
+
+              <i data-lucide="map-pin"></i>
+
+            </div>
+
+
+            <strong>
+              Lokasi Perniagaan
+            </strong>
+
+
+            <span>
+              Tekan butang di atas untuk navigasi
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         CONTACT / ORDER CTA
+    ==================================================== -->
+
+    <section
+      class="cta-section"
+      id="contact"
+      aria-labelledby="contactHeading"
+    >
+
+      <div class="container">
+
+
+        <div class="cta-card">
+
+
+          <span class="section-label">
+            TEMPAHAN
+          </span>
+
+
+          <h2 id="contactHeading">
+            Dah tahu nak makan apa?
+          </h2>
+
+
+          <p>
+            Buat tempahan dengan mudah melalui WhatsApp.
+          </p>
+
+
+          <!-- WHATSAPP -->
+
+          <a
+            href="#"
+            class="btn btn-whatsapp"
+            id="mainWhatsAppButton"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Tempah melalui WhatsApp"
+          >
+
+            <i
+              data-lucide="message-circle"
+              aria-hidden="true"
+            ></i>
+
+            Tempah melalui WhatsApp
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-inner">
+
+
+      <!-- FOOTER BRAND -->
+
+      <div class="footer-brand">
+
+        <strong id="footerBusinessName">
+          Nama Perniagaan
+        </strong>
+
+        <span id="footerBusinessType">
+          Makanan & Minuman
+        </span>
+
+      </div>
+
+
+      <!-- COPYRIGHT -->
+
+      <div class="footer-right">
+
+        <span>
+          © <span id="currentYear"></span>
+        </span>
+
+        <span id="footerCopyrightName">
+          Nama Perniagaan
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       FLOATING WHATSAPP
+  ====================================================== -->
+
+  <a
+    href="#"
+    class="whatsapp-floating"
+    id="floatingWhatsApp"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Tempah melalui WhatsApp"
+  >
+
+    <i
+      data-lucide="message-circle"
+      aria-hidden="true"
+    ></i>
+
+  </a>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+
+       Semua maklumat pelanggan berada dalam CONFIG
+       di dalam script.js.
+  ====================================================== -->
+
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
