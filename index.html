@@ -1,0 +1,5030 @@
+<!-- =========================================================
+     F&B WEBSITE TEMPLATE — COPY & PASTE VERSION
+
+     CARA GUNA:
+     1. Cari bahagian: const CONFIG = {
+     2. Ubah maklumat perniagaan anda pada CONFIG sahaja.
+     3. Jangan ubah kod lain.
+     4. Select All / Copy semua kandungan fail ini.
+     5. Di GitHub, create atau buka file: index.html
+     6. Paste semua kod ini ke dalam index.html
+     7. Create folder: images
+     8. Upload logo dan gambar menu ke folder images
+     9. Pastikan nama gambar sama seperti dalam CONFIG
+     10. Commit / Save changes
+
+     PENTING:
+     - Edit CONFIG sahaja.
+     - Jangan padam tanda petik, koma, kurungan atau kod lain.
+     - Jika tiada logo/gambar, gunakan "" dan placeholder akan digunakan.
+========================================================= -->
+
+<!DOCTYPE html>
+
+<!-- =========================================================
+     F&B WEBSITE TEMPLATE — CUSTOMER VERSION
+
+     ✏️ CARA EDIT:
+     1. Cari: const CONFIG = {
+     2. Tukar maklumat perniagaan anda.
+     3. Jangan ubah bahagian bertanda:
+        ⚠️ JANGAN UBAH BAHAGIAN DI BAWAH
+
+     GAMBAR:
+     Letakkan logo dan gambar menu di dalam folder "images".
+========================================================= -->
+
+<html lang="ms">
+
+<head>
+
+  <!-- =====================================================
+       BASIC
+  ====================================================== -->
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <meta
+    name="description"
+    id="metaDescription"
+    content="Website perniagaan makanan dan minuman."
+  >
+
+  <meta
+    name="theme-color"
+    content="#111111"
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+
+  <!-- =====================================================
+       OPEN GRAPH
+       WhatsApp / Facebook / Social Sharing
+  ====================================================== -->
+
+  <meta
+    property="og:title"
+    id="ogTitle"
+    content="Nama Perniagaan"
+  >
+
+  <meta
+    property="og:description"
+    id="ogDescription"
+    content="Website perniagaan makanan dan minuman."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:image"
+    id="ogImage"
+    content=""
+  >
+
+
+  <!-- =====================================================
+       PAGE TITLE
+  ====================================================== -->
+
+  <title id="pageTitle">
+    Nama Perniagaan
+  </title>
+
+
+  <!-- =====================================================
+       GOOGLE FONT
+       Inter
+  ====================================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =====================================================
+       LUCIDE ICONS
+       Version pinned for template stability
+  ====================================================== -->
+
+  <script
+    src="https://unpkg.com/lucide@1.27.0"
+    defer
+  ></script>
+
+  <!-- =====================================================
+       MAIN CSS — EMBEDDED
+  ====================================================== -->
+
+  <style>
+/* =========================================================
+   F&B WEBSITE TEMPLATE
+   STYLE.CSS — FINAL
+
+   DESIGN:
+   - Mobile First
+   - Modern / Premium
+   - Professional F&B
+   - Responsive
+   - Accessible
+   - Lightweight
+   - Cloudflare Pages / GitHub Pages Ready
+========================================================= */
+
+
+/* =========================================================
+   1. DESIGN TOKENS
+========================================================= */
+
+:root {
+
+  /* BRAND */
+
+  --color-primary: #111111;
+  --color-primary-soft: #27272a;
+
+  --color-accent: #d97706;
+  --color-accent-dark: #b45309;
+
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #1da851;
+
+
+  /* BACKGROUND */
+
+  --color-background: #fafaf9;
+  --color-surface: #ffffff;
+  --color-surface-soft: #f4f4f5;
+
+
+  /* TEXT */
+
+  --color-text: #18181b;
+  --color-text-secondary: #52525b;
+  --color-text-muted: #71717a;
+  --color-text-light: #a1a1aa;
+
+
+  /* BORDER */
+
+  --color-border: #e4e4e7;
+  --color-border-soft: #ededee;
+
+
+  /* RADIUS */
+
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+
+
+  /* SHADOW */
+
+  --shadow-xs:
+    0 2px 8px rgba(0, 0, 0, 0.04);
+
+  --shadow-sm:
+    0 6px 20px rgba(0, 0, 0, 0.06);
+
+  --shadow-md:
+    0 12px 35px rgba(0, 0, 0, 0.08);
+
+  --shadow-lg:
+    0 20px 55px rgba(0, 0, 0, 0.12);
+
+
+  /* CONTAINER */
+
+  --container-width: 1120px;
+
+
+  /* HEADER */
+
+  --header-height: 68px;
+
+}
+
+
+/* =========================================================
+   2. RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+
+  box-sizing: border-box;
+
+}
+
+
+html {
+
+  scroll-behavior: smooth;
+
+  scroll-padding-top: 85px;
+
+}
+
+
+body {
+
+  margin: 0;
+
+  padding: 0;
+
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background:
+    var(--color-background);
+
+  color:
+    var(--color-text);
+
+  line-height: 1.6;
+
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
+
+  text-rendering: optimizeLegibility;
+
+}
+
+
+body.no-scroll {
+
+  overflow: hidden;
+
+}
+
+
+img {
+
+  display: block;
+
+  max-width: 100%;
+
+}
+
+
+button,
+input,
+textarea,
+select {
+
+  font: inherit;
+
+}
+
+
+button {
+
+  border: 0;
+
+}
+
+
+a {
+
+  color: inherit;
+
+  text-decoration: none;
+
+}
+
+
+ul,
+ol {
+
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+
+}
+
+
+h1,
+h2,
+h3,
+h4,
+p {
+
+  margin-top: 0;
+
+}
+
+
+h1,
+h2,
+h3 {
+
+  text-wrap: balance;
+
+}
+
+
+::selection {
+
+  background:
+    var(--color-accent);
+
+  color:
+    #ffffff;
+
+}
+
+
+/* =========================================================
+   3. ACCESSIBILITY
+========================================================= */
+
+:focus-visible {
+
+  outline:
+    3px solid
+    rgba(217, 119, 6, 0.35);
+
+  outline-offset:
+    3px;
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+
+    scroll-behavior: auto;
+
+  }
+
+  *,
+  *::before,
+  *::after {
+
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    transition-duration:
+      0.01ms !important;
+
+    scroll-behavior:
+      auto !important;
+
+  }
+
+}
+
+
+/* =========================================================
+   4. CONTAINER
+========================================================= */
+
+.container {
+
+  width:
+    min(
+      var(--container-width),
+      calc(100% - 32px)
+    );
+
+  margin-inline:
+    auto;
+
+}
+
+
+/* =========================================================
+   5. HEADER
+========================================================= */
+
+.site-header {
+
+  position:
+    fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  height:
+    var(--header-height);
+
+  z-index:
+    1000;
+
+  background:
+    rgba(250, 250, 249, 0.78);
+
+  border-bottom:
+    1px solid
+    rgba(0, 0, 0, 0.04);
+
+  backdrop-filter:
+    blur(18px)
+    saturate(180%);
+
+  -webkit-backdrop-filter:
+    blur(18px)
+    saturate(180%);
+
+  transition:
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+
+}
+
+
+.site-header.scrolled {
+
+  background:
+    rgba(250, 250, 249, 0.94);
+
+  box-shadow:
+    0 8px 30px
+    rgba(0, 0, 0, 0.06);
+
+}
+
+
+.header-inner {
+
+  height: 100%;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+}
+
+
+/* =========================================================
+   6. BRAND
+========================================================= */
+
+.brand {
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    10px;
+
+  min-width:
+    0;
+
+}
+
+
+.brand-logo {
+
+  width:
+    36px;
+
+  height:
+    36px;
+
+  flex:
+    0 0 36px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  overflow:
+    hidden;
+
+  border-radius:
+    10px;
+
+  background:
+    var(--color-primary);
+
+  color:
+    #ffffff;
+
+}
+
+
+.brand-logo img {
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    contain;
+
+}
+
+
+.brand-logo.logo-placeholder {
+
+  font-size:
+    14px;
+
+  font-weight:
+    800;
+
+}
+
+
+.brand-name {
+
+  max-width:
+    180px;
+
+  overflow:
+    hidden;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+
+  font-size:
+    14px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    -0.3px;
+
+}
+
+
+/* =========================================================
+   7. DESKTOP NAVIGATION
+========================================================= */
+
+.desktop-nav {
+
+  display:
+    none;
+
+  align-items:
+    center;
+
+  gap:
+    6px;
+
+}
+
+
+.desktop-nav a {
+
+  padding:
+    8px 13px;
+
+  border-radius:
+    var(--radius-pill);
+
+  font-size:
+    13px;
+
+  font-weight:
+    600;
+
+  color:
+    var(--color-text-secondary);
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+
+}
+
+
+.desktop-nav a:hover {
+
+  background:
+    var(--color-surface);
+
+  color:
+    var(--color-text);
+
+}
+
+
+/* =========================================================
+   8. MOBILE MENU BUTTON
+========================================================= */
+
+.mobile-menu-button {
+
+  width:
+    42px;
+
+  height:
+    42px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  cursor:
+    pointer;
+
+  border-radius:
+    12px;
+
+  background:
+    var(--color-surface);
+
+  border:
+    1px solid
+    var(--color-border);
+
+  color:
+    var(--color-text);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+
+}
+
+
+.mobile-menu-button:hover {
+
+  background:
+    var(--color-surface-soft);
+
+}
+
+
+.mobile-menu-button:active {
+
+  transform:
+    scale(0.95);
+
+}
+
+
+.mobile-menu-button svg {
+
+  width:
+    19px;
+
+  height:
+    19px;
+
+}
+
+
+/* =========================================================
+   9. MOBILE NAVIGATION
+========================================================= */
+
+.mobile-nav {
+
+  position:
+    absolute;
+
+  top:
+    calc(
+      var(--header-height) - 1px
+    );
+
+  left:
+    16px;
+
+  right:
+    16px;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  padding:
+    8px;
+
+  background:
+    rgba(255, 255, 255, 0.97);
+
+  border:
+    1px solid
+    var(--color-border);
+
+  border-radius:
+    var(--radius-md);
+
+  box-shadow:
+    var(--shadow-lg);
+
+  opacity:
+    0;
+
+  visibility:
+    hidden;
+
+  transform:
+    translateY(-8px);
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s ease;
+
+}
+
+
+.mobile-nav.active {
+
+  opacity:
+    1;
+
+  visibility:
+    visible;
+
+  transform:
+    translateY(0);
+
+}
+
+
+.mobile-nav a {
+
+  padding:
+    14px;
+
+  border-radius:
+    10px;
+
+  font-size:
+    14px;
+
+  font-weight:
+    600;
+
+  transition:
+    background 0.2s ease;
+
+}
+
+
+.mobile-nav a:hover {
+
+  background:
+    var(--color-surface-soft);
+
+}
+
+
+/* =========================================================
+   10. HERO
+========================================================= */
+
+.hero {
+
+  position:
+    relative;
+
+  min-height:
+    500px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  overflow:
+    hidden;
+
+  padding-top:
+    calc(
+      var(--header-height) + 30px
+    );
+
+  background:
+
+    radial-gradient(
+      circle at 85% 18%,
+      rgba(217, 119, 6, 0.13),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 10% 80%,
+      rgba(0, 0, 0, 0.05),
+      transparent 28%
+    );
+
+}
+
+
+.hero::before {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  width:
+    300px;
+
+  height:
+    300px;
+
+  right:
+    -160px;
+
+  bottom:
+    -160px;
+
+  border-radius:
+    50%;
+
+  border:
+    1px solid
+    rgba(217, 119, 6, 0.12);
+
+}
+
+
+.hero-content {
+
+  position:
+    relative;
+
+  z-index:
+    1;
+
+  padding-top:
+    28px;
+
+  padding-bottom:
+    42px;
+
+}
+
+
+/* =========================================================
+   11. HERO BADGE
+========================================================= */
+
+.hero-badge {
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    8px;
+
+  margin-bottom:
+    18px;
+
+  padding:
+    7px 12px;
+
+  border:
+    1px solid
+    rgba(217, 119, 6, 0.2);
+
+  border-radius:
+    var(--radius-pill);
+
+  background:
+    rgba(217, 119, 6, 0.07);
+
+  color:
+    var(--color-accent-dark);
+
+  font-size:
+    10px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    1.3px;
+
+}
+
+
+.badge-dot {
+
+  width:
+    7px;
+
+  height:
+    7px;
+
+  flex:
+    0 0 7px;
+
+  border-radius:
+    50%;
+
+  background:
+    var(--color-accent);
+
+  box-shadow:
+    0 0 0 4px
+    rgba(217, 119, 6, 0.12);
+
+}
+
+
+/* =========================================================
+   12. HERO TYPOGRAPHY
+========================================================= */
+
+.hero h1 {
+
+  max-width:
+    900px;
+
+  margin-bottom:
+    22px;
+
+  font-size:
+    clamp(
+      46px,
+      11vw,
+      88px
+    );
+
+  line-height:
+    0.98;
+
+  letter-spacing:
+    -4.5px;
+
+  font-weight:
+    800;
+
+}
+
+
+.hero-tagline {
+
+  max-width:
+    620px;
+
+  margin-bottom:
+    24px;
+
+  color:
+    var(--color-text-muted);
+
+  font-size:
+    clamp(
+      16px,
+      3vw,
+      21px
+    );
+
+  line-height:
+    1.55;
+
+}
+
+
+/* =========================================================
+   13. BUTTON SYSTEM
+========================================================= */
+
+.hero-actions {
+
+  display:
+    flex;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    9px;
+
+}
+
+
+.btn {
+
+  min-height:
+    50px;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    9px;
+
+  padding:
+    0 19px;
+
+  border-radius:
+    var(--radius-pill);
+
+  font-size:
+    13px;
+
+  font-weight:
+    700;
+
+  cursor:
+    pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+
+}
+
+
+.btn svg {
+
+  width:
+    17px;
+
+  height:
+    17px;
+
+}
+
+
+.btn:hover {
+
+  transform:
+    translateY(-2px);
+
+}
+
+
+.btn:active {
+
+  transform:
+    scale(0.97);
+
+}
+
+
+.btn-primary {
+
+  background:
+    var(--color-primary);
+
+  color:
+    #ffffff;
+
+  box-shadow:
+    0 9px 24px
+    rgba(0, 0, 0, 0.16);
+
+}
+
+
+.btn-primary:hover {
+
+  background:
+    #000000;
+
+  box-shadow:
+    0 12px 30px
+    rgba(0, 0, 0, 0.20);
+
+}
+
+
+.btn-secondary {
+
+  background:
+    rgba(255, 255, 255, 0.9);
+
+  color:
+    var(--color-text);
+
+  border:
+    1px solid
+    var(--color-border);
+
+}
+
+
+.btn-secondary:hover {
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    var(--shadow-xs);
+
+}
+
+
+/* =========================================================
+   14. QUICK INFORMATION
+========================================================= */
+
+.quick-info {
+
+  position:
+    relative;
+
+  z-index:
+    10;
+
+  margin-top:
+    -24px;
+
+}
+
+
+.quick-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr;
+
+  gap:
+    10px;
+
+}
+
+
+.quick-card {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    13px;
+
+  min-width:
+    0;
+
+  padding:
+    17px;
+
+  background:
+    rgba(255, 255, 255, 0.95);
+
+  border:
+    1px solid
+    var(--color-border);
+
+  border-radius:
+    var(--radius-md);
+
+  box-shadow:
+    var(--shadow-sm);
+
+}
+
+
+.quick-icon {
+
+  width:
+    43px;
+
+  height:
+    43px;
+
+  flex:
+    0 0 43px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border-radius:
+    12px;
+
+  background:
+    var(--color-surface-soft);
+
+  color:
+    var(--color-text);
+
+}
+
+
+.quick-icon svg {
+
+  width:
+    18px;
+
+  height:
+    18px;
+
+}
+
+
+.quick-card span {
+
+  display:
+    block;
+
+  margin-bottom:
+    2px;
+
+  color:
+    var(--color-text-muted);
+
+  font-size:
+    10px;
+
+  font-weight:
+    500;
+
+}
+
+
+.quick-card strong {
+
+  display:
+    block;
+
+  overflow:
+    hidden;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+
+  font-size:
+    13px;
+
+  font-weight:
+    700;
+
+}
+
+
+/* =========================================================
+   15. GENERAL SECTION
+========================================================= */
+
+.section {
+
+  padding:
+    58px 0;
+
+}
+
+
+.section-heading {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    10px;
+
+  margin-bottom:
+    24px;
+
+}
+
+
+.section-label {
+
+  display:
+    inline-block;
+
+  margin-bottom:
+    12px;
+
+  color:
+    var(--color-accent);
+
+  font-size:
+    10px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    1.6px;
+
+}
+
+
+.section-heading h2,
+.location-content h2,
+.cta-card h2 {
+
+  margin-bottom:
+    10px;
+
+  font-size:
+    clamp(
+      32px,
+      7vw,
+      52px
+    );
+
+  line-height:
+    1.04;
+
+  letter-spacing:
+    -2.4px;
+
+  font-weight:
+    800;
+
+}
+
+
+.section-heading p {
+
+  max-width:
+    580px;
+
+  margin-bottom:
+    0;
+
+  color:
+    var(--color-text-muted);
+
+  font-size:
+    14px;
+
+}
+
+
+/* =========================================================
+   16. MENU GRID
+========================================================= */
+
+.menu-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr;
+
+  gap:
+    17px;
+
+}
+
+
+/* =========================================================
+   17. MENU CARD
+========================================================= */
+
+.menu-card {
+
+  overflow:
+    hidden;
+
+  background:
+    var(--color-surface);
+
+  border:
+    1px solid
+    var(--color-border);
+
+  border-radius:
+    var(--radius-lg);
+
+  box-shadow:
+    var(--shadow-xs);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+}
+
+
+.menu-card:hover {
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    var(--shadow-md);
+
+}
+
+
+/* =========================================================
+   18. MENU IMAGE
+========================================================= */
+
+.menu-image {
+
+  position:
+    relative;
+
+  aspect-ratio:
+    1 / 0.72;
+
+  overflow:
+    hidden;
+
+  background:
+    var(--color-surface-soft);
+
+}
+
+
+.menu-image img {
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    cover;
+
+  transition:
+    transform 0.5s ease;
+
+}
+
+
+.menu-card:hover
+.menu-image img {
+
+  transform:
+    scale(1.045);
+
+}
+
+
+/* =========================================================
+   19. MENU IMAGE PLACEHOLDER
+========================================================= */
+
+.menu-image-placeholder {
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    8px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f4f4f5,
+      #e4e4e7
+    );
+
+  color:
+    var(--color-text-light);
+
+}
+
+
+.menu-image-placeholder svg {
+
+  width:
+    28px;
+
+  height:
+    28px;
+
+}
+
+
+.menu-image-placeholder span {
+
+  font-size:
+    11px;
+
+  font-weight:
+    600;
+
+}
+
+
+/* =========================================================
+   20. MENU CONTENT
+========================================================= */
+
+.menu-info {
+
+  padding:
+    18px;
+
+}
+
+
+.menu-top {
+
+  display:
+    flex;
+
+  align-items:
+    flex-start;
+
+  justify-content:
+    space-between;
+
+  gap:
+    14px;
+
+  margin-bottom:
+    7px;
+
+}
+
+
+.menu-name {
+
+  margin:
+    0;
+
+  font-size:
+    17px;
+
+  line-height:
+    1.25;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    -0.3px;
+
+}
+
+
+.menu-price {
+
+  flex-shrink:
+    0;
+
+  color:
+    var(--color-accent);
+
+  font-size:
+    16px;
+
+  font-weight:
+    800;
+
+}
+
+
+.menu-description {
+
+  margin-bottom:
+    17px;
+
+  color:
+    var(--color-text-muted);
+
+  font-size:
+    12.5px;
+
+  line-height:
+    1.55;
+
+}
+
+
+.menu-description:empty {
+
+  display:
+    none;
+
+}
+
+
+/* =========================================================
+   21. MENU ORDER BUTTON
+========================================================= */
+
+.order-btn {
+
+  width:
+    100%;
+
+  min-height:
+    45px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    8px;
+
+  padding:
+    0 14px;
+
+  border-radius:
+    var(--radius-sm);
+
+  background:
+    var(--color-surface-soft);
+
+  color:
+    var(--color-text);
+
+  font-size:
+    12.5px;
+
+  font-weight:
+    700;
+
+  cursor:
+    pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+
+.order-btn svg {
+
+  width:
+    16px;
+
+  height:
+    16px;
+
+}
+
+
+.order-btn:hover {
+
+  background:
+    var(--color-primary);
+
+  color:
+    #ffffff;
+
+}
+
+
+.order-btn:active {
+
+  transform:
+    scale(0.98);
+
+}
+
+
+/* =========================================================
+   22. EMPTY MENU
+========================================================= */
+
+.menu-empty {
+
+  grid-column:
+    1 / -1;
+
+  min-height:
+    250px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border:
+    1px dashed
+    var(--color-border);
+
+  border-radius:
+    var(--radius-lg);
+
+  background:
+    var(--color-surface);
+
+}
+
+
+/* =========================================================
+   23. LOCATION SECTION
+========================================================= */
+
+.location-section {
+
+  padding:
+    0 0 58px;
+
+}
+
+
+.location-card {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr;
+
+  overflow:
+    hidden;
+
+  border-radius:
+    var(--radius-xl);
+
+  background:
+    var(--color-primary);
+
+  color:
+    #ffffff;
+
+}
+
+
+.location-content {
+
+  padding:
+    35px 24px;
+
+}
+
+
+.location-content
+.section-label {
+
+  color:
+    #fbbf24;
+
+}
+
+
+.location-content h2 {
+
+  margin-bottom:
+    12px;
+
+}
+
+
+.location-content p {
+
+  margin-bottom:
+    25px;
+
+  color:
+    #a1a1aa;
+
+  font-size:
+    13.5px;
+
+}
+
+
+.location-buttons {
+
+  display:
+    flex;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    8px;
+
+}
+
+
+.location-btn {
+
+  min-height:
+    45px;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    8px;
+
+  padding:
+    0 15px;
+
+  border-radius:
+    var(--radius-pill);
+
+  background:
+    #ffffff;
+
+  color:
+    var(--color-text);
+
+  font-size:
+    12px;
+
+  font-weight:
+    700;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+
+}
+
+
+.location-btn:hover {
+
+  transform:
+    translateY(-2px);
+
+  opacity:
+    0.92;
+
+}
+
+
+.location-btn svg {
+
+  width:
+    16px;
+
+  height:
+    16px;
+
+}
+
+
+/* =========================================================
+   24. MAP VISUAL
+========================================================= */
+
+.map-visual {
+
+  min-height:
+    270px;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    8px;
+
+  text-align:
+    center;
+
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #27272a,
+      #27272a 10px,
+      #2d2d30 10px,
+      #2d2d30 20px
+    );
+
+}
+
+
+.map-icon {
+
+  width:
+    54px;
+
+  height:
+    54px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  margin-bottom:
+    5px;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(251, 191, 36, 0.1);
+
+  color:
+    #fbbf24;
+
+}
+
+
+.map-icon svg {
+
+  width:
+    27px;
+
+  height:
+    27px;
+
+}
+
+
+.map-visual strong {
+
+  font-size:
+    14px;
+
+}
+
+
+.map-visual span {
+
+  color:
+    #a1a1aa;
+
+  font-size:
+    11px;
+
+}
+
+
+/* =========================================================
+   25. CTA / WHATSAPP
+========================================================= */
+
+.cta-section {
+
+  padding:
+    0 0 58px;
+
+}
+
+
+.cta-card {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  padding:
+    50px 20px;
+
+  border-radius:
+    var(--radius-xl);
+
+  background:
+    var(--color-surface-soft);
+
+  text-align:
+    center;
+
+}
+
+
+.cta-card .section-label {
+
+  margin-bottom:
+    10px;
+
+}
+
+
+.cta-card h2 {
+
+  max-width:
+    700px;
+
+}
+
+
+.cta-card p {
+
+  margin-bottom:
+    24px;
+
+  color:
+    var(--color-text-muted);
+
+  font-size:
+    14px;
+
+}
+
+
+.btn-whatsapp {
+
+  background:
+    var(--color-whatsapp);
+
+  color:
+    #ffffff;
+
+  box-shadow:
+    0 10px 25px
+    rgba(37, 211, 102, 0.24);
+
+}
+
+
+.btn-whatsapp:hover {
+
+  background:
+    var(--color-whatsapp-dark);
+
+  box-shadow:
+    0 14px 32px
+    rgba(37, 211, 102, 0.30);
+
+}
+
+
+/* =========================================================
+   26. FOOTER
+========================================================= */
+
+.site-footer {
+
+  padding:
+    30px 0
+    calc(
+      90px +
+      env(safe-area-inset-bottom)
+    );
+
+  background:
+    var(--color-primary);
+
+  color:
+    #ffffff;
+
+}
+
+
+.footer-inner {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    20px;
+
+}
+
+
+.footer-brand {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    2px;
+
+}
+
+
+.footer-brand strong {
+
+  font-size:
+    14px;
+
+  font-weight:
+    700;
+
+}
+
+
+.footer-brand span,
+.footer-right {
+
+  color:
+    #a1a1aa;
+
+  font-size:
+    11px;
+
+}
+
+
+.footer-right {
+
+  display:
+    flex;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    5px;
+
+}
+
+
+/* =========================================================
+   27. FLOATING WHATSAPP
+========================================================= */
+
+.whatsapp-floating {
+
+  position:
+    fixed;
+
+  right:
+    17px;
+
+  bottom:
+    calc(
+      17px +
+      env(safe-area-inset-bottom)
+    );
+
+  z-index:
+    900;
+
+  width:
+    56px;
+
+  height:
+    56px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border-radius:
+    50%;
+
+  background:
+    var(--color-whatsapp);
+
+  color:
+    #ffffff;
+
+  box-shadow:
+    0 10px 30px
+    rgba(37, 211, 102, 0.35);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+}
+
+
+.whatsapp-floating svg {
+
+  width:
+    25px;
+
+  height:
+    25px;
+
+}
+
+
+.whatsapp-floating:hover {
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 14px 35px
+    rgba(37, 211, 102, 0.42);
+
+}
+
+
+.whatsapp-floating:active {
+
+  transform:
+    scale(0.94);
+
+}
+
+
+/* =========================================================
+   28. HIDDEN UTILITY
+========================================================= */
+
+.is-hidden {
+
+  display:
+    none !important;
+
+}
+
+
+/* =========================================================
+   29. TABLET
+========================================================= */
+
+@media (min-width: 640px) {
+
+
+  .container {
+
+    width:
+      min(
+        var(--container-width),
+        calc(100% - 48px)
+      );
+
+  }
+
+
+  .quick-grid {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+  }
+
+
+  .menu-grid {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+  }
+
+
+  .section-heading {
+
+    flex-direction:
+      row;
+
+    align-items:
+      flex-end;
+
+    justify-content:
+      space-between;
+
+  }
+
+
+  .location-content {
+
+    padding:
+      48px;
+
+  }
+
+
+  .cta-card {
+
+    padding:
+      60px 40px;
+
+  }
+
+
+  .footer-inner {
+
+    flex-direction:
+      row;
+
+    align-items:
+      center;
+
+    justify-content:
+      space-between;
+
+  }
+
+}
+
+
+/* =========================================================
+   30. DESKTOP
+========================================================= */
+
+@media (min-width: 900px) {
+
+
+  :root {
+
+    --header-height:
+      72px;
+
+  }
+
+
+  .mobile-menu-button {
+
+    display:
+      none;
+
+  }
+
+
+  .desktop-nav {
+
+    display:
+      flex;
+
+  }
+
+
+  .mobile-nav {
+
+    display:
+      none;
+
+  }
+
+
+  .hero {
+
+    min-height:
+      560px;
+
+    padding-top:
+      calc(
+        var(--header-height) + 40px
+      );
+
+  }
+
+
+  .hero-content {
+
+    padding-top:
+      32px;
+
+    padding-bottom:
+      52px;
+
+  }
+
+
+  .hero h1 {
+
+    letter-spacing:
+      -5px;
+
+  }
+
+
+  .menu-grid {
+
+    grid-template-columns:
+      repeat(3, 1fr);
+
+  }
+
+
+  .location-card {
+
+    grid-template-columns:
+      1fr 1fr;
+
+  }
+
+
+  .map-visual {
+
+    min-height:
+      100%;
+
+  }
+
+
+  .location-content {
+
+    display:
+      flex;
+
+    flex-direction:
+      column;
+
+    justify-content:
+      center;
+
+  }
+
+
+  .cta-card {
+
+    padding:
+      66px 40px;
+
+  }
+
+}
+
+
+/* =========================================================
+   31. LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+
+
+  .container {
+
+    width:
+      min(
+        var(--container-width),
+        calc(100% - 64px)
+      );
+
+  }
+
+
+  .hero {
+
+    min-height:
+      600px;
+
+  }
+
+
+  .hero h1 {
+
+    font-size:
+      88px;
+
+  }
+
+}
+
+
+/* =========================================================
+   32. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+
+  .container {
+
+    width:
+      calc(100% - 24px);
+
+  }
+
+
+  .hero h1 {
+
+    font-size:
+      42px;
+
+    letter-spacing:
+      -3.5px;
+
+  }
+
+
+  .hero-actions {
+
+    flex-direction:
+      column;
+
+  }
+
+
+  .hero-actions .btn {
+
+    width:
+      100%;
+
+  }
+
+
+  .location-buttons {
+
+    flex-direction:
+      column;
+
+  }
+
+
+  .location-btn {
+
+    width:
+      100%;
+
+  }
+
+
+  .menu-info {
+
+    padding:
+      16px;
+
+  }
+
+
+  .whatsapp-floating {
+
+    width:
+      52px;
+
+    height:
+      52px;
+
+    right:
+      14px;
+
+  }
+
+}
+
+  
+/* =========================================================
+   MENU IMAGE LIGHTBOX
+========================================================= */
+.menu-image.has-image { cursor: zoom-in; }
+
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.88);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.image-lightbox.active { opacity: 1; visibility: visible; }
+
+.image-lightbox img {
+  display: block;
+  max-width: min(94vw, 1100px);
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 16px;
+}
+
+.image-lightbox-close {
+  position: absolute;
+  top: calc(16px + env(safe-area-inset-top));
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,.14);
+  color: #fff;
+  cursor: pointer;
+}
+
+body.lightbox-open { overflow: hidden; }
+
+
+/* =========================================================
+   COMPACT TABLET VERTICAL RHYTHM
+========================================================= */
+
+@media (min-width: 640px) and (max-width: 899px) {
+
+  .hero {
+    min-height: 540px;
+  }
+
+  .hero-content {
+    padding-top: 30px;
+    padding-bottom: 46px;
+  }
+
+  .section {
+    padding: 58px 0;
+  }
+
+  .location-section,
+  .cta-section {
+    padding-bottom: 58px;
+  }
+
+}
+
+</style>
+
+
+  <!-- =====================================================
+       ✏️ EDIT MAKLUMAT DI BAHAGIAN CONFIG INI SAHAJA
+
+       Pelanggan tidak perlu mengubah HTML, CSS atau
+       kod fungsi website di bahagian lain.
+  ====================================================== -->
+
+  <script>
+/* =========================================================
+   F&B WEBSITE TEMPLATE
+   SCRIPT.JS
+
+   =========================================================
+   ✏️ PELANGGAN HANYA PERLU EDIT BAHAGIAN CONFIG DI BAWAH
+
+   Semua fungsi website dikawal dari CONFIG.
+
+   PELANGGAN TIDAK PERLU UBAH BAHAGIAN LAIN.
+========================================================= */
+
+
+const CONFIG = {
+
+
+  /* =======================================================
+     1. MAKLUMAT PERNIAGAAN
+  ======================================================= */
+
+  business: {
+
+    name: "Kopi C Shake",
+
+    type: "KOPI & MINUMAN",
+
+    tagline: "Kopi murah, rasa premium.",
+
+
+    /*
+      LOGO
+
+      Jika ADA logo:
+
+      logo: "images/logo.png"
+
+      Jika TIADA logo:
+
+      logo: ""
+
+      Jika logo tidak dijumpai,
+      website akan automatik menggunakan
+      huruf pertama nama perniagaan.
+    */
+
+    logo: "images/logo.png"
+
+  },
+
+
+  /* =======================================================
+     2. WHATSAPP
+  ======================================================= */
+
+  contact: {
+
+    /*
+      Masukkan nombor WhatsApp
+      tanpa + dan tanpa ruang.
+
+      Contoh:
+
+      60123456789
+    */
+
+    whatsapp: "60123456789"
+
+  },
+
+
+  /* =======================================================
+     3. LOKASI
+  ======================================================= */
+
+  location: {
+
+    /*
+      Nama lokasi / alamat ringkas.
+
+      Contoh:
+
+      "Pekan Tuaran, Sabah"
+
+      Jika tidak mahu:
+
+      name: ""
+    */
+
+    name: "Pekan Tuaran, Sabah",
+
+
+    /*
+      Penerangan lokasi.
+
+      Jika tidak mahu:
+
+      description: ""
+    */
+
+    description:
+      "Kunjungi kami untuk menikmati minuman kegemaran anda.",
+
+
+    /*
+      GOOGLE MAPS
+
+      Contoh:
+
+      https://maps.google.com/?q=Pekan+Tuaran+Sabah
+
+      Jika tidak mahu:
+
+      googleMaps: ""
+    */
+
+    googleMaps:
+      "https://maps.google.com/?q=Pekan+Tuaran+Sabah",
+
+
+    /*
+      WAZE
+
+      Contoh:
+
+      https://www.waze.com/ul?q=Pekan%20Tuaran%20Sabah
+
+      Jika tidak mahu:
+
+      waze: ""
+    */
+
+    waze:
+      "https://www.waze.com/ul?q=Pekan%20Tuaran%20Sabah"
+
+  },
+
+
+  /* =======================================================
+     4. WAKTU OPERASI
+  ======================================================= */
+
+  /*
+    Contoh:
+
+    "10:00 AM – 10:00 PM"
+
+    Jika tidak mahu:
+
+    ""
+  */
+
+  openingHours:
+    "10:00 AM – 10:00 PM",
+
+
+  /* =======================================================
+     5. MENU
+  ======================================================= */
+
+  menu: [
+
+    /*
+      MENU 1
+    */
+
+    {
+
+      name: "Kopi C Shake",
+
+      price: "RM4.90",
+
+      description:
+        "Kopi berkrim dengan rasa premium.",
+
+      image:
+        "images/menu-1.jpg"
+
+    },
+
+
+    /*
+      MENU 2
+    */
+
+    {
+
+      name: "Matcha Latte",
+
+      price: "RM6.50",
+
+      description:
+        "Matcha creamy dengan rasa yang seimbang.",
+
+      image:
+        "images/menu-2.jpg"
+
+    },
+
+
+    /*
+      MENU 3
+    */
+
+    {
+
+      name: "Mojito",
+
+      price: "RM5.90",
+
+      description:
+        "Minuman segar dan menyegarkan.",
+
+      image:
+        "images/menu-3.jpg"
+
+    }
+
+  ]
+
+};
+  </script>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
+  <header
+    class="site-header"
+    id="siteHeader"
+  >
+
+    <div class="container header-inner">
+
+
+      <!-- -------------------------------------------------
+           BRAND
+      -------------------------------------------------- -->
+
+      <a
+        href="#home"
+        class="brand"
+        aria-label="Kembali ke halaman utama"
+      >
+
+        <div
+          class="brand-logo"
+          id="brandLogo"
+          aria-hidden="true"
+        ></div>
+
+
+        <span
+          class="brand-name"
+          id="brandName"
+        >
+          Nama Perniagaan
+        </span>
+
+      </a>
+
+
+      <!-- -------------------------------------------------
+           DESKTOP NAVIGATION
+      -------------------------------------------------- -->
+
+      <nav
+        class="desktop-nav"
+        aria-label="Navigasi utama"
+      >
+
+        <a href="#menu">
+          Menu
+        </a>
+
+        <a
+          href="#location"
+          id="navLocation"
+        >
+          Lokasi
+        </a>
+
+      </nav>
+
+
+      <!-- -------------------------------------------------
+           MOBILE MENU BUTTON
+      -------------------------------------------------- -->
+
+      <button
+        type="button"
+        class="mobile-menu-button"
+        id="mobileMenuButton"
+        aria-label="Buka menu"
+        aria-expanded="false"
+        aria-controls="mobileNav"
+      >
+
+        <i
+          data-lucide="menu"
+          aria-hidden="true"
+        ></i>
+
+      </button>
+
+    </div>
+
+
+    <!-- ===================================================
+         MOBILE NAVIGATION
+    ==================================================== -->
+
+    <nav
+      class="mobile-nav"
+      id="mobileNav"
+      aria-label="Navigasi mudah alih"
+    >
+
+      <a href="#menu">
+        Menu
+      </a>
+
+      <a
+        href="#location"
+        id="mobileLocationLink"
+      >
+        Lokasi
+      </a>
+
+      <a
+        href="#contact"
+        id="mobileOrderLink"
+      >
+        Tempahan
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================================
+       MAIN CONTENT
+  ====================================================== -->
+
+  <main id="main-content">
+
+
+    <!-- ===================================================
+         HERO
+    ==================================================== -->
+
+    <section
+      class="hero"
+      id="home"
+      aria-labelledby="businessName"
+    >
+
+      <div class="container hero-content">
+
+
+        <!-- HERO BADGE -->
+
+        <div
+          class="hero-badge"
+          id="heroBadge"
+        >
+
+          <span
+            class="badge-dot"
+            aria-hidden="true"
+          ></span>
+
+          <span id="businessType">
+            MAKANAN & MINUMAN
+          </span>
+
+        </div>
+
+
+        <!-- BUSINESS NAME -->
+
+        <h1 id="businessName">
+          Nama Perniagaan
+        </h1>
+
+
+        <!-- TAGLINE -->
+
+        <p
+          class="hero-tagline"
+          id="tagline"
+        >
+          Sedap, berkualiti dan berbaloi.
+        </p>
+
+
+        <!-- HERO ACTIONS -->
+
+        <div class="hero-actions">
+
+
+          <!-- MENU -->
+
+          <a
+            href="#menu"
+            class="btn btn-primary"
+          >
+
+            Lihat Menu
+
+            <i
+              data-lucide="arrow-down"
+              aria-hidden="true"
+            ></i>
+
+          </a>
+
+
+          <!-- LOCATION -->
+
+          <a
+            href="#location"
+            class="btn btn-secondary"
+            id="heroLocationButton"
+          >
+
+            <i
+              data-lucide="map-pin"
+              aria-hidden="true"
+            ></i>
+
+            Lokasi
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         QUICK INFORMATION
+    ==================================================== -->
+
+    <section
+      class="quick-info"
+      id="quickInfo"
+      aria-label="Maklumat perniagaan"
+    >
+
+      <div class="container quick-grid">
+
+
+        <!-- OPENING HOURS -->
+
+        <div
+          class="quick-card"
+          id="hoursCard"
+        >
+
+          <div
+            class="quick-icon"
+            aria-hidden="true"
+          >
+
+            <i data-lucide="clock-3"></i>
+
+          </div>
+
+
+          <div>
+
+            <span>
+              Waktu Operasi
+            </span>
+
+            <strong id="openingHours">
+              10:00 AM – 10:00 PM
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <!-- LOCATION -->
+
+        <div
+          class="quick-card"
+          id="quickLocationCard"
+        >
+
+          <div
+            class="quick-icon"
+            aria-hidden="true"
+          >
+
+            <i data-lucide="map-pin"></i>
+
+          </div>
+
+
+          <div>
+
+            <span>
+              Lokasi
+            </span>
+
+            <strong id="locationName">
+              Lokasi Perniagaan
+            </strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         MENU
+    ==================================================== -->
+
+    <section
+      class="section menu-section"
+      id="menu"
+      aria-labelledby="menuHeading"
+    >
+
+      <div class="container">
+
+
+        <!-- SECTION HEADING -->
+
+        <div class="section-heading">
+
+
+          <div>
+
+            <span class="section-label">
+              MENU
+            </span>
+
+            <h2 id="menuHeading">
+              Pilihan untuk anda
+            </h2>
+
+          </div>
+
+
+          <p id="menuIntro">
+            Pilih menu kegemaran anda dan terus buat tempahan melalui WhatsApp.
+          </p>
+
+        </div>
+
+
+        <!-- MENU CARDS
+             Akan dijana oleh script.js -->
+
+        <div
+          class="menu-grid"
+          id="menuContainer"
+        ></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         LOCATION
+    ==================================================== -->
+
+    <section
+      class="location-section"
+      id="location"
+      aria-labelledby="locationHeading"
+    >
+
+      <div class="container">
+
+
+        <div class="location-card">
+
+
+          <!-- LOCATION INFORMATION -->
+
+          <div class="location-content">
+
+
+            <span class="section-label">
+              LOKASI
+            </span>
+
+
+            <h2 id="locationHeading">
+              Kunjungi kami
+            </h2>
+
+
+            <p id="locationDescription">
+              Datang dan nikmati hidangan kegemaran anda.
+            </p>
+
+
+            <!-- LOCATION BUTTONS -->
+
+            <div
+              class="location-buttons"
+              id="locationButtons"
+            >
+
+
+              <!-- GOOGLE MAPS -->
+
+              <a
+                href="#"
+                class="location-btn"
+                id="googleMapsButton"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Buka lokasi di Google Maps"
+              >
+
+                <i
+                  data-lucide="map"
+                  aria-hidden="true"
+                ></i>
+
+                Google Maps
+
+              </a>
+
+
+              <!-- WAZE -->
+
+              <a
+                href="#"
+                class="location-btn"
+                id="wazeButton"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Buka lokasi di Waze"
+              >
+
+                <i
+                  data-lucide="navigation"
+                  aria-hidden="true"
+                ></i>
+
+                Waze
+
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- MAP VISUAL -->
+
+          <div
+            class="map-visual"
+            id="mapVisual"
+            aria-hidden="true"
+          >
+
+            <div class="map-icon">
+
+              <i data-lucide="map-pin"></i>
+
+            </div>
+
+
+            <strong>
+              Lokasi Perniagaan
+            </strong>
+
+
+            <span>
+              Tekan butang di atas untuk navigasi
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         CONTACT / ORDER CTA
+    ==================================================== -->
+
+    <section
+      class="cta-section"
+      id="contact"
+      aria-labelledby="contactHeading"
+    >
+
+      <div class="container">
+
+
+        <div class="cta-card">
+
+
+          <span class="section-label">
+            TEMPAHAN
+          </span>
+
+
+          <h2 id="contactHeading">
+            Dah tahu nak makan apa?
+          </h2>
+
+
+          <p>
+            Buat tempahan dengan mudah melalui WhatsApp.
+          </p>
+
+
+          <!-- WHATSAPP -->
+
+          <a
+            href="#"
+            class="btn btn-whatsapp"
+            id="mainWhatsAppButton"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Tempah melalui WhatsApp"
+          >
+
+            <i
+              data-lucide="message-circle"
+              aria-hidden="true"
+            ></i>
+
+            Tempah melalui WhatsApp
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-inner">
+
+
+      <!-- FOOTER BRAND -->
+
+      <div class="footer-brand">
+
+        <strong id="footerBusinessName">
+          Nama Perniagaan
+        </strong>
+
+        <span id="footerBusinessType">
+          Makanan & Minuman
+        </span>
+
+      </div>
+
+
+      <!-- COPYRIGHT -->
+
+      <div class="footer-right">
+
+        <span>
+          © <span id="currentYear"></span>
+        </span>
+
+        <span id="footerCopyrightName">
+          Nama Perniagaan
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       FLOATING WHATSAPP
+  ====================================================== -->
+
+  <a
+    href="#"
+    class="whatsapp-floating"
+    id="floatingWhatsApp"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Tempah melalui WhatsApp"
+  >
+
+    <i
+      data-lucide="message-circle"
+      aria-hidden="true"
+    ></i>
+
+  </a>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+
+       Semua maklumat pelanggan berada dalam CONFIG
+       di bahagian atas fail index.html.
+  ====================================================== -->
+
+  <!-- =====================================================
+       ⚠️ JANGAN UBAH BAHAGIAN DI BAWAH
+       Kod sistem website
+  ====================================================== -->
+
+  <script>
+/* =========================================================
+   HELPER
+========================================================= */
+
+function getElement(id) {
+  return document.getElementById(id);
+}
+
+function hideElement(element) {
+  if (element) {
+    element.classList.add("is-hidden");
+  }
+}
+
+function showElement(element) {
+  if (element) {
+    element.classList.remove("is-hidden");
+  }
+}
+
+
+/* =========================================================
+   SAFE TEXT
+========================================================= */
+
+function safeText(value) {
+  if (
+    value === undefined ||
+    value === null
+  ) {
+    return "";
+  }
+
+  return String(value).trim();
+}
+
+
+/* =========================================================
+   WHATSAPP LINK
+========================================================= */
+
+function createWhatsAppLink(message) {
+  const number =
+    safeText(
+      CONFIG.contact?.whatsapp
+    ).replace(/\D/g, "");
+
+  if (!number) {
+    return "#";
+  }
+
+  return (
+    "https://wa.me/" +
+    number +
+    "?text=" +
+    encodeURIComponent(message)
+  );
+}
+
+
+/* =========================================================
+   STANDARD WHATSAPP MESSAGE
+========================================================= */
+
+function getWhatsAppMessage() {
+  const business =
+    safeText(
+      CONFIG.business?.name
+    );
+
+  return (
+    `Hello ${business || "Perniagaan"}, ` +
+    `saya mahu buat tempahan.`
+  );
+}
+
+
+/* =========================================================
+   BUSINESS INFORMATION
+========================================================= */
+
+function renderBusiness() {
+  const business =
+    CONFIG.business || {};
+
+  const name =
+    safeText(business.name);
+
+  const type =
+    safeText(business.type);
+
+  const tagline =
+    safeText(business.tagline);
+
+  const pageTitle =
+    getElement("pageTitle");
+
+  if (pageTitle) {
+    pageTitle.textContent =
+      name || "Perniagaan";
+  }
+
+  document.title =
+    name
+      ? `${name} | ${type || "Perniagaan"}`
+      : "Perniagaan";
+
+  const businessName =
+    getElement("businessName");
+
+  if (businessName) {
+    businessName.textContent =
+      name || "Nama Perniagaan";
+  }
+
+  const brandName =
+    getElement("brandName");
+
+  if (brandName) {
+    brandName.textContent =
+      name || "Nama Perniagaan";
+  }
+
+  const footerBusinessName =
+    getElement("footerBusinessName");
+
+  if (footerBusinessName) {
+    footerBusinessName.textContent =
+      name || "Nama Perniagaan";
+  }
+
+  const footerCopyrightName =
+    getElement("footerCopyrightName");
+
+  if (footerCopyrightName) {
+    footerCopyrightName.textContent =
+      name || "Nama Perniagaan";
+  }
+
+  const businessType =
+    getElement("businessType");
+
+  const heroBadge =
+    getElement("heroBadge");
+
+  if (
+    businessType &&
+    type
+  ) {
+    businessType.textContent =
+      type;
+
+    showElement(
+      heroBadge
+    );
+  } else {
+    hideElement(
+      heroBadge
+    );
+  }
+
+  const footerBusinessType =
+    getElement("footerBusinessType");
+
+  if (
+    footerBusinessType &&
+    type
+  ) {
+    footerBusinessType.textContent =
+      type;
+
+    showElement(
+      footerBusinessType
+    );
+  } else {
+    hideElement(
+      footerBusinessType
+    );
+  }
+
+  const taglineElement =
+    getElement("tagline");
+
+  if (
+    taglineElement &&
+    tagline
+  ) {
+    taglineElement.textContent =
+      tagline;
+
+    showElement(
+      taglineElement
+    );
+  } else {
+    hideElement(
+      taglineElement
+    );
+  }
+
+  renderLogo();
+
+  renderSEO(
+    name,
+    type,
+    tagline
+  );
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+function renderLogo() {
+  const logoContainer =
+    getElement("brandLogo");
+
+  if (!logoContainer) {
+    return;
+  }
+
+  const logo =
+    safeText(
+      CONFIG.business?.logo
+    );
+
+  logoContainer.innerHTML = "";
+
+  logoContainer.classList.remove(
+    "logo-placeholder"
+  );
+
+  if (logo) {
+    const image =
+      document.createElement("img");
+
+    image.src =
+      logo;
+
+    image.alt =
+      safeText(
+        CONFIG.business?.name
+      ) || "Logo";
+
+    image.loading =
+      "eager";
+
+    image.decoding =
+      "async";
+
+    image.onerror =
+      function () {
+        renderLogoPlaceholder(
+          logoContainer
+        );
+      };
+
+    logoContainer.appendChild(
+      image
+    );
+
+    return;
+  }
+
+  renderLogoPlaceholder(
+    logoContainer
+  );
+}
+
+
+/* =========================================================
+   LOGO PLACEHOLDER
+========================================================= */
+
+function renderLogoPlaceholder(
+  container
+) {
+  if (!container) {
+    return;
+  }
+
+  container.innerHTML = "";
+
+  container.classList.add(
+    "logo-placeholder"
+  );
+
+  const name =
+    safeText(
+      CONFIG.business?.name
+    );
+
+  const initial =
+    name
+      ? name.charAt(0).toUpperCase()
+      : "F";
+
+  container.textContent =
+    initial;
+}
+
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+function renderLocation() {
+  const location =
+    CONFIG.location || {};
+
+  const name =
+    safeText(location.name);
+
+  const description =
+    safeText(location.description);
+
+  const maps =
+    safeText(location.googleMaps);
+
+  const waze =
+    safeText(location.waze);
+
+  const locationName =
+    getElement("locationName");
+
+  const quickLocationCard =
+    getElement(
+      "quickLocationCard"
+    );
+
+  if (
+    locationName &&
+    name
+  ) {
+    locationName.textContent =
+      name;
+
+    showElement(
+      quickLocationCard
+    );
+  } else {
+    hideElement(
+      quickLocationCard
+    );
+  }
+
+  const locationDescription =
+    getElement(
+      "locationDescription"
+    );
+
+  if (
+    locationDescription &&
+    description
+  ) {
+    locationDescription.textContent =
+      description;
+
+    showElement(
+      locationDescription
+    );
+  } else {
+    hideElement(
+      locationDescription
+    );
+  }
+
+  const mapsButton =
+    getElement(
+      "googleMapsButton"
+    );
+
+  if (
+    mapsButton &&
+    maps
+  ) {
+    mapsButton.href =
+      maps;
+
+    showElement(
+      mapsButton
+    );
+  } else {
+    hideElement(
+      mapsButton
+    );
+  }
+
+  const wazeButton =
+    getElement(
+      "wazeButton"
+    );
+
+  if (
+    wazeButton &&
+    waze
+  ) {
+    wazeButton.href =
+      waze;
+
+    showElement(
+      wazeButton
+    );
+  } else {
+    hideElement(
+      wazeButton
+    );
+  }
+
+  const locationButtons =
+    getElement(
+      "locationButtons"
+    );
+
+  if (
+    locationButtons
+  ) {
+    if (
+      maps ||
+      waze
+    ) {
+      showElement(
+        locationButtons
+      );
+    } else {
+      hideElement(
+        locationButtons
+      );
+    }
+  }
+
+  const heroLocationButton =
+    getElement(
+      "heroLocationButton"
+    );
+
+  if (
+    heroLocationButton
+  ) {
+    if (
+      maps ||
+      waze
+    ) {
+      heroLocationButton.href =
+        "#location";
+
+      showElement(
+        heroLocationButton
+      );
+    } else {
+      hideElement(
+        heroLocationButton
+      );
+    }
+  }
+
+  const navLocation =
+    getElement(
+      "navLocation"
+    );
+
+  const mobileLocationLink =
+    getElement(
+      "mobileLocationLink"
+    );
+
+  if (
+    maps ||
+    waze
+  ) {
+    showElement(
+      navLocation
+    );
+
+    showElement(
+      mobileLocationLink
+    );
+  } else {
+    hideElement(
+      navLocation
+    );
+
+    hideElement(
+      mobileLocationLink
+    );
+  }
+
+  const locationSection =
+    getElement("location");
+
+  if (
+    locationSection
+  ) {
+    if (
+      name ||
+      description ||
+      maps ||
+      waze
+    ) {
+      showElement(
+        locationSection
+      );
+    } else {
+      hideElement(
+        locationSection
+      );
+    }
+  }
+}
+
+
+/* =========================================================
+   OPENING HOURS
+========================================================= */
+
+function renderOpeningHours() {
+  const hours =
+    safeText(
+      CONFIG.openingHours
+    );
+
+  const hoursCard =
+    getElement(
+      "hoursCard"
+    );
+
+  const hoursElement =
+    getElement(
+      "openingHours"
+    );
+
+  if (
+    hoursCard &&
+    hoursElement
+  ) {
+    if (hours) {
+      hoursElement.textContent =
+        hours;
+
+      showElement(
+        hoursCard
+      );
+    } else {
+      hideElement(
+        hoursCard
+      );
+    }
+  }
+
+  const quickInfo =
+    getElement(
+      "quickInfo"
+    );
+
+  const hasHours =
+    Boolean(hours);
+
+  const hasLocation =
+    Boolean(
+      safeText(
+        CONFIG.location?.name
+      )
+    );
+
+  if (
+    quickInfo
+  ) {
+    if (
+      !hasHours &&
+      !hasLocation
+    ) {
+      hideElement(
+        quickInfo
+      );
+    } else {
+      showElement(
+        quickInfo
+      );
+    }
+  }
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+function renderMenu() {
+  const container =
+    getElement(
+      "menuContainer"
+    );
+
+  if (!container) {
+    return;
+  }
+
+  container.innerHTML = "";
+
+  const menu =
+    Array.isArray(
+      CONFIG.menu
+    )
+      ? CONFIG.menu
+      : [];
+
+  if (!menu.length) {
+    container.innerHTML = `
+
+      <div class="menu-empty">
+
+        <div class="menu-image-placeholder">
+
+          <i data-lucide="utensils"></i>
+
+          <span>
+            Menu akan dikemaskini.
+          </span>
+
+        </div>
+
+      </div>
+
+    `;
+
+    refreshIcons();
+
+    return;
+  }
+
+  let menuCount = 0;
+
+  menu.forEach(
+    function (item, index) {
+      const current =
+        item || {};
+
+      const name =
+        safeText(current.name);
+
+      const price =
+        safeText(current.price);
+
+      const description =
+        safeText(current.description);
+
+      const image =
+        safeText(current.image);
+
+      if (
+        !name &&
+        !price &&
+        !description &&
+        !image
+      ) {
+        return;
+      }
+
+      menuCount++;
+
+      const card =
+        document.createElement(
+          "article"
+        );
+
+      card.className =
+        "menu-card";
+
+      const imageArea =
+        document.createElement(
+          "div"
+        );
+
+      imageArea.className =
+        "menu-image";
+
+      if (image) {
+        const imageElement =
+          document.createElement(
+            "img"
+          );
+
+        imageElement.src =
+          image;
+
+        imageElement.alt =
+          name || "Gambar menu";
+
+        imageElement.loading =
+          index < 3
+            ? "eager"
+            : "lazy";
+
+        imageElement.decoding =
+          "async";
+
+        imageElement.onerror =
+          function () {
+            renderImagePlaceholder(
+              imageArea
+            );
+          };
+
+        imageArea.appendChild(
+          imageElement
+        );
+
+        imageArea.classList.add(
+          "has-image"
+        );
+
+        imageArea.setAttribute(
+          "role",
+          "button"
+        );
+
+        imageArea.setAttribute(
+          "tabindex",
+          "0"
+        );
+
+        imageArea.setAttribute(
+          "aria-label",
+          `Besarkan gambar ${name || "menu"}`
+        );
+
+        function showMenuImage() {
+          openImageLightbox(
+            image,
+            name || "Gambar menu"
+          );
+        }
+
+        imageArea.addEventListener(
+          "click",
+          showMenuImage
+        );
+
+        imageArea.addEventListener(
+          "keydown",
+          function (event) {
+            if (
+              event.key === "Enter" ||
+              event.key === " "
+            ) {
+              event.preventDefault();
+              showMenuImage();
+            }
+          }
+        );
+      } else {
+        renderImagePlaceholder(
+          imageArea
+        );
+      }
+
+      const info =
+        document.createElement(
+          "div"
+        );
+
+      info.className =
+        "menu-info";
+
+      const top =
+        document.createElement(
+          "div"
+        );
+
+      top.className =
+        "menu-top";
+
+      if (name) {
+        const title =
+          document.createElement(
+            "h3"
+          );
+
+        title.className =
+          "menu-name";
+
+        title.textContent =
+          name;
+
+        top.appendChild(
+          title
+        );
+      }
+
+      if (price) {
+        const priceElement =
+          document.createElement(
+            "span"
+          );
+
+        priceElement.className =
+          "menu-price";
+
+        priceElement.textContent =
+          price;
+
+        top.appendChild(
+          priceElement
+        );
+      }
+
+      if (
+        name ||
+        price
+      ) {
+        info.appendChild(
+          top
+        );
+      }
+
+      if (description) {
+        const descriptionElement =
+          document.createElement(
+            "p"
+          );
+
+        descriptionElement.className =
+          "menu-description";
+
+        descriptionElement.textContent =
+          description;
+
+        info.appendChild(
+          descriptionElement
+        );
+      }
+
+      const whatsappNumber =
+        safeText(
+          CONFIG.contact?.whatsapp
+        );
+
+      if (
+        whatsappNumber
+      ) {
+        const orderButton =
+          document.createElement(
+            "button"
+          );
+
+        orderButton.type =
+          "button";
+
+        orderButton.className =
+          "order-btn";
+
+        orderButton.setAttribute(
+          "aria-label",
+          `Tempah ${name || "menu"} melalui WhatsApp`
+        );
+
+        orderButton.innerHTML = `
+
+          <i data-lucide="message-circle"></i>
+
+          Tempah Sekarang
+
+        `;
+
+        orderButton.addEventListener(
+          "click",
+          openMenuWhatsApp
+        );
+
+        info.appendChild(
+          orderButton
+        );
+      }
+
+      card.appendChild(
+        imageArea
+      );
+
+      card.appendChild(
+        info
+      );
+
+      container.appendChild(
+        card
+      );
+    }
+  );
+
+  if (
+    menuCount === 0
+  ) {
+    container.innerHTML = `
+
+      <div class="menu-empty">
+
+        <div class="menu-image-placeholder">
+
+          <i data-lucide="utensils"></i>
+
+          <span>
+            Menu akan dikemaskini.
+          </span>
+
+        </div>
+
+      </div>
+
+    `;
+  }
+
+  refreshIcons();
+}
+
+
+/* =========================================================
+   MENU IMAGE PLACEHOLDER
+========================================================= */
+
+function renderImagePlaceholder(
+  container
+) {
+  if (!container) {
+    return;
+  }
+
+  container.innerHTML = `
+
+    <div class="menu-image-placeholder">
+
+      <i data-lucide="image"></i>
+
+      <span>
+        Gambar menu
+      </span>
+
+    </div>
+
+  `;
+
+  refreshIcons();
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+function renderWhatsApp() {
+  const number =
+    safeText(
+      CONFIG.contact?.whatsapp
+    );
+
+  const mainButton =
+    getElement(
+      "mainWhatsAppButton"
+    );
+
+  const floatingButton =
+    getElement(
+      "floatingWhatsApp"
+    );
+
+  const mobileOrderLink =
+    getElement(
+      "mobileOrderLink"
+    );
+
+  const contactSection =
+    getElement(
+      "contact"
+    );
+
+  if (!number) {
+    hideElement(
+      mainButton
+    );
+
+    hideElement(
+      floatingButton
+    );
+
+    hideElement(
+      mobileOrderLink
+    );
+
+    hideElement(
+      contactSection
+    );
+
+    return;
+  }
+
+  const message =
+    getWhatsAppMessage();
+
+  const link =
+    createWhatsAppLink(
+      message
+    );
+
+  if (mainButton) {
+    mainButton.href =
+      link;
+
+    showElement(
+      mainButton
+    );
+  }
+
+  if (floatingButton) {
+    floatingButton.href =
+      link;
+
+    showElement(
+      floatingButton
+    );
+  }
+
+  if (mobileOrderLink) {
+    showElement(
+      mobileOrderLink
+    );
+  }
+
+  if (contactSection) {
+    showElement(
+      contactSection
+    );
+  }
+}
+
+
+/* =========================================================
+   MENU → WHATSAPP
+========================================================= */
+
+function openMenuWhatsApp() {
+  const number =
+    safeText(
+      CONFIG.contact?.whatsapp
+    );
+
+  if (!number) {
+    return;
+  }
+
+  /*
+    Semua butang menu menggunakan
+    mesej WhatsApp yang sama.
+
+    TIADA:
+    - nama menu
+    - harga
+    - kuantiti
+
+    Hanya:
+
+    Hello [Nama Bisnes],
+    saya mahu buat tempahan.
+  */
+
+  const message =
+    getWhatsAppMessage();
+
+  const link =
+    createWhatsAppLink(
+      message
+    );
+
+  if (
+    link !== "#"
+  ) {
+    window.open(
+      link,
+      "_blank",
+      "noopener,noreferrer"
+    );
+  }
+}
+
+
+/* =========================================================
+   SEO
+========================================================= */
+
+function renderSEO(
+  name,
+  type,
+  tagline
+) {
+  const description =
+    tagline ||
+    `${name || "Perniagaan"} - ${type || "Makanan & Minuman"}.`;
+
+  const metaDescription =
+    getElement(
+      "metaDescription"
+    );
+
+  const ogTitle =
+    getElement(
+      "ogTitle"
+    );
+
+  const ogDescription =
+    getElement(
+      "ogDescription"
+    );
+
+  const ogImage =
+    getElement(
+      "ogImage"
+    );
+
+  if (metaDescription) {
+    metaDescription.setAttribute(
+      "content",
+      description
+    );
+  }
+
+  if (ogTitle) {
+    ogTitle.setAttribute(
+      "content",
+      name || "Perniagaan"
+    );
+  }
+
+  if (ogDescription) {
+    ogDescription.setAttribute(
+      "content",
+      description
+    );
+  }
+
+  /*
+    Gunakan logo sebagai
+    Open Graph image jika ada.
+  */
+
+  const logo =
+    safeText(
+      CONFIG.business?.logo
+    );
+
+  if (
+    ogImage
+  ) {
+    if (logo) {
+      ogImage.setAttribute(
+        "content",
+        logo
+      );
+    } else {
+      ogImage.removeAttribute(
+        "content"
+      );
+    }
+  }
+}
+
+
+
+/* =========================================================
+   MENU IMAGE LIGHTBOX
+========================================================= */
+
+function openImageLightbox(source, altText) {
+  const imageSource = safeText(source);
+  if (!imageSource) return;
+
+  let lightbox = getElement("imageLightbox");
+
+  if (!lightbox) {
+    lightbox = document.createElement("div");
+    lightbox.id = "imageLightbox";
+    lightbox.className = "image-lightbox";
+    lightbox.setAttribute("role", "dialog");
+    lightbox.setAttribute("aria-modal", "true");
+    lightbox.setAttribute("aria-label", "Paparan gambar menu");
+
+    lightbox.innerHTML = `
+      <button
+        type="button"
+        class="image-lightbox-close"
+        aria-label="Tutup gambar"
+      >
+        <i data-lucide="x"></i>
+      </button>
+      <img src="" alt="">
+    `;
+
+    document.body.appendChild(lightbox);
+
+    lightbox.addEventListener("click", function (event) {
+      if (
+        event.target === lightbox ||
+        event.target.closest(".image-lightbox-close")
+      ) {
+        closeImageLightbox();
+      }
+    });
+
+    refreshIcons();
+  }
+
+  const image = lightbox.querySelector("img");
+  if (image) {
+    image.src = imageSource;
+    image.alt = safeText(altText) || "Gambar menu";
+  }
+
+  lightbox.classList.add("active");
+  document.body.classList.add("lightbox-open");
+}
+
+function closeImageLightbox() {
+  const lightbox = getElement("imageLightbox");
+  if (!lightbox) return;
+
+  lightbox.classList.remove("active");
+  document.body.classList.remove("lightbox-open");
+}
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closeImageLightbox();
+  }
+});
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+function initMobileNavigation() {
+  const button =
+    getElement(
+      "mobileMenuButton"
+    );
+
+  const navigation =
+    getElement(
+      "mobileNav"
+    );
+
+  if (
+    !button ||
+    !navigation
+  ) {
+    return;
+  }
+
+  button.addEventListener(
+    "click",
+    function () {
+      const isOpen =
+        navigation.classList.toggle(
+          "active"
+        );
+
+      button.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+      document.body.classList.toggle(
+        "no-scroll",
+        isOpen
+      );
+
+      button.setAttribute(
+        "aria-label",
+        isOpen
+          ? "Tutup menu"
+          : "Buka menu"
+      );
+
+      button.innerHTML =
+        isOpen
+          ? `<i data-lucide="x"></i>`
+          : `<i data-lucide="menu"></i>`;
+
+      refreshIcons();
+    }
+  );
+
+  const links =
+    navigation.querySelectorAll(
+      "a"
+    );
+
+  links.forEach(
+    function (link) {
+      link.addEventListener(
+        "click",
+        closeMobileNavigation
+      );
+    }
+  );
+}
+
+
+/* =========================================================
+   CLOSE MOBILE NAV
+========================================================= */
+
+function closeMobileNavigation() {
+  const button =
+    getElement(
+      "mobileMenuButton"
+    );
+
+  const navigation =
+    getElement(
+      "mobileNav"
+    );
+
+  if (!navigation) {
+    return;
+  }
+
+  navigation.classList.remove(
+    "active"
+  );
+
+  document.body.classList.remove(
+    "no-scroll"
+  );
+
+  if (button) {
+    button.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
+    button.setAttribute(
+      "aria-label",
+      "Buka menu"
+    );
+
+    button.innerHTML =
+      `<i data-lucide="menu"></i>`;
+  }
+
+  refreshIcons();
+}
+
+
+/* =========================================================
+   HEADER SCROLL
+========================================================= */
+
+function initHeaderScroll() {
+  const header =
+    getElement(
+      "siteHeader"
+    );
+
+  if (!header) {
+    return;
+  }
+
+  function updateHeader() {
+    if (
+      window.scrollY > 20
+    ) {
+      header.classList.add(
+        "scrolled"
+      );
+    } else {
+      header.classList.remove(
+        "scrolled"
+      );
+    }
+  }
+
+  updateHeader();
+
+  window.addEventListener(
+    "scroll",
+    updateHeader,
+    {
+      passive: true
+    }
+  );
+}
+
+
+/* =========================================================
+   CURRENT YEAR
+========================================================= */
+
+function renderCurrentYear() {
+  const element =
+    getElement(
+      "currentYear"
+    );
+
+  if (element) {
+    element.textContent =
+      new Date().getFullYear();
+  }
+}
+
+
+/* =========================================================
+   LUCIDE ICONS
+========================================================= */
+
+function refreshIcons() {
+  if (
+    typeof lucide !== "undefined"
+  ) {
+    lucide.createIcons();
+  }
+}
+
+
+/* =========================================================
+   START WEBSITE
+========================================================= */
+
+function initWebsite() {
+  renderBusiness();
+  renderLocation();
+  renderOpeningHours();
+  renderMenu();
+  renderWhatsApp();
+  initMobileNavigation();
+  initHeaderScroll();
+  renderCurrentYear();
+  refreshIcons();
+}
+
+
+/* =========================================================
+   RUN
+========================================================= */
+
+if (
+  document.readyState === "loading"
+) {
+  document.addEventListener(
+    "DOMContentLoaded",
+    initWebsite
+  );
+} else {
+  initWebsite();
+}
+  </script>
+
+
+</body>
+
+</html>
