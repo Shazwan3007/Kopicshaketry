@@ -1,0 +1,1343 @@
+
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#122B45">
+<meta name="description" content="Semak keputusan SPM dan terokai pilihan program Asasi atau Diploma.">
+<title>Semak Program Pengajian | Borneo Edu</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#122B45;
+  --navy2:#1B4268;
+  --blue:#176384;
+  --green:#087E63;
+  --light:#F5F8FB;
+  --white:#fff;
+  --text:#172A3E;
+  --muted:#617487;
+  --border:#DCE5EC;
+  --shadow:0 20px 65px rgba(4,24,47,.17);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,Arial,sans-serif;
+  color:var(--text);
+  background:var(--navy);
+  -webkit-font-smoothing:antialiased;
+}
+button,input,select{font:inherit}
+button{cursor:pointer}
+button:disabled{opacity:.45;cursor:not-allowed}
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+a:focus-visible{
+  outline:3px solid #4FB8D7;
+  outline-offset:2px;
+}
+
+.hero{
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+  background:
+    radial-gradient(ellipse at 10% 0%,#28618A 0%,transparent 43%),
+    linear-gradient(130deg,#183F65,#122B45 70%);
+  padding:55px 22px;
+  position:relative;
+  overflow:hidden;
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  width:520px;
+  height:520px;
+  border:1px solid #ffffff12;
+  border-radius:50%;
+  right:-260px;
+  bottom:-300px;
+}
+.container{
+  max-width:1200px;
+  width:100%;
+  margin:auto;
+  display:grid;
+  grid-template-columns:.83fr 1.17fr;
+  align-items:center;
+  gap:65px;
+  position:relative;
+  z-index:1;
+}
+
+.intro{color:white}
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:#A8DAEC;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:24px;
+}
+.eyebrow:before{
+  content:"";
+  width:8px;
+  height:8px;
+  background:#4FD6AA;
+  border-radius:50%;
+}
+h1,h2,h3,p{margin-top:0}
+h1,h2,h3{font-family:Manrope,Inter,sans-serif}
+h1{
+  font-size:clamp(34px,4vw,55px);
+  line-height:1.13;
+  font-weight:800;
+  letter-spacing:-2px;
+  margin-bottom:24px;
+}
+.intro p{
+  font-size:16px;
+  line-height:1.85;
+  color:#DAE7F1;
+  max-width:480px;
+}
+.benefits{
+  display:grid;
+  gap:15px;
+  margin-top:38px;
+}
+.benefit{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  font-size:14px;
+  color:#EAF5F9;
+}
+.tick{
+  width:24px;
+  height:24px;
+  border-radius:50%;
+  background:#ffffff17;
+  display:grid;
+  place-items:center;
+  color:#6FE2B8;
+  font-weight:800;
+}
+.footerline{
+  margin-top:35px;
+  font-size:12px;
+  color:#B1C5D4;
+  line-height:1.7;
+}
+
+.panel{
+  background:white;
+  border-radius:24px;
+  padding:36px;
+  box-shadow:var(--shadow);
+  min-width:0;
+}
+.progress{
+  height:5px;
+  background:#EDF1F5;
+  border-radius:12px;
+  overflow:hidden;
+  margin-bottom:30px;
+}
+.progress div{
+  height:100%;
+  background:linear-gradient(90deg,#176384,#087E63);
+  width:33.33%;
+  transition:width .35s ease;
+  border-radius:12px;
+}
+.stepmeta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:14px;
+}
+.kicker{
+  color:var(--blue);
+  font-size:11px;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  font-weight:800;
+}
+.percent{
+  font-size:12px;
+  color:var(--muted);
+  font-weight:700;
+}
+h2{
+  font-size:clamp(22px,2.4vw,27px);
+  letter-spacing:-.8px;
+  line-height:1.35;
+  font-weight:800;
+  margin-bottom:10px;
+}
+.desc{
+  font-size:13px;
+  line-height:1.75;
+  color:var(--muted);
+  margin-bottom:22px;
+}
+.section{
+  display:none;
+  animation:fade .3s ease;
+}
+.section.active{display:block}
+@keyframes fade{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.fieldtitle{
+  font-size:12px;
+  font-weight:800;
+  color:var(--navy);
+  margin:20px 0 12px;
+}
+.subjectrow{
+  display:grid;
+  grid-template-columns:1fr 135px 34px;
+  align-items:center;
+  gap:9px;
+  margin-bottom:10px;
+}
+.subjectrow.fixed{
+  grid-template-columns:1fr 135px;
+}
+.subjectrow select,
+.subjectrow input,
+.textinput{
+  width:100%;
+  min-width:0;
+  height:45px;
+  border:1px solid var(--border);
+  background:#fff;
+  border-radius:10px;
+  padding:0 12px;
+  color:var(--text);
+  font-size:13px;
+}
+.subjectrow select:focus,
+.subjectrow input:focus,
+.textinput:focus{
+  border-color:var(--blue);
+}
+.remove{
+  height:34px;
+  width:34px;
+  border:0;
+  border-radius:9px;
+  background:#FCEBEC;
+  color:#B33C47;
+  font-size:20px;
+}
+.add{
+  border:1px dashed #91B7CB;
+  background:#F3F8FB;
+  color:var(--blue);
+  padding:13px 15px;
+  border-radius:11px;
+  width:100%;
+  font-size:12px;
+  font-weight:800;
+  margin-top:4px;
+}
+.note{
+  background:#F0F7FA;
+  color:#476477;
+  border:1px solid #D9EBF2;
+  border-radius:12px;
+  padding:13px 15px;
+  font-size:12px;
+  line-height:1.7;
+  margin-top:19px;
+}
+.actions{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-top:27px;
+}
+.btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  gap:9px;
+  padding:14px 22px;
+  border-radius:11px;
+  border:0;
+  font-weight:800;
+  font-size:13px;
+  transition:.2s ease;
+}
+.btn-primary{
+  background:var(--navy);
+  color:white;
+}
+.btn-primary:hover:not(:disabled){
+  background:var(--blue);
+  transform:translateY(-1px);
+}
+.btn-back{
+  background:#F1F5F8;
+  color:var(--navy);
+}
+.btn-wa{
+  color:white;
+  background:#0B986C;
+  width:100%;
+  text-decoration:none;
+  font-size:14px;
+  padding:17px;
+}
+.btn-wa:hover{background:#087957}
+
+.summary{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin:20px 0;
+}
+.stat{
+  border-radius:14px;
+  background:var(--light);
+  border:1px solid #EDF1F5;
+  padding:20px 8px;
+  text-align:center;
+}
+.stat strong{
+  display:block;
+  font-family:Manrope;
+  font-size:28px;
+  color:var(--navy);
+  margin-bottom:5px;
+}
+.stat span{
+  color:var(--muted);
+  font-size:11px;
+}
+.filter{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  background:#F0F3F6;
+  border-radius:12px;
+  padding:4px;
+  margin:18px 0 14px;
+  gap:4px;
+}
+.filter button{
+  border:0;
+  background:transparent;
+  border-radius:9px;
+  font-weight:700;
+  font-size:12px;
+  padding:12px 5px;
+  color:#6C7C89;
+}
+.filter button.on{
+  background:white;
+  color:var(--navy);
+  box-shadow:0 2px 8px #122b4510;
+}
+.searchwrap{position:relative}
+.searchwrap input{
+  padding-left:39px;
+  height:47px;
+}
+.searchicon{
+  position:absolute;
+  left:14px;
+  top:13px;
+  color:#8093A3;
+}
+.programlist{
+  display:grid;
+  gap:9px;
+  max-height:340px;
+  overflow-y:auto;
+  padding:3px 4px 3px 0;
+  margin-top:15px;
+  scrollbar-width:thin;
+  scrollbar-color:#BCD2DF transparent;
+}
+.program{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:14px;
+  cursor:pointer;
+  transition:.2s;
+  background:white;
+}
+.program:hover{
+  border-color:#8FBBCD;
+  background:#FBFDFE;
+}
+.program.selected{
+  border-color:var(--blue);
+  background:#F0F8FB;
+  box-shadow:inset 0 0 0 1px #17638420;
+}
+.circle{
+  flex-shrink:0;
+  width:20px;
+  height:20px;
+  border:2px solid #B7C7D2;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+}
+.selected .circle{
+  background:var(--green);
+  border-color:var(--green);
+  color:#fff;
+}
+.circle svg{display:none}
+.selected .circle svg{display:block}
+.programbody{min-width:0}
+.programbody strong{
+  display:block;
+  font-size:12px;
+  line-height:1.5;
+  color:var(--navy);
+}
+.programbody small{
+  display:block;
+  font-size:10px;
+  color:var(--muted);
+  margin-top:3px;
+  line-height:1.5;
+}
+.selectionbar{
+  margin-top:15px;
+  color:var(--muted);
+  font-size:12px;
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+}
+.resultbanner{
+  padding:15px;
+  border-radius:12px;
+  background:#EAF7F2;
+  border:1px solid #CBEBDD;
+  color:#17684F;
+  font-size:12px;
+  line-height:1.7;
+  margin:15px 0;
+}
+.resultbanner.warning{
+  background:#FFF7E9;
+  color:#80551B;
+  border-color:#F1DFC0;
+}
+.hidden{display:none!important}
+.review{
+  border:1px solid var(--border);
+  border-radius:13px;
+  overflow:hidden;
+  margin-top:18px;
+}
+.reviewtitle{
+  padding:13px 16px;
+  background:#F4F7FA;
+  font-weight:800;
+  font-size:12px;
+  color:var(--navy);
+}
+.reviewcontent{
+  padding:16px;
+  font-size:12px;
+  line-height:1.9;
+  white-space:pre-wrap;
+  max-height:250px;
+  overflow:auto;
+}
+.privacy{
+  margin-top:16px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.8;
+}
+
+@media(max-width:900px){
+  .hero{padding:38px 18px}
+  .container{
+    grid-template-columns:1fr;
+    gap:28px;
+    max-width:670px;
+  }
+  .intro h1{max-width:560px}
+  .intro p{max-width:570px}
+  .benefits{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px 24px;
+    margin-top:20px;
+  }
+  .footerline{margin-top:20px}
+}
+@media(max-width:560px){
+  .hero{
+    padding:25px 13px 35px;
+    align-items:flex-start;
+  }
+  .container{gap:23px}
+  .eyebrow{
+    margin-bottom:13px;
+    font-size:10px;
+  }
+  h1{
+    font-size:32px;
+    letter-spacing:-1.3px;
+    margin-bottom:12px;
+  }
+  .intro p{
+    font-size:13px;
+    line-height:1.7;
+  }
+  .benefit{font-size:11px}
+  .benefits{gap:9px 15px}
+  .tick{
+    width:20px;
+    height:20px;
+  }
+  .footerline{font-size:10px}
+  .panel{
+    padding:23px 17px;
+    border-radius:18px;
+  }
+  .progress{margin-bottom:23px}
+  .subjectrow{
+    grid-template-columns:1fr 99px 30px;
+    gap:6px;
+  }
+  .subjectrow.fixed{
+    grid-template-columns:1fr 99px;
+  }
+  .subjectrow input,
+  .subjectrow select{
+    padding:0 8px;
+    font-size:12px;
+  }
+  .btn{
+    padding:13px 15px;
+    font-size:12px;
+  }
+  .stat{padding:16px 6px}
+  .programlist{max-height:300px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{
+    animation:none!important;
+    scroll-behavior:auto!important;
+    transition:none!important;
+  }
+}
+</style>
+</head>
+
+<body>
+<main class="hero">
+<div class="container">
+
+  <!-- BAHAGIAN UTAMA -->
+  <div class="intro">
+    <div class="eyebrow">Semakan Program Pengajian</div>
+
+    <h1>
+      Ketahui Program Pengajian Yang Sesuai
+      Dengan Keputusan SPM Anda
+    </h1>
+
+    <p>
+      Semak keputusan SPM anda dengan mudah dan terokai
+      pilihan program Asasi atau Diploma berdasarkan
+      kelayakan akademik anda. Pilih program yang diminati
+      dan hubungi penasihat pendidikan kami untuk mendapatkan
+      maklumat lanjut.
+    </p>
+
+    <div class="benefits">
+      <div class="benefit">
+        <span class="tick">✓</span>
+        Semakan Percuma
+      </div>
+      <div class="benefit">
+        <span class="tick">✓</span>
+        Tiada Sebarang Komitmen
+      </div>
+      <div class="benefit">
+        <span class="tick">✓</span>
+        Mudah, Cepat &amp; Ringkas
+      </div>
+    </div>
+
+    <div class="footerline">
+      Semak Kelayakan · Terokai Program · Dapatkan Konsultasi
+    </div>
+  </div>
+
+  <!-- BORANG 3 LANGKAH -->
+  <div class="panel">
+
+    <div class="progress">
+      <div id="progressFill"></div>
+    </div>
+
+    <div class="stepmeta">
+      <span class="kicker" id="stepLabel">
+        Langkah 1 daripada 3
+      </span>
+      <span class="percent" id="percent">33%</span>
+    </div>
+
+    <!-- LANGKAH 1 -->
+    <section class="section active" id="step1">
+      <h2>Masukkan Keputusan SPM Anda</h2>
+
+      <p class="desc">
+        Pilih gred bagi setiap subjek yang anda ambil.
+        Maklumat ini digunakan untuk membuat semakan awal
+        program pengajian.
+      </p>
+
+      <div class="fieldtitle">Subjek utama</div>
+      <div id="mandatorySubjects"></div>
+
+      <div class="fieldtitle">Subjek tambahan</div>
+      <div id="additionalSubjects"></div>
+
+      <button
+        class="add"
+        type="button"
+        onclick="addSubject()">
+        + Tambah Subjek SPM
+      </button>
+
+      <div class="note">
+        Kepujian SPM dikira berdasarkan gred
+        A+, A, A-, B+, B, C+ dan C.
+        Sila masukkan semua subjek yang diambil
+        untuk mendapatkan jumlah kepujian yang tepat.
+      </div>
+
+      <div class="actions">
+        <span></span>
+        <button
+          class="btn btn-primary"
+          type="button"
+          onclick="calculate()">
+          Semak Program →
+        </button>
+      </div>
+    </section>
+
+    <!-- LANGKAH 2 -->
+    <section class="section" id="step2">
+
+      <h2 id="resultTitle">
+        Tahniah! Ini pilihan program anda.
+      </h2>
+
+      <p class="desc" id="resultDescription">
+        Berdasarkan keputusan yang dimasukkan,
+        berikut ialah pilihan program untuk semakan lanjut.
+      </p>
+
+      <div class="summary">
+        <div class="stat">
+          <strong id="creditTotal">0</strong>
+          <span>Kepujian SPM</span>
+        </div>
+        <div class="stat">
+          <strong id="programTotal">0</strong>
+          <span>Program untuk disemak</span>
+        </div>
+      </div>
+
+      <div
+        id="eligibilityBanner"
+        class="resultbanner">
+      </div>
+
+      <div id="programArea">
+
+        <div class="filter">
+          <button
+            class="on"
+            data-filter="Semua"
+            onclick="filterPrograms('Semua')">
+            Semua
+          </button>
+
+          <button
+            data-filter="Asasi"
+            onclick="filterPrograms('Asasi')">
+            Asasi
+          </button>
+
+          <button
+            data-filter="Diploma"
+            onclick="filterPrograms('Diploma')">
+            Diploma
+          </button>
+        </div>
+
+        <div class="searchwrap">
+          <span class="searchicon">⌕</span>
+          <input
+            class="textinput"
+            id="search"
+            type="search"
+            placeholder="Cari program yang diminati..."
+            oninput="renderPrograms()">
+        </div>
+
+        <div
+          class="programlist"
+          id="programList">
+        </div>
+
+        <div class="selectionbar">
+          <span id="selectedCount">
+            0 daripada 3 program dipilih
+          </span>
+          <span id="visibleCount"></span>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button
+          class="btn btn-back"
+          onclick="goStep(1)">
+          ← Kembali
+        </button>
+
+        <button
+          class="btn btn-primary"
+          onclick="prepareWhatsApp()">
+          Seterusnya →
+        </button>
+      </div>
+    </section>
+
+    <!-- LANGKAH 3 -->
+    <section class="section" id="step3">
+
+      <h2>Hubungi Penasihat Pengajian</h2>
+
+      <p class="desc">
+        Semakan awal anda telah selesai.
+        Teruskan ke WhatsApp untuk mendapatkan
+        penerangan tentang program, syarat khusus
+        dan proses permohonan.
+      </p>
+
+      <div class="resultbanner">
+        ✓ Maklumat keputusan SPM dan program pilihan
+        anda telah disediakan dalam mesej WhatsApp.
+      </div>
+
+      <div class="review">
+        <div class="reviewtitle">
+          Ringkasan mesej WhatsApp
+        </div>
+        <div
+          class="reviewcontent"
+          id="messagePreview">
+        </div>
+      </div>
+
+      <div class="privacy">
+        Mesej hanya dihantar selepas anda memilih
+        untuk membukanya di WhatsApp dan menekan hantar.
+        Laman ini tidak mempunyai pangkalan data
+        untuk menyimpan keputusan SPM.
+      </div>
+
+      <div class="actions">
+        <button
+          class="btn btn-back"
+          onclick="goStep(2)">
+          ← Kembali
+        </button>
+      </div>
+
+      <div style="margin-top:18px">
+        <a
+          id="waLink"
+          class="btn btn-wa"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer">
+          Teruskan ke WhatsApp
+        </a>
+      </div>
+
+    </section>
+  </div>
+
+</div>
+</main>
+
+<script>
+"use strict";
+
+const PHONE = "601121561243";
+
+const GRADES = [
+  "A+","A","A-","B+","B","C+","C",
+  "D","E","G","TH"
+];
+
+const CREDITS = [
+  "A+","A","A-","B+","B","C+","C"
+];
+
+const ASASI = [
+  "Asasi Perniagaan",
+  "Asasi Pengajian Komputer"
+];
+
+const DIPLOMA = [
+  "Diploma Pengurusan Perladangan",
+  "Diploma Geomatik",
+  "Diploma Sistem Maklumat Geografi",
+  "Diploma Penerbangan",
+  "Diploma Pengurusan Hotel",
+  "Diploma Pengurusan Pelancongan",
+  "Diploma Pentadbiran Perniagaan",
+  "Diploma Perakaunan",
+  "Diploma Pendidikan Awal Kanak-Kanak",
+  "Diploma Animasi",
+  "Diploma Multimedia Kreatif",
+  "Diploma Teknologi Pemasaran Digital",
+  "Diploma Pengurusan Sekuriti",
+  "Diploma Penyiasatan Jenayah",
+  "Diploma Keselamatan & Kesihatan Pekerjaan",
+  "Diploma Teknologi Penyelenggaraan Pesawat",
+  "Diploma Pengurusan Kru Kabin Penerbangan"
+];
+
+const SUBJECTS = [
+  "Pendidikan Islam",
+  "Pendidikan Moral",
+  "Sains",
+  "Sains Tambahan",
+  "Fizik",
+  "Kimia",
+  "Biologi",
+  "Matematik Tambahan",
+  "Prinsip Perakaunan",
+  "Perniagaan",
+  "Ekonomi",
+  "Geografi",
+  "Bahasa Arab",
+  "Bahasa Cina",
+  "Bahasa Tamil",
+  "Kesusasteraan Melayu",
+  "Sains Komputer",
+  "Reka Cipta",
+  "Pendidikan Seni Visual",
+  "Sains Rumah Tangga",
+  "Pertanian"
+];
+
+const state = {
+  grades: [],
+  credits: 0,
+  eligible: [],
+  selected: [],
+  filter: "Semua"
+};
+
+function gradeOptions() {
+  return '<option value="">Pilih gred</option>' +
+    GRADES.map(g =>
+      `<option value="${g}">${g}</option>`
+    ).join("");
+}
+
+function setupSubjects() {
+  const main = [
+    "Bahasa Melayu",
+    "Bahasa Inggeris",
+    "Matematik",
+    "Sejarah"
+  ];
+
+  document.getElementById(
+    "mandatorySubjects"
+  ).innerHTML = main.map(name => `
+    <div class="subjectrow fixed">
+      <input
+        value="${name}"
+        disabled
+        aria-label="Subjek ${name}">
+
+      <select
+        class="grade"
+        data-subject="${name}"
+        aria-label="Gred ${name}">
+        ${gradeOptions()}
+      </select>
+    </div>
+  `).join("");
+
+  addSubject("Pendidikan Islam");
+  addSubject("Sains");
+}
+
+function addSubject(defaultSubject = "") {
+  const wrap = document.getElementById(
+    "additionalSubjects"
+  );
+
+  const div = document.createElement("div");
+  div.className = "subjectrow";
+
+  const choices = SUBJECTS.map(s =>
+    `<option value="${s}" ${
+      s === defaultSubject ? "selected" : ""
+    }>${s}</option>`
+  ).join("");
+
+  div.innerHTML = `
+    <select
+      class="subjectname"
+      aria-label="Nama subjek">
+      <option value="">Pilih subjek</option>
+      ${choices}
+    </select>
+
+    <select
+      class="grade"
+      aria-label="Gred subjek tambahan">
+      ${gradeOptions()}
+    </select>
+
+    <button
+      class="remove"
+      type="button"
+      aria-label="Buang subjek">
+      ×
+    </button>
+  `;
+
+  div.querySelector(".remove").onclick =
+    () => div.remove();
+
+  wrap.appendChild(div);
+}
+
+function collectGrades() {
+  const rows = [];
+  const missing = [];
+
+  document.querySelectorAll(
+    "#mandatorySubjects .subjectrow"
+  ).forEach(row => {
+    const name = row.querySelector("input").value;
+    const grade = row.querySelector(".grade").value;
+
+    if (!grade) {
+      missing.push(name);
+    } else {
+      rows.push({ name, grade });
+    }
+  });
+
+  document.querySelectorAll(
+    "#additionalSubjects .subjectrow"
+  ).forEach(row => {
+    const name =
+      row.querySelector(".subjectname").value;
+    const grade =
+      row.querySelector(".grade").value;
+
+    if (!name && !grade) return;
+
+    if (!name || !grade) {
+      missing.push(name || "Subjek tambahan");
+    } else {
+      rows.push({ name, grade });
+    }
+  });
+
+  if (missing.length) {
+    alert(
+      "Sila lengkapkan maklumat gred untuk: " +
+      missing.join(", ")
+    );
+    return null;
+  }
+
+  const names = rows.map(r => r.name);
+
+  if (new Set(names).size !== names.length) {
+    alert(
+      "Terdapat subjek yang berulang. " +
+      "Sila semak semula."
+    );
+    return null;
+  }
+
+  return rows;
+}
+
+function calculate() {
+  const grades = collectGrades();
+  if (!grades) return;
+
+  state.grades = grades;
+
+  state.credits = grades.filter(
+    r => CREDITS.includes(r.grade)
+  ).length;
+
+  state.selected = [];
+  state.filter = "Semua";
+
+  if (state.credits >= 5) {
+    state.eligible = [
+      ...ASASI.map(name => ({
+        name,
+        type: "Asasi"
+      })),
+      ...DIPLOMA.map(name => ({
+        name,
+        type: "Diploma"
+      }))
+    ];
+  } else if (state.credits >= 3) {
+    state.eligible = DIPLOMA.map(name => ({
+      name,
+      type: "Diploma"
+    }));
+  } else {
+    state.eligible = [];
+  }
+
+  document.getElementById(
+    "creditTotal"
+  ).textContent = state.credits;
+
+  document.getElementById(
+    "programTotal"
+  ).textContent = state.eligible.length;
+
+  document.getElementById("search").value = "";
+
+  document.querySelectorAll(
+    "[data-filter]"
+  ).forEach(btn => {
+    btn.classList.toggle(
+      "on",
+      btn.dataset.filter === "Semua"
+    );
+  });
+
+  let message = "";
+  let title = "";
+  let description = "";
+
+  if (state.credits >= 5) {
+    title = "Tahniah! Ini pilihan program anda.";
+
+    description =
+      "Berdasarkan keputusan yang dimasukkan, " +
+      "anda memenuhi syarat minimum kepujian " +
+      "untuk meneroka pilihan berikut.";
+
+    message =
+      "Anda mempunyai sekurang-kurangnya " +
+      "5 kepujian. Pilihan Asasi dan Diploma " +
+      "dipaparkan untuk semakan lanjut.";
+
+  } else if (state.credits >= 3) {
+    title = "Ini pilihan Diploma untuk anda.";
+
+    description =
+      "Keputusan anda mencapai syarat minimum " +
+      "kepujian bagi laluan Diploma dalam " +
+      "semakan awal ini.";
+
+    message =
+      "Anda mempunyai 3 hingga 4 kepujian. " +
+      "Pilihan Diploma dipaparkan untuk " +
+      "semakan lanjut.";
+
+  } else {
+    title = "Mari bincang pilihan pengajian anda.";
+
+    description =
+      "Keputusan anda belum mencapai minimum " +
+      "3 kepujian. Anda masih boleh mendapatkan " +
+      "konsultasi tentang pilihan yang sesuai.";
+
+    message =
+      "Anda belum mencapai minimum kepujian " +
+      "bagi pilihan Asasi atau Diploma dalam " +
+      "semakan ini. Hubungi penasihat " +
+      "untuk semakan pilihan lain.";
+  }
+
+  document.getElementById(
+    "resultTitle"
+  ).textContent = title;
+
+  document.getElementById(
+    "resultDescription"
+  ).textContent = description;
+
+  const banner = document.getElementById(
+    "eligibilityBanner"
+  );
+
+  banner.textContent = message;
+
+  banner.classList.toggle(
+    "warning",
+    state.credits < 3
+  );
+
+  document.getElementById(
+    "programArea"
+  ).classList.toggle(
+    "hidden",
+    state.credits < 3
+  );
+
+  renderPrograms();
+  goStep(2);
+}
+
+function filterPrograms(type) {
+  state.filter = type;
+
+  document.querySelectorAll(
+    "[data-filter]"
+  ).forEach(btn => {
+    btn.classList.toggle(
+      "on",
+      btn.dataset.filter === type
+    );
+  });
+
+  renderPrograms();
+}
+
+function renderPrograms() {
+  const q = document.getElementById(
+    "search"
+  ).value.toLowerCase().trim();
+
+  const list = document.getElementById(
+    "programList"
+  );
+
+  const filtered = state.eligible.filter(p =>
+    (
+      state.filter === "Semua" ||
+      p.type === state.filter
+    ) &&
+    p.name.toLowerCase().includes(q)
+  );
+
+  document.getElementById(
+    "selectedCount"
+  ).textContent =
+    `${state.selected.length} daripada 3 program dipilih`;
+
+  document.getElementById(
+    "visibleCount"
+  ).textContent =
+    `${filtered.length} dipaparkan`;
+
+  if (!filtered.length) {
+    list.innerHTML = `
+      <div class="note">
+        Tiada program ditemui untuk carian ini.
+      </div>
+    `;
+    return;
+  }
+
+  list.innerHTML = filtered.map((p, i) => {
+    const selected = state.selected.includes(p.name);
+
+    return `
+      <div
+        class="program ${selected ? "selected" : ""}"
+        role="checkbox"
+        aria-checked="${selected}"
+        tabindex="0"
+        data-index="${i}">
+
+        <span class="circle">
+          <svg
+            width="13"
+            height="13"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="3">
+            <path d="M5 12l4 4L19 6"/>
+          </svg>
+        </span>
+
+        <span class="programbody">
+          <strong>${p.name}</strong>
+          <small>
+            ${p.type} · Tertakluk kepada syarat khusus
+          </small>
+        </span>
+
+      </div>
+    `;
+  }).join("");
+
+  list.querySelectorAll(".program").forEach(el => {
+    const program = filtered[Number(el.dataset.index)];
+
+    const action = () => toggleProgram(program.name);
+
+    el.addEventListener("click", action);
+
+    el.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        action();
+      }
+    });
+  });
+}
+
+function toggleProgram(name) {
+  if (state.selected.includes(name)) {
+    state.selected = state.selected.filter(
+      x => x !== name
+    );
+  } else {
+    if (state.selected.length >= 3) {
+      alert(
+        "Maksimum 3 program sahaja boleh dipilih."
+      );
+      return;
+    }
+
+    state.selected.push(name);
+  }
+
+  renderPrograms();
+}
+
+function prepareWhatsApp() {
+  if (
+    state.eligible.length > 0 &&
+    state.selected.length === 0
+  ) {
+    alert(
+      "Sila pilih sekurang-kurangnya satu program."
+    );
+    return;
+  }
+
+  const subjects = state.grades.map(
+    g => `- ${g.name}: ${g.grade}`
+  ).join("\n");
+
+  const programs = state.selected.length
+    ? state.selected.map(
+        (p, i) => `${i + 1}. ${p}`
+      ).join("\n")
+    : "Mohon cadangan program lain yang sesuai.";
+
+  const message =
+`Salam, saya ingin mendapatkan maklumat lanjut tentang pengajian di North Borneo University College.
+
+KEPUTUSAN SPM
+${subjects}
+
+Jumlah kepujian: ${state.credits}
+
+PROGRAM PILIHAN
+${programs}
+
+Saya ingin mendapatkan maklumat lanjut tentang syarat kemasukan, yuran pengajian dan proses permohonan.
+
+Terima kasih.`;
+
+  document.getElementById(
+    "messagePreview"
+  ).textContent = message;
+
+  document.getElementById(
+    "waLink"
+  ).href =
+    `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`;
+
+  goStep(3);
+}
+
+function goStep(step) {
+  document.querySelectorAll(
+    ".section"
+  ).forEach((el, i) => {
+    el.classList.toggle(
+      "active",
+      i === step - 1
+    );
+  });
+
+  document.getElementById(
+    "stepLabel"
+  ).textContent =
+    `Langkah ${step} daripada 3`;
+
+  document.getElementById(
+    "percent"
+  ).textContent =
+    Math.round(step / 3 * 100) + "%";
+
+  document.getElementById(
+    "progressFill"
+  ).style.width =
+    (step / 3 * 100) + "%";
+
+  if (window.innerWidth < 901) {
+    document.querySelector(
+      ".panel"
+    ).scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    });
+  }
+}
+
+setupSubjects();
+</script>
+
+</body>
+</html>
