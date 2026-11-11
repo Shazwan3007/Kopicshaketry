@@ -61,6 +61,7 @@ a:focus-visible{
  border:1px solid #ffffff12;
  border-radius:50%;
  right:-260px;bottom:-300px;
+ pointer-events:none;
 }
 .container{
  max-width:1200px;
@@ -450,6 +451,8 @@ h2{
  font-size:11px;
  line-height:1.8;
 }
+
+/* SUSUN ATUR TABLET SEDIA ADA */
 @media(max-width:900px){
  .hero{padding:38px 18px}
  .container{
@@ -467,6 +470,8 @@ h2{
  }
  .footerline{margin-top:20px}
 }
+
+/* SUSUN ATUR TELEFON SEDIA ADA */
 @media(max-width:560px){
  .hero{
   padding:25px 13px 35px;
@@ -505,6 +510,319 @@ h2{
  .stat{padding:16px 6px}
  .programlist{max-height:300px}
 }
+
+/* ======================================
+   PENAMBAHBAIKAN MOBILE RESPONSIVE
+   Hanya untuk skrin telefon
+   ====================================== */
+
+@media(max-width:600px){
+
+ html,body{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+ }
+
+ .hero{
+  min-height:100svh;
+  padding:24px 12px 36px;
+  align-items:flex-start;
+ }
+
+ .container{
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  gap:24px;
+  width:100%;
+  max-width:100%;
+ }
+
+ /* BAHAGIAN TAJUK */
+
+ .intro{
+  width:100%;
+  min-width:0;
+ }
+
+ .eyebrow{
+  font-size:10px;
+  letter-spacing:1.2px;
+  margin-bottom:14px;
+ }
+
+ .intro h1{
+  font-size:clamp(27px,7vw,35px);
+  line-height:1.22;
+  letter-spacing:-1.1px;
+  margin-bottom:16px;
+  overflow-wrap:break-word;
+ }
+
+ .intro p{
+  font-size:13px;
+  line-height:1.75;
+  max-width:100%;
+ }
+
+ .benefits{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px 15px;
+  margin-top:20px;
+ }
+
+ .benefit{
+  font-size:11px;
+  gap:7px;
+ }
+
+ .tick{
+  width:22px;
+  height:22px;
+  flex-shrink:0;
+ }
+
+ .footerline{
+  font-size:11px;
+  margin-top:20px;
+  line-height:1.6;
+ }
+
+ /* BORANG */
+
+ .panel{
+  width:100%;
+  min-width:0;
+  padding:23px 16px;
+  border-radius:18px;
+ }
+
+ .progress{
+  margin-bottom:22px;
+ }
+
+ h2{
+  font-size:21px;
+  line-height:1.4;
+  letter-spacing:-.5px;
+ }
+
+ .desc{
+  font-size:13px;
+  line-height:1.75;
+ }
+
+ /* EMPAT SUBJEK UTAMA */
+
+ .subjectrow.fixed{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 92px;
+  gap:8px;
+  width:100%;
+ }
+
+ .subjectrow.fixed input{
+  width:100%;
+  min-width:0;
+  height:48px;
+  font-size:13px;
+  padding:0 10px;
+ }
+
+ .subjectrow.fixed select{
+  width:100%;
+  min-width:0;
+  height:48px;
+  font-size:16px;
+  padding:0 8px;
+ }
+
+ /* SUBJEK TAMBAHAN */
+
+ #additionalSubjects .subjectrow{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 42px;
+  gap:8px;
+  margin-bottom:15px;
+  width:100%;
+ }
+
+ #additionalSubjects .subjectname{
+  grid-column:1 / -1;
+  grid-row:1;
+  width:100%;
+  min-width:0;
+  height:48px;
+  font-size:16px;
+  padding:0 12px;
+ }
+
+ #additionalSubjects .grade{
+  grid-column:1;
+  grid-row:2;
+  width:100%;
+  height:48px;
+  font-size:16px;
+  padding:0 12px;
+ }
+
+ #additionalSubjects .remove{
+  grid-column:2;
+  grid-row:2;
+  width:42px;
+  height:48px;
+  border-radius:10px;
+ }
+
+ .add{
+  min-height:48px;
+  font-size:13px;
+  padding:13px;
+ }
+
+ /* ELAKKAN ZOOM AUTOMATIK iPHONE */
+
+ input,
+ select,
+ textarea{
+  max-width:100%;
+ }
+
+ /* LANGKAH 2 */
+
+ .summary{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+ }
+
+ .stat{
+  padding:17px 8px;
+ }
+
+ .stat strong{
+  font-size:26px;
+ }
+
+ .filter{
+  width:100%;
+  gap:3px;
+ }
+
+ .filter button{
+  font-size:12px;
+  padding:13px 5px;
+  min-width:0;
+ }
+
+ .searchwrap input{
+  width:100%;
+  height:50px;
+  font-size:16px;
+ }
+
+ .programlist{
+  max-height:380px;
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  -webkit-overflow-scrolling:touch;
+ }
+
+ .program{
+  min-height:62px;
+  padding:14px 12px;
+  gap:12px;
+ }
+
+ .programbody strong{
+  font-size:13px;
+  overflow-wrap:anywhere;
+ }
+
+ .programbody small{
+  font-size:11px;
+ }
+
+ .selectionbar{
+  flex-wrap:wrap;
+  line-height:1.5;
+ }
+
+ /* BUTANG NAVIGASI */
+
+ .actions{
+  display:flex;
+  gap:10px;
+  width:100%;
+ }
+
+ .actions .btn{
+  min-height:48px;
+  padding:12px 14px;
+  font-size:12px;
+ }
+
+ .actions .btn-primary{
+  flex:1;
+ }
+
+ .btn-wa{
+  min-height:52px;
+  font-size:14px;
+  text-align:center;
+ }
+
+ /* LANGKAH 3 */
+
+ .reviewcontent{
+  overflow-wrap:anywhere;
+  font-size:12px;
+ }
+
+ .privacy{
+  font-size:11px;
+  line-height:1.8;
+ }
+}
+
+/* TELEFON BERSKRIN KECIL */
+
+@media(max-width:360px){
+
+ .hero{
+  padding-left:9px;
+  padding-right:9px;
+ }
+
+ .panel{
+  padding:20px 12px;
+ }
+
+ .intro h1{
+  font-size:27px;
+ }
+
+ .subjectrow.fixed{
+  grid-template-columns:minmax(0,1fr) 82px;
+  gap:6px;
+ }
+
+ .subjectrow.fixed input{
+  padding:0 7px;
+  font-size:12px;
+ }
+
+ .subjectrow.fixed select{
+  padding:0 5px;
+  font-size:16px;
+ }
+
+ .actions .btn{
+  font-size:11px;
+  padding:10px 12px;
+ }
+}
+
 @media(prefers-reduced-motion:reduce){
  *,*:before,*:after{
   animation:none!important;
@@ -541,10 +859,12 @@ h2{
    <span class="tick">✓</span>
    Semakan Percuma
   </div>
+
   <div class="benefit">
    <span class="tick">✓</span>
    Tiada Sebarang Komitmen
   </div>
+
   <div class="benefit">
    <span class="tick">✓</span>
    Mudah, Cepat &amp; Ringkas
@@ -610,6 +930,7 @@ h2{
     Semak Program →
    </button>
   </div>
+
  </section>
 
  <!-- LANGKAH 2 -->
@@ -719,6 +1040,7 @@ h2{
    <div class="reviewtitle">
     Ringkasan mesej WhatsApp
    </div>
+
    <div
     class="reviewcontent"
     id="messagePreview">
@@ -805,15 +1127,7 @@ const DIPLOMA = [
  "Diploma Pengurusan Kru Kabin Penerbangan"
 ];
 
-/*
-  SENARAI SUBJEK TAMBAHAN SPM
-
-  Dikemas kini berdasarkan senarai yang
-  diberikan pengguna.
-
-  Nama subjek sahaja, tanpa kod.
-  Empat subjek utama dikekalkan berasingan.
-*/
+/* SENARAI SUBJEK TAMBAHAN */
 
 const SUBJECTS = [
  "Pendidikan Islam",
@@ -1130,17 +1444,14 @@ function eligibleForProgram(
  totalCredits
 ) {
 
- // Wajib lulus Bahasa Melayu dan Sejarah.
  if (!hasPassedSPM(grades)) {
   return false;
  }
 
- // Asasi: minimum 5 kepujian.
  if (type === "Asasi") {
   return totalCredits >= 5;
  }
 
- // Diploma: minimum 3 kepujian.
  if (totalCredits < 3) {
   return false;
  }
@@ -1545,7 +1856,6 @@ function goStep(step) {
 }
 
 /* MULAKAN BORANG */
-
 setupSubjects();
 
 </script>
