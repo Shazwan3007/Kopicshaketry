@@ -6,7 +6,6 @@
 <meta name="theme-color" content="#122B45">
 <meta name="description" content="Semak kelayakan SPM untuk program Asasi dan Diploma.">
 <title>Semak Program Pengajian | Borneo Edu</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -452,7 +451,7 @@ h2{
  line-height:1.8;
 }
 
-/* SUSUN ATUR TABLET SEDIA ADA */
+/* TABLET */
 @media(max-width:900px){
  .hero{padding:38px 18px}
  .container{
@@ -471,7 +470,7 @@ h2{
  .footerline{margin-top:20px}
 }
 
-/* SUSUN ATUR TELEFON SEDIA ADA */
+/* MOBILE ASAL */
 @media(max-width:560px){
  .hero{
   padding:25px 13px 35px;
@@ -511,25 +510,18 @@ h2{
  .programlist{max-height:300px}
 }
 
-/* ======================================
-   PENAMBAHBAIKAN MOBILE RESPONSIVE
-   Hanya untuk skrin telefon
-   ====================================== */
-
+/* PENAMBAHBAIKAN RESPONSIF TELEFON */
 @media(max-width:600px){
-
  html,body{
   width:100%;
   max-width:100%;
   overflow-x:hidden;
  }
-
  .hero{
   min-height:100svh;
   padding:24px 12px 36px;
   align-items:flex-start;
  }
-
  .container{
   display:grid;
   grid-template-columns:minmax(0,1fr);
@@ -537,20 +529,15 @@ h2{
   width:100%;
   max-width:100%;
  }
-
- /* BAHAGIAN TAJUK */
-
  .intro{
   width:100%;
   min-width:0;
  }
-
  .eyebrow{
   font-size:10px;
   letter-spacing:1.2px;
   margin-bottom:14px;
  }
-
  .intro h1{
   font-size:clamp(27px,7vw,35px);
   line-height:1.22;
@@ -558,70 +545,53 @@ h2{
   margin-bottom:16px;
   overflow-wrap:break-word;
  }
-
  .intro p{
   font-size:13px;
   line-height:1.75;
   max-width:100%;
  }
-
  .benefits{
   display:flex;
   flex-wrap:wrap;
   gap:12px 15px;
   margin-top:20px;
  }
-
  .benefit{
   font-size:11px;
   gap:7px;
  }
-
  .tick{
   width:22px;
   height:22px;
   flex-shrink:0;
  }
-
  .footerline{
   font-size:11px;
   margin-top:20px;
   line-height:1.6;
  }
-
- /* BORANG */
-
  .panel{
   width:100%;
   min-width:0;
   padding:23px 16px;
   border-radius:18px;
  }
-
- .progress{
-  margin-bottom:22px;
- }
-
+ .progress{margin-bottom:22px}
  h2{
   font-size:21px;
   line-height:1.4;
   letter-spacing:-.5px;
  }
-
  .desc{
   font-size:13px;
   line-height:1.75;
  }
-
- /* EMPAT SUBJEK UTAMA */
-
  .subjectrow.fixed{
   display:grid;
   grid-template-columns:minmax(0,1fr) 92px;
   gap:8px;
   width:100%;
  }
-
  .subjectrow.fixed input{
   width:100%;
   min-width:0;
@@ -629,7 +599,6 @@ h2{
   font-size:13px;
   padding:0 10px;
  }
-
  .subjectrow.fixed select{
   width:100%;
   min-width:0;
@@ -637,9 +606,6 @@ h2{
   font-size:16px;
   padding:0 8px;
  }
-
- /* SUBJEK TAMBAHAN */
-
  #additionalSubjects .subjectrow{
   display:grid;
   grid-template-columns:minmax(0,1fr) 42px;
@@ -647,7 +613,6 @@ h2{
   margin-bottom:15px;
   width:100%;
  }
-
  #additionalSubjects .subjectname{
   grid-column:1 / -1;
   grid-row:1;
@@ -657,7 +622,6 @@ h2{
   font-size:16px;
   padding:0 12px;
  }
-
  #additionalSubjects .grade{
   grid-column:1;
   grid-row:2;
@@ -666,7 +630,6 @@ h2{
   font-size:16px;
   padding:0 12px;
  }
-
  #additionalSubjects .remove{
   grid-column:2;
   grid-row:2;
@@ -674,155 +637,98 @@ h2{
   height:48px;
   border-radius:10px;
  }
-
  .add{
   min-height:48px;
   font-size:13px;
   padding:13px;
  }
-
- /* ELAKKAN ZOOM AUTOMATIK iPHONE */
-
- input,
- select,
- textarea{
-  max-width:100%;
- }
-
- /* LANGKAH 2 */
-
+ input,select,textarea{max-width:100%}
  .summary{
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:10px;
  }
-
- .stat{
-  padding:17px 8px;
- }
-
- .stat strong{
-  font-size:26px;
- }
-
- .filter{
-  width:100%;
-  gap:3px;
- }
-
+ .stat{padding:17px 8px}
+ .stat strong{font-size:26px}
+ .filter{width:100%;gap:3px}
  .filter button{
   font-size:12px;
   padding:13px 5px;
   min-width:0;
  }
-
  .searchwrap input{
   width:100%;
   height:50px;
   font-size:16px;
  }
-
  .programlist{
   max-height:380px;
   overflow-y:auto;
   overscroll-behavior:contain;
   -webkit-overflow-scrolling:touch;
  }
-
  .program{
   min-height:62px;
   padding:14px 12px;
   gap:12px;
  }
-
  .programbody strong{
   font-size:13px;
   overflow-wrap:anywhere;
  }
-
- .programbody small{
-  font-size:11px;
- }
-
+ .programbody small{font-size:11px}
  .selectionbar{
   flex-wrap:wrap;
   line-height:1.5;
  }
-
- /* BUTANG NAVIGASI */
-
  .actions{
   display:flex;
   gap:10px;
   width:100%;
  }
-
  .actions .btn{
   min-height:48px;
   padding:12px 14px;
   font-size:12px;
  }
-
- .actions .btn-primary{
-  flex:1;
- }
-
+ .actions .btn-primary{flex:1}
  .btn-wa{
   min-height:52px;
   font-size:14px;
   text-align:center;
  }
-
- /* LANGKAH 3 */
-
  .reviewcontent{
   overflow-wrap:anywhere;
   font-size:12px;
  }
-
  .privacy{
   font-size:11px;
   line-height:1.8;
  }
 }
-
-/* TELEFON BERSKRIN KECIL */
-
 @media(max-width:360px){
-
  .hero{
   padding-left:9px;
   padding-right:9px;
  }
-
- .panel{
-  padding:20px 12px;
- }
-
- .intro h1{
-  font-size:27px;
- }
-
+ .panel{padding:20px 12px}
+ .intro h1{font-size:27px}
  .subjectrow.fixed{
   grid-template-columns:minmax(0,1fr) 82px;
   gap:6px;
  }
-
  .subjectrow.fixed input{
   padding:0 7px;
   font-size:12px;
  }
-
  .subjectrow.fixed select{
   padding:0 5px;
   font-size:16px;
  }
-
  .actions .btn{
   font-size:11px;
   padding:10px 12px;
  }
 }
-
 @media(prefers-reduced-motion:reduce){
  *,*:before,*:after{
   animation:none!important;
@@ -840,12 +746,10 @@ h2{
 <!-- BAHAGIAN UTAMA -->
 <div class="intro">
  <div class="eyebrow">Semakan Program Pengajian</div>
-
  <h1>
   Ketahui Program Pengajian Yang Sesuai
   Dengan Keputusan SPM Anda
  </h1>
-
  <p>
   Semak keputusan SPM anda dengan mudah dan terokai
   pilihan program Asasi atau Diploma berdasarkan
@@ -853,24 +757,20 @@ h2{
   dan hubungi penasihat pendidikan kami untuk mendapatkan
   maklumat lanjut.
  </p>
-
  <div class="benefits">
   <div class="benefit">
    <span class="tick">✓</span>
    Semakan Percuma
   </div>
-
   <div class="benefit">
    <span class="tick">✓</span>
    Tiada Sebarang Komitmen
   </div>
-
   <div class="benefit">
    <span class="tick">✓</span>
    Mudah, Cepat &amp; Ringkas
   </div>
  </div>
-
  <div class="footerline">
   Semak Kelayakan · Terokai Program · Dapatkan Konsultasi
  </div>
@@ -878,10 +778,7 @@ h2{
 
 <!-- BORANG 3 LANGKAH -->
 <div class="panel">
-
- <div class="progress">
-  <div id="progressFill"></div>
- </div>
+ <div class="progress"><div id="progressFill"></div></div>
 
  <div class="stepmeta">
   <span class="kicker" id="stepLabel">
@@ -892,15 +789,12 @@ h2{
 
  <!-- LANGKAH 1 -->
  <section class="section active" id="step1">
-
   <h2>Masukkan Keputusan SPM Anda</h2>
-
   <p class="desc">
    Pilih gred bagi setiap subjek yang anda ambil.
    Maklumat ini digunakan untuk membuat semakan awal
    program pengajian.
   </p>
-
   <div class="fieldtitle">Subjek utama</div>
   <div id="mandatorySubjects"></div>
 
@@ -923,23 +817,18 @@ h2{
 
   <div class="actions">
    <span></span>
-   <button
-    class="btn btn-primary"
-    type="button"
-    onclick="calculate()">
+   <button class="btn btn-primary"
+    type="button" onclick="calculate()">
     Semak Program →
    </button>
   </div>
-
  </section>
 
  <!-- LANGKAH 2 -->
  <section class="section" id="step2">
-
   <h2 id="resultTitle">
    Tahniah! Ini pilihan program anda.
   </h2>
-
   <p class="desc" id="resultDescription">
    Berdasarkan keputusan yang dimasukkan,
    berikut ialah pilihan program untuk semakan lanjut.
@@ -950,7 +839,6 @@ h2{
     <strong id="creditTotal">0</strong>
     <span>Kepujian SPM</span>
    </div>
-
    <div class="stat">
     <strong id="programTotal">0</strong>
     <span>Program untuk disemak</span>
@@ -960,23 +848,16 @@ h2{
   <div id="eligibilityBanner" class="resultbanner"></div>
 
   <div id="programArea">
-
    <div class="filter">
-    <button
-     class="on"
-     data-filter="Semua"
+    <button class="on" data-filter="Semua"
      onclick="filterPrograms('Semua')">
      Semua
     </button>
-
-    <button
-     data-filter="Asasi"
+    <button data-filter="Asasi"
      onclick="filterPrograms('Asasi')">
      Asasi
     </button>
-
-    <button
-     data-filter="Diploma"
+    <button data-filter="Diploma"
      onclick="filterPrograms('Diploma')">
      Diploma
     </button>
@@ -984,95 +865,71 @@ h2{
 
    <div class="searchwrap">
     <span class="searchicon">⌕</span>
-    <input
-     class="textinput"
-     id="search"
+    <input class="textinput" id="search"
      type="search"
      placeholder="Cari program yang diminati..."
      oninput="renderPrograms()">
    </div>
 
    <div class="programlist" id="programList"></div>
-
    <div class="selectionbar">
     <span id="selectedCount">
      0 daripada 3 program dipilih
     </span>
     <span id="visibleCount"></span>
    </div>
-
   </div>
 
   <div class="actions">
-   <button
-    class="btn btn-back"
+   <button class="btn btn-back"
     onclick="goStep(1)">
     ← Kembali
    </button>
-
-   <button
-    class="btn btn-primary"
+   <button class="btn btn-primary"
     onclick="prepareWhatsApp()">
     Seterusnya →
    </button>
   </div>
-
  </section>
 
  <!-- LANGKAH 3 -->
  <section class="section" id="step3">
-
   <h2>Hubungi Penasihat Pengajian</h2>
-
   <p class="desc">
    Semakan awal anda telah selesai.
    Teruskan ke WhatsApp untuk mendapatkan
    penerangan tentang program, syarat khusus
    dan proses permohonan.
   </p>
-
   <div class="resultbanner">
    ✓ Maklumat keputusan SPM dan program pilihan
    anda telah disediakan dalam mesej WhatsApp.
   </div>
-
   <div class="review">
    <div class="reviewtitle">
     Ringkasan mesej WhatsApp
    </div>
-
-   <div
-    class="reviewcontent"
-    id="messagePreview">
-   </div>
+   <div class="reviewcontent" id="messagePreview"></div>
   </div>
-
   <div class="privacy">
    Mesej hanya dihantar selepas anda memilih
    untuk membukanya di WhatsApp dan menekan hantar.
    Laman ini tidak mempunyai pangkalan data
    untuk menyimpan keputusan SPM.
   </div>
-
   <div class="actions">
-   <button
-    class="btn btn-back"
+   <button class="btn btn-back"
     onclick="goStep(2)">
     ← Kembali
    </button>
   </div>
-
   <div style="margin-top:18px">
-   <a
-    id="waLink"
-    class="btn btn-wa"
-    href="#"
-    target="_blank"
+   <a id="waLink" class="btn btn-wa"
+    href="#" target="_blank"
     rel="noopener noreferrer">
     Teruskan ke WhatsApp
    </a>
   </div>
-
  </section>
 </div>
 
@@ -1083,7 +940,6 @@ h2{
 "use strict";
 
 /* KONFIGURASI UTAMA */
-
 const PHONE = "601121561243";
 
 const GRADES = [
@@ -1101,7 +957,6 @@ const PASS_GRADES = [
 ];
 
 /* SENARAI PROGRAM */
-
 const ASASI = [
  "Asasi Perniagaan",
  "Asasi Pengajian Komputer"
@@ -1128,7 +983,6 @@ const DIPLOMA = [
 ];
 
 /* SENARAI SUBJEK TAMBAHAN */
-
 const SUBJECTS = [
  "Pendidikan Islam",
  "Pendidikan Moral",
@@ -1210,20 +1064,12 @@ const SUBJECTS = [
 ];
 
 /* KUMPULAN SUBJEK SYARAT KHUSUS */
-
 const SCIENCE_SUBJECTS = [
- "Sains",
- "Sains Tambahan",
- "Fizik",
- "Kimia",
- "Biologi"
+ "Sains","Sains Tambahan","Fizik","Kimia","Biologi"
 ];
 
 const OSH_SCIENCE_SUBJECTS = [
- "Biologi",
- "Kimia",
- "Fizik",
- "Sains"
+ "Biologi","Kimia","Fizik","Sains"
 ];
 
 const TECHNICAL_SUBJECTS = [
@@ -1245,7 +1091,6 @@ const state = {
 };
 
 /* BORANG SUBJEK SPM */
-
 function gradeOptions() {
  return '<option value="">Pilih gred</option>' +
  GRADES.map(g =>
@@ -1254,7 +1099,6 @@ function gradeOptions() {
 }
 
 function setupSubjects() {
-
  const main = [
   "Bahasa Melayu",
   "Bahasa Inggeris",
@@ -1266,14 +1110,9 @@ function setupSubjects() {
   "mandatorySubjects"
  ).innerHTML = main.map(name => `
   <div class="subjectrow fixed">
-   <input
-    value="${name}"
-    disabled
+   <input value="${name}" disabled
     aria-label="Subjek ${name}">
-
-   <select
-    class="grade"
-    data-subject="${name}"
+   <select class="grade" data-subject="${name}"
     aria-label="Gred ${name}">
     ${gradeOptions()}
    </select>
@@ -1285,11 +1124,9 @@ function setupSubjects() {
 }
 
 function addSubject(defaultSubject = "") {
-
  const wrap = document.getElementById(
   "additionalSubjects"
  );
-
  const div = document.createElement("div");
  div.className = "subjectrow";
 
@@ -1300,25 +1137,17 @@ function addSubject(defaultSubject = "") {
  ).join("");
 
  div.innerHTML = `
-  <select
-   class="subjectname"
+  <select class="subjectname"
    aria-label="Nama subjek">
    <option value="">Pilih subjek</option>
    ${choices}
   </select>
-
-  <select
-   class="grade"
+  <select class="grade"
    aria-label="Gred subjek tambahan">
    ${gradeOptions()}
   </select>
-
-  <button
-   class="remove"
-   type="button"
-   aria-label="Buang subjek">
-   ×
-  </button>
+  <button class="remove" type="button"
+   aria-label="Buang subjek">×</button>
  `;
 
  div.querySelector(".remove").onclick =
@@ -1328,17 +1157,14 @@ function addSubject(defaultSubject = "") {
 }
 
 function collectGrades() {
-
  const rows = [];
  const missing = [];
 
  document.querySelectorAll(
   "#mandatorySubjects .subjectrow"
  ).forEach(row => {
-
   const name = row.querySelector("input").value;
   const grade = row.querySelector(".grade").value;
-
   if (!grade) {
    missing.push(name);
   } else {
@@ -1349,10 +1175,8 @@ function collectGrades() {
  document.querySelectorAll(
   "#additionalSubjects .subjectrow"
  ).forEach(row => {
-
   const name =
    row.querySelector(".subjectname").value;
-
   const grade =
    row.querySelector(".grade").value;
 
@@ -1374,7 +1198,6 @@ function collectGrades() {
  }
 
  const names = rows.map(r => r.name);
-
  if (new Set(names).size !== names.length) {
   alert(
    "Terdapat subjek yang berulang. " +
@@ -1387,14 +1210,11 @@ function collectGrades() {
 }
 
 /* SEMAKAN KELAYAKAN */
-
 function getGrade(grades, subjectName) {
-
  const item = grades.find(
   g => g.name.toLowerCase() ===
   subjectName.toLowerCase()
  );
-
  return item ? item.grade : "";
 }
 
@@ -1436,28 +1256,18 @@ function hasPassedSPM(grades) {
 }
 
 /* SYARAT SETIAP PROGRAM */
-
 function eligibleForProgram(
- name,
- type,
- grades,
- totalCredits
+ name,type,grades,totalCredits
 ) {
-
- if (!hasPassedSPM(grades)) {
-  return false;
- }
+ if (!hasPassedSPM(grades)) return false;
 
  if (type === "Asasi") {
   return totalCredits >= 5;
  }
 
- if (totalCredits < 3) {
-  return false;
- }
+ if (totalCredits < 3) return false;
 
  switch (name) {
-
   case "Diploma Geomatik":
    return (
     isCredit(grades,"Matematik") &&
@@ -1482,8 +1292,7 @@ function eligibleForProgram(
     isPass(grades,"Bahasa Inggeris") &&
     isCredit(grades,"Matematik") &&
     countCreditsFrom(
-     grades,
-     OSH_SCIENCE_SUBJECTS
+     grades,OSH_SCIENCE_SUBJECTS
     ) >= 2
    );
 
@@ -1499,9 +1308,7 @@ function eligibleForProgram(
 }
 
 /* PROSES SEMAKAN */
-
 function calculate() {
-
  const grades = collectGrades();
  if (!grades) return;
 
@@ -1513,14 +1320,8 @@ function calculate() {
  const spmPassed = hasPassedSPM(grades);
 
  const allPrograms = [
-  ...ASASI.map(name => ({
-   name,
-   type:"Asasi"
-  })),
-  ...DIPLOMA.map(name => ({
-   name,
-   type:"Diploma"
-  }))
+  ...ASASI.map(name => ({name,type:"Asasi"})),
+  ...DIPLOMA.map(name => ({name,type:"Diploma"}))
  ];
 
  state.eligible = allPrograms.filter(
@@ -1546,8 +1347,7 @@ function calculate() {
   "[data-filter]"
  ).forEach(btn => {
   btn.classList.toggle(
-   "on",
-   btn.dataset.filter === "Semua"
+   "on",btn.dataset.filter === "Semua"
   );
  });
 
@@ -1556,13 +1356,10 @@ function calculate() {
  let message = "";
 
  if (!spmPassed) {
-
   title = "Semakan Kelayakan SPM Anda";
-
   description =
    "Syarat asas kemasukan memerlukan " +
    "lulus Bahasa Melayu dan Sejarah.";
-
   message =
    "Keputusan anda belum memenuhi syarat " +
    "asas lulus SPM kerana Bahasa Melayu " +
@@ -1570,29 +1367,23 @@ function calculate() {
    "boleh mendapatkan konsultasi.";
 
  } else if (state.eligible.length > 0) {
-
   title = "Tahniah! Ini pilihan program anda.";
-
   description =
    "Berdasarkan keputusan SPM anda, berikut " +
    "ialah program yang memenuhi syarat " +
    "akademik yang telah ditetapkan untuk " +
    "semakan awal.";
-
   message =
    "Anda telah lulus Bahasa Melayu dan " +
    "Sejarah serta memenuhi syarat akademik " +
    "awal bagi program yang dipaparkan.";
 
  } else {
-
   title = "Mari bincang pilihan pengajian anda.";
-
   description =
    "Keputusan anda belum memenuhi syarat " +
    "program yang disenaraikan. Anda masih " +
    "boleh mendapatkan konsultasi lanjut.";
-
   message =
    "Tiada program Asasi atau Diploma dalam " +
    "senarai ini yang memenuhi syarat " +
@@ -1610,9 +1401,7 @@ function calculate() {
  const banner = document.getElementById(
   "eligibilityBanner"
  );
-
  banner.textContent = message;
-
  banner.classList.toggle(
   "warning",
   !spmPassed || state.eligible.length === 0
@@ -1630,25 +1419,19 @@ function calculate() {
 }
 
 /* CARIAN DAN PENAPIS */
-
 function filterPrograms(type) {
-
  state.filter = type;
-
  document.querySelectorAll(
   "[data-filter]"
  ).forEach(btn => {
   btn.classList.toggle(
-   "on",
-   btn.dataset.filter === type
+   "on",btn.dataset.filter === type
   );
  });
-
  renderPrograms();
 }
 
 function renderPrograms() {
-
  const q = document.getElementById(
   "search"
  ).value.toLowerCase().trim();
@@ -1685,9 +1468,7 @@ function renderPrograms() {
  }
 
  list.innerHTML = filtered.map((p,i) => {
-
   const selected = state.selected.includes(p.name);
-
   return `
    <div
     class="program ${selected ? "selected" : ""}"
@@ -1697,12 +1478,9 @@ function renderPrograms() {
     data-index="${i}">
 
     <span class="circle">
-     <svg
-      width="13"
-      height="13"
+     <svg width="13" height="13"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
+      fill="none" stroke="currentColor"
       stroke-width="3">
       <path d="M5 12l4 4L19 6"/>
      </svg>
@@ -1714,28 +1492,20 @@ function renderPrograms() {
       ${p.type} · Tertakluk kepada syarat khusus
      </small>
     </span>
-
    </div>
   `;
  }).join("");
 
  list.querySelectorAll(".program").forEach(el => {
-
   const program = filtered[
    Number(el.dataset.index)
   ];
-
   const action = () => toggleProgram(
    program.name
   );
-
   el.addEventListener("click",action);
-
   el.addEventListener("keydown",e => {
-   if (
-    e.key === "Enter" ||
-    e.key === " "
-   ) {
+   if (e.key === "Enter" || e.key === " ") {
     e.preventDefault();
     action();
    }
@@ -1744,39 +1514,27 @@ function renderPrograms() {
 }
 
 function toggleProgram(name) {
-
  if (state.selected.includes(name)) {
-
   state.selected = state.selected.filter(
    x => x !== name
   );
-
  } else {
-
   if (state.selected.length >= 3) {
-   alert(
-    "Maksimum 3 program sahaja boleh dipilih."
-   );
+   alert("Maksimum 3 program sahaja boleh dipilih.");
    return;
   }
-
   state.selected.push(name);
  }
-
  renderPrograms();
 }
 
 /* INTEGRASI WHATSAPP */
-
 function prepareWhatsApp() {
-
  if (
   state.eligible.length > 0 &&
   state.selected.length === 0
  ) {
-  alert(
-   "Sila pilih sekurang-kurangnya satu program."
-  );
+  alert("Sila pilih sekurang-kurangnya satu program.");
   return;
  }
 
@@ -1818,15 +1576,13 @@ Terima kasih.`;
 }
 
 /* NAVIGASI TIGA LANGKAH */
-
+/* AUTO-SCROLL TELAH DIBUANG */
 function goStep(step) {
-
  document.querySelectorAll(
   ".section"
  ).forEach((el,i) => {
   el.classList.toggle(
-   "active",
-   i === step-1
+   "active",i === step-1
   );
  });
 
@@ -1844,20 +1600,10 @@ function goStep(step) {
   "progressFill"
  ).style.width =
   (step/3*100) + "%";
-
- if (window.innerWidth < 901) {
-  document.querySelector(
-   ".panel"
-  ).scrollIntoView({
-   behavior:"smooth",
-   block:"start"
-  });
- }
 }
 
 /* MULAKAN BORANG */
 setupSubjects();
-
 </script>
 </body>
 </html>
