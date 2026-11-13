@@ -11,8 +11,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Pahlawan Solat">
     
-    <!-- Dynamic Manifest Injection for PWA -->
+    <!-- Dynamic Manifest Injection for PWA with Cartoon SVG Icon -->
     <script>
+        const cartoonIconSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512"><rect width="512" height="512" rx="110" fill="#38BDF8"/><path d="M256 90c-55 45-110 95-110 160v170h220V250c0-65-55-115-110-160z" fill="#FDE68A" stroke="#D97706" stroke-width="16"/><circle cx="256" cy="180" r="35" fill="#F59E0B"/><path d="M220 420h72v-80a36 36 0 00-72 0v80z" fill="#0284C7"/></svg>`;
+        const iconBase64 = "data:image/svg+xml;base64," + btoa(cartoonIconSvg);
+
         const pwaManifest = {
             "name": "Pahlawan Solat Cilik",
             "short_name": "PahlawanSolat",
@@ -22,14 +25,9 @@
             "theme_color": "#38BDF8",
             "icons": [
                 {
-                    "src": "https://placehold.co/192x192/0284c7/ffffff?text=PS",
-                    "sizes": "192x192",
-                    "type": "image/png"
-                },
-                {
-                    "src": "https://placehold.co/512x512/0284c7/ffffff?text=PS",
-                    "sizes": "512x512",
-                    "type": "image/png"
+                    "src": iconBase64,
+                    "sizes": "192x192 512x512",
+                    "type": "image/svg+xml"
                 }
             ]
         };
