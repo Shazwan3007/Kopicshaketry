@@ -1,1609 +1,1008 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#122B45">
-<meta name="description" content="Semak kelayakan SPM untuk program Asasi dan Diploma.">
-<title>Semak Program Pengajian | Borneo Edu</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengembaraan Solat: Pahlawan Solat Cilik</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Fredoka & Nunito (Gaya Kartun & Mesra Kanak-kanak) -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                        cartoon: ['Fredoka', 'cursive'],
+                    },
+                    colors: {
+                        skybg: '#E0F2FE',
+                        grass: '#86EFAC',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Latar belakang langit & awan kartun ceria */
+        body {
+            background: linear-gradient(180deg, #38BDF8 0%, #BAE6FD 55%, #F0FDF4 100%);
+            background-attachment: fixed;
+        }
 
-<style>
-:root{
- --navy:#122B45;
- --navy2:#1B4268;
- --blue:#176384;
- --green:#087E63;
- --light:#F5F8FB;
- --white:#fff;
- --text:#172A3E;
- --muted:#617487;
- --border:#DCE5EC;
- --shadow:0 20px 65px rgba(4,24,47,.17);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
- margin:0;
- font-family:Inter,Arial,sans-serif;
- color:var(--text);
- background:var(--navy);
- -webkit-font-smoothing:antialiased;
-}
-button,input,select{font:inherit}
-button{cursor:pointer}
-button:disabled{opacity:.45;cursor:not-allowed}
-button:focus-visible,
-input:focus-visible,
-select:focus-visible,
-a:focus-visible{
- outline:3px solid #4FB8D7;
- outline-offset:2px;
-}
-.hero{
- min-height:100svh;
- display:flex;
- align-items:center;
- background:
- radial-gradient(ellipse at 10% 0%,#28618A 0%,transparent 43%),
- linear-gradient(130deg,#183F65,#122B45 70%);
- padding:55px 22px;
- position:relative;
- overflow:hidden;
-}
-.hero:before{
- content:"";
- position:absolute;
- width:520px;height:520px;
- border:1px solid #ffffff12;
- border-radius:50%;
- right:-260px;bottom:-300px;
- pointer-events:none;
-}
-.container{
- max-width:1200px;
- width:100%;
- margin:auto;
- display:grid;
- grid-template-columns:.83fr 1.17fr;
- align-items:center;
- gap:65px;
- position:relative;
- z-index:1;
-}
-.intro{color:white}
-.eyebrow{
- display:inline-flex;
- align-items:center;
- gap:9px;
- color:#A8DAEC;
- font-size:12px;
- font-weight:800;
- letter-spacing:2px;
- text-transform:uppercase;
- margin-bottom:24px;
-}
-.eyebrow:before{
- content:"";
- width:8px;height:8px;
- background:#4FD6AA;
- border-radius:50%;
-}
-h1,h2,h3,p{margin-top:0}
-h1,h2,h3{font-family:Manrope,Inter,sans-serif}
-h1{
- font-size:clamp(34px,4vw,55px);
- line-height:1.13;
- font-weight:800;
- letter-spacing:-2px;
- margin-bottom:24px;
-}
-.intro p{
- font-size:16px;
- line-height:1.85;
- color:#DAE7F1;
- max-width:480px;
-}
-.benefits{
- display:grid;
- gap:15px;
- margin-top:38px;
-}
-.benefit{
- display:flex;
- gap:12px;
- align-items:center;
- font-size:14px;
- color:#EAF5F9;
-}
-.tick{
- width:24px;height:24px;
- border-radius:50%;
- background:#ffffff17;
- display:grid;
- place-items:center;
- color:#6FE2B8;
- font-weight:800;
-}
-.footerline{
- margin-top:35px;
- font-size:12px;
- color:#B1C5D4;
- line-height:1.7;
-}
-.panel{
- background:white;
- border-radius:24px;
- padding:36px;
- box-shadow:var(--shadow);
- min-width:0;
-}
-.progress{
- height:5px;
- background:#EDF1F5;
- border-radius:12px;
- overflow:hidden;
- margin-bottom:30px;
-}
-.progress div{
- height:100%;
- background:linear-gradient(90deg,#176384,#087E63);
- width:33.33%;
- transition:width .35s ease;
- border-radius:12px;
-}
-.stepmeta{
- display:flex;
- align-items:center;
- justify-content:space-between;
- gap:12px;
- margin-bottom:14px;
-}
-.kicker{
- color:var(--blue);
- font-size:11px;
- letter-spacing:1.2px;
- text-transform:uppercase;
- font-weight:800;
-}
-.percent{
- font-size:12px;
- color:var(--muted);
- font-weight:700;
-}
-h2{
- font-size:clamp(22px,2.4vw,27px);
- letter-spacing:-.8px;
- line-height:1.35;
- font-weight:800;
- margin-bottom:10px;
-}
-.desc{
- font-size:13px;
- line-height:1.75;
- color:var(--muted);
- margin-bottom:22px;
-}
-.section{display:none;animation:fade .3s ease}
-.section.active{display:block}
-@keyframes fade{
- from{opacity:0;transform:translateY(8px)}
- to{opacity:1;transform:translateY(0)}
-}
-.fieldtitle{
- font-size:12px;
- font-weight:800;
- color:var(--navy);
- margin:20px 0 12px;
-}
-.subjectrow{
- display:grid;
- grid-template-columns:1fr 135px 34px;
- align-items:center;
- gap:9px;
- margin-bottom:10px;
-}
-.subjectrow.fixed{
- grid-template-columns:1fr 135px;
-}
-.subjectrow select,
-.subjectrow input,
-.textinput{
- width:100%;
- min-width:0;
- height:45px;
- border:1px solid var(--border);
- background:#fff;
- border-radius:10px;
- padding:0 12px;
- color:var(--text);
- font-size:13px;
-}
-.subjectrow select:focus,
-.subjectrow input:focus,
-.textinput:focus{
- border-color:var(--blue);
-}
-.remove{
- height:34px;width:34px;
- border:0;
- border-radius:9px;
- background:#FCEBEC;
- color:#B33C47;
- font-size:20px;
-}
-.add{
- border:1px dashed #91B7CB;
- background:#F3F8FB;
- color:var(--blue);
- padding:13px 15px;
- border-radius:11px;
- width:100%;
- font-size:12px;
- font-weight:800;
- margin-top:4px;
-}
-.note{
- background:#F0F7FA;
- color:#476477;
- border:1px solid #D9EBF2;
- border-radius:12px;
- padding:13px 15px;
- font-size:12px;
- line-height:1.7;
- margin-top:19px;
-}
-.actions{
- display:flex;
- align-items:center;
- justify-content:space-between;
- gap:12px;
- margin-top:27px;
-}
-.btn{
- display:inline-flex;
- justify-content:center;
- align-items:center;
- gap:9px;
- padding:14px 22px;
- border-radius:11px;
- border:0;
- font-weight:800;
- font-size:13px;
- transition:.2s ease;
-}
-.btn-primary{background:var(--navy);color:white}
-.btn-primary:hover:not(:disabled){
- background:var(--blue);
- transform:translateY(-1px);
-}
-.btn-back{background:#F1F5F8;color:var(--navy)}
-.btn-wa{
- color:white;
- background:#0B986C;
- width:100%;
- text-decoration:none;
- font-size:14px;
- padding:17px;
-}
-.btn-wa:hover{background:#087957}
-.summary{
- display:grid;
- grid-template-columns:1fr 1fr;
- gap:12px;
- margin:20px 0;
-}
-.stat{
- border-radius:14px;
- background:var(--light);
- border:1px solid #EDF1F5;
- padding:20px 8px;
- text-align:center;
-}
-.stat strong{
- display:block;
- font-family:Manrope;
- font-size:28px;
- color:var(--navy);
- margin-bottom:5px;
-}
-.stat span{color:var(--muted);font-size:11px}
-.filter{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- background:#F0F3F6;
- border-radius:12px;
- padding:4px;
- margin:18px 0 14px;
- gap:4px;
-}
-.filter button{
- border:0;
- background:transparent;
- border-radius:9px;
- font-weight:700;
- font-size:12px;
- padding:12px 5px;
- color:#6C7C89;
-}
-.filter button.on{
- background:white;
- color:var(--navy);
- box-shadow:0 2px 8px #122b4510;
-}
-.searchwrap{position:relative}
-.searchwrap input{padding-left:39px;height:47px}
-.searchicon{
- position:absolute;
- left:14px;top:13px;
- color:#8093A3;
-}
-.programlist{
- display:grid;
- gap:9px;
- max-height:340px;
- overflow-y:auto;
- padding:3px 4px 3px 0;
- margin-top:15px;
- scrollbar-width:thin;
- scrollbar-color:#BCD2DF transparent;
-}
-.program{
- display:flex;
- align-items:center;
- gap:13px;
- border:1px solid var(--border);
- border-radius:12px;
- padding:14px;
- cursor:pointer;
- transition:.2s;
- background:white;
-}
-.program:hover{
- border-color:#8FBBCD;
- background:#FBFDFE;
-}
-.program.selected{
- border-color:var(--blue);
- background:#F0F8FB;
- box-shadow:inset 0 0 0 1px #17638420;
-}
-.circle{
- flex-shrink:0;
- width:20px;height:20px;
- border:2px solid #B7C7D2;
- border-radius:50%;
- display:grid;
- place-items:center;
-}
-.selected .circle{
- background:var(--green);
- border-color:var(--green);
- color:#fff;
-}
-.circle svg{display:none}
-.selected .circle svg{display:block}
-.programbody{min-width:0}
-.programbody strong{
- display:block;
- font-size:12px;
- line-height:1.5;
- color:var(--navy);
-}
-.programbody small{
- display:block;
- font-size:10px;
- color:var(--muted);
- margin-top:3px;
- line-height:1.5;
-}
-.selectionbar{
- margin-top:15px;
- color:var(--muted);
- font-size:12px;
- display:flex;
- justify-content:space-between;
- gap:10px;
-}
-.resultbanner{
- padding:15px;
- border-radius:12px;
- background:#EAF7F2;
- border:1px solid #CBEBDD;
- color:#17684F;
- font-size:12px;
- line-height:1.7;
- margin:15px 0;
-}
-.resultbanner.warning{
- background:#FFF7E9;
- color:#80551B;
- border-color:#F1DFC0;
-}
-.hidden{display:none!important}
-.review{
- border:1px solid var(--border);
- border-radius:13px;
- overflow:hidden;
- margin-top:18px;
-}
-.reviewtitle{
- padding:13px 16px;
- background:#F4F7FA;
- font-weight:800;
- font-size:12px;
- color:var(--navy);
-}
-.reviewcontent{
- padding:16px;
- font-size:12px;
- line-height:1.9;
- white-space:pre-wrap;
- max-height:250px;
- overflow:auto;
-}
-.privacy{
- margin-top:16px;
- color:var(--muted);
- font-size:11px;
- line-height:1.8;
-}
+        /* Butang gaya 3D Kartun (Tactile Pop Buttons) */
+        .btn-cartoon {
+            transition: all 0.12s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 5px 0 rgba(0, 0, 0, 0.18);
+        }
+        .btn-cartoon:active:not(:disabled) {
+            transform: translateY(4px);
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.18);
+        }
 
-/* TABLET */
-@media(max-width:900px){
- .hero{padding:38px 18px}
- .container{
-  grid-template-columns:1fr;
-  gap:28px;
-  max-width:670px;
- }
- .intro h1{max-width:560px}
- .intro p{max-width:570px}
- .benefits{
-  display:flex;
-  flex-wrap:wrap;
-  gap:15px 24px;
-  margin-top:20px;
- }
- .footerline{margin-top:20px}
-}
+        /* Kad gaya buku cerita kartun */
+        .card-cartoon {
+            border-width: 3px;
+            box-shadow: 0 6px 0 rgba(15, 23, 42, 0.08);
+        }
 
-/* MOBILE ASAL */
-@media(max-width:560px){
- .hero{
-  padding:25px 13px 35px;
-  align-items:flex-start;
- }
- .container{gap:23px}
- .eyebrow{
-  margin-bottom:13px;
-  font-size:10px;
- }
- h1{
-  font-size:32px;
-  letter-spacing:-1.3px;
-  margin-bottom:12px;
- }
- .intro p{font-size:13px;line-height:1.7}
- .benefit{font-size:11px}
- .benefits{gap:9px 15px}
- .tick{width:20px;height:20px}
- .footerline{font-size:10px}
- .panel{padding:23px 17px;border-radius:18px}
- .progress{margin-bottom:23px}
- .subjectrow{
-  grid-template-columns:1fr 99px 30px;
-  gap:6px;
- }
- .subjectrow.fixed{
-  grid-template-columns:1fr 99px;
- }
- .subjectrow input,
- .subjectrow select{
-  padding:0 8px;
-  font-size:12px;
- }
- .btn{padding:13px 15px;font-size:12px}
- .stat{padding:16px 6px}
- .programlist{max-height:300px}
-}
+        /* Animasi terapung untuk watak & awan */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-7px); }
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
 
-/* PENAMBAHBAIKAN RESPONSIF TELEFON */
-@media(max-width:600px){
- html,body{
-  width:100%;
-  max-width:100%;
-  overflow-x:hidden;
- }
- .hero{
-  min-height:100svh;
-  padding:24px 12px 36px;
-  align-items:flex-start;
- }
- .container{
-  display:grid;
-  grid-template-columns:minmax(0,1fr);
-  gap:24px;
-  width:100%;
-  max-width:100%;
- }
- .intro{
-  width:100%;
-  min-width:0;
- }
- .eyebrow{
-  font-size:10px;
-  letter-spacing:1.2px;
-  margin-bottom:14px;
- }
- .intro h1{
-  font-size:clamp(27px,7vw,35px);
-  line-height:1.22;
-  letter-spacing:-1.1px;
-  margin-bottom:16px;
-  overflow-wrap:break-word;
- }
- .intro p{
-  font-size:13px;
-  line-height:1.75;
-  max-width:100%;
- }
- .benefits{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px 15px;
-  margin-top:20px;
- }
- .benefit{
-  font-size:11px;
-  gap:7px;
- }
- .tick{
-  width:22px;
-  height:22px;
-  flex-shrink:0;
- }
- .footerline{
-  font-size:11px;
-  margin-top:20px;
-  line-height:1.6;
- }
- .panel{
-  width:100%;
-  min-width:0;
-  padding:23px 16px;
-  border-radius:18px;
- }
- .progress{margin-bottom:22px}
- h2{
-  font-size:21px;
-  line-height:1.4;
-  letter-spacing:-.5px;
- }
- .desc{
-  font-size:13px;
-  line-height:1.75;
- }
- .subjectrow.fixed{
-  display:grid;
-  grid-template-columns:minmax(0,1fr) 92px;
-  gap:8px;
-  width:100%;
- }
- .subjectrow.fixed input{
-  width:100%;
-  min-width:0;
-  height:48px;
-  font-size:13px;
-  padding:0 10px;
- }
- .subjectrow.fixed select{
-  width:100%;
-  min-width:0;
-  height:48px;
-  font-size:16px;
-  padding:0 8px;
- }
- #additionalSubjects .subjectrow{
-  display:grid;
-  grid-template-columns:minmax(0,1fr) 42px;
-  gap:8px;
-  margin-bottom:15px;
-  width:100%;
- }
- #additionalSubjects .subjectname{
-  grid-column:1 / -1;
-  grid-row:1;
-  width:100%;
-  min-width:0;
-  height:48px;
-  font-size:16px;
-  padding:0 12px;
- }
- #additionalSubjects .grade{
-  grid-column:1;
-  grid-row:2;
-  width:100%;
-  height:48px;
-  font-size:16px;
-  padding:0 12px;
- }
- #additionalSubjects .remove{
-  grid-column:2;
-  grid-row:2;
-  width:42px;
-  height:48px;
-  border-radius:10px;
- }
- .add{
-  min-height:48px;
-  font-size:13px;
-  padding:13px;
- }
- input,select,textarea{max-width:100%}
- .summary{
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:10px;
- }
- .stat{padding:17px 8px}
- .stat strong{font-size:26px}
- .filter{width:100%;gap:3px}
- .filter button{
-  font-size:12px;
-  padding:13px 5px;
-  min-width:0;
- }
- .searchwrap input{
-  width:100%;
-  height:50px;
-  font-size:16px;
- }
- .programlist{
-  max-height:380px;
-  overflow-y:auto;
-  overscroll-behavior:contain;
-  -webkit-overflow-scrolling:touch;
- }
- .program{
-  min-height:62px;
-  padding:14px 12px;
-  gap:12px;
- }
- .programbody strong{
-  font-size:13px;
-  overflow-wrap:anywhere;
- }
- .programbody small{font-size:11px}
- .selectionbar{
-  flex-wrap:wrap;
-  line-height:1.5;
- }
- .actions{
-  display:flex;
-  gap:10px;
-  width:100%;
- }
- .actions .btn{
-  min-height:48px;
-  padding:12px 14px;
-  font-size:12px;
- }
- .actions .btn-primary{flex:1}
- .btn-wa{
-  min-height:52px;
-  font-size:14px;
-  text-align:center;
- }
- .reviewcontent{
-  overflow-wrap:anywhere;
-  font-size:12px;
- }
- .privacy{
-  font-size:11px;
-  line-height:1.8;
- }
-}
-@media(max-width:360px){
- .hero{
-  padding-left:9px;
-  padding-right:9px;
- }
- .panel{padding:20px 12px}
- .intro h1{font-size:27px}
- .subjectrow.fixed{
-  grid-template-columns:minmax(0,1fr) 82px;
-  gap:6px;
- }
- .subjectrow.fixed input{
-  padding:0 7px;
-  font-size:12px;
- }
- .subjectrow.fixed select{
-  padding:0 5px;
-  font-size:16px;
- }
- .actions .btn{
-  font-size:11px;
-  padding:10px 12px;
- }
-}
-@media(prefers-reduced-motion:reduce){
- *,*:before,*:after{
-  animation:none!important;
-  scroll-behavior:auto!important;
-  transition:none!important;
- }
-}
-</style>
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
+        }
+        .animate-wiggle {
+            animation: wiggle 2.5s ease-in-out infinite;
+        }
+
+        @keyframes pop-in {
+            0% { transform: scale(0.7); opacity: 0; }
+            70% { transform: scale(1.05); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .animate-pop {
+            animation: pop-in 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+    </style>
 </head>
-
-<body>
-<main class="hero">
-<div class="container">
-
-<!-- BAHAGIAN UTAMA -->
-<div class="intro">
- <div class="eyebrow">Semakan Program Pengajian</div>
- <h1>
-  Ketahui Program Pengajian Yang Sesuai
-  Dengan Keputusan SPM Anda
- </h1>
- <p>
-  Semak keputusan SPM anda dengan mudah dan terokai
-  pilihan program Asasi atau Diploma berdasarkan
-  kelayakan akademik anda. Pilih program yang diminati
-  dan hubungi penasihat pendidikan kami untuk mendapatkan
-  maklumat lanjut.
- </p>
- <div class="benefits">
-  <div class="benefit">
-   <span class="tick">✓</span>
-   Semakan Percuma
-  </div>
-  <div class="benefit">
-   <span class="tick">✓</span>
-   Tiada Sebarang Komitmen
-  </div>
-  <div class="benefit">
-   <span class="tick">✓</span>
-   Mudah, Cepat &amp; Ringkas
-  </div>
- </div>
- <div class="footerline">
-  Semak Kelayakan · Terokai Program · Dapatkan Konsultasi
- </div>
-</div>
-
-<!-- BORANG 3 LANGKAH -->
-<div class="panel">
- <div class="progress"><div id="progressFill"></div></div>
-
- <div class="stepmeta">
-  <span class="kicker" id="stepLabel">
-   Langkah 1 daripada 3
-  </span>
-  <span class="percent" id="percent">33%</span>
- </div>
-
- <!-- LANGKAH 1 -->
- <section class="section active" id="step1">
-  <h2>Masukkan Keputusan SPM Anda</h2>
-  <p class="desc">
-   Pilih gred bagi setiap subjek yang anda ambil.
-   Maklumat ini digunakan untuk membuat semakan awal
-   program pengajian.
-  </p>
-  <div class="fieldtitle">Subjek utama</div>
-  <div id="mandatorySubjects"></div>
-
-  <div class="fieldtitle">Subjek tambahan</div>
-  <div id="additionalSubjects"></div>
-
-  <button
-   class="add"
-   type="button"
-   onclick="addSubject()">
-   + Tambah Subjek SPM
-  </button>
-
-  <div class="note">
-   Kepujian SPM dikira berdasarkan gred
-   A+, A, A-, B+, B, C+ dan C.
-   Sila masukkan semua subjek yang diambil
-   untuk mendapatkan jumlah kepujian yang tepat.
-  </div>
-
-  <div class="actions">
-   <span></span>
-   <button class="btn btn-primary"
-    type="button" onclick="calculate()">
-    Semak Program →
-   </button>
-  </div>
- </section>
-
- <!-- LANGKAH 2 -->
- <section class="section" id="step2">
-  <h2 id="resultTitle">
-   Tahniah! Ini pilihan program anda.
-  </h2>
-  <p class="desc" id="resultDescription">
-   Berdasarkan keputusan yang dimasukkan,
-   berikut ialah pilihan program untuk semakan lanjut.
-  </p>
-
-  <div class="summary">
-   <div class="stat">
-    <strong id="creditTotal">0</strong>
-    <span>Kepujian SPM</span>
-   </div>
-   <div class="stat">
-    <strong id="programTotal">0</strong>
-    <span>Program untuk disemak</span>
-   </div>
-  </div>
-
-  <div id="eligibilityBanner" class="resultbanner"></div>
-
-  <div id="programArea">
-   <div class="filter">
-    <button class="on" data-filter="Semua"
-     onclick="filterPrograms('Semua')">
-     Semua
-    </button>
-    <button data-filter="Asasi"
-     onclick="filterPrograms('Asasi')">
-     Asasi
-    </button>
-    <button data-filter="Diploma"
-     onclick="filterPrograms('Diploma')">
-     Diploma
-    </button>
-   </div>
-
-   <div class="searchwrap">
-    <span class="searchicon">⌕</span>
-    <input class="textinput" id="search"
-     type="search"
-     placeholder="Cari program yang diminati..."
-     oninput="renderPrograms()">
-   </div>
-
-   <div class="programlist" id="programList"></div>
-   <div class="selectionbar">
-    <span id="selectedCount">
-     0 daripada 3 program dipilih
-    </span>
-    <span id="visibleCount"></span>
-   </div>
-  </div>
-
-  <div class="actions">
-   <button class="btn btn-back"
-    onclick="goStep(1)">
-    ← Kembali
-   </button>
-   <button class="btn btn-primary"
-    onclick="prepareWhatsApp()">
-    Seterusnya →
-   </button>
-  </div>
- </section>
-
- <!-- LANGKAH 3 -->
- <section class="section" id="step3">
-  <h2>Hubungi Penasihat Pengajian</h2>
-  <p class="desc">
-   Semakan awal anda telah selesai.
-   Teruskan ke WhatsApp untuk mendapatkan
-   penerangan tentang program, syarat khusus
-   dan proses permohonan.
-  </p>
-  <div class="resultbanner">
-   ✓ Maklumat keputusan SPM dan program pilihan
-   anda telah disediakan dalam mesej WhatsApp.
-  </div>
-  <div class="review">
-   <div class="reviewtitle">
-    Ringkasan mesej WhatsApp
-   </div>
-   <div class="reviewcontent" id="messagePreview"></div>
-  </div>
-  <div class="privacy">
-   Mesej hanya dihantar selepas anda memilih
-   untuk membukanya di WhatsApp dan menekan hantar.
-   Laman ini tidak mempunyai pangkalan data
-   untuk menyimpan keputusan SPM.
-  </div>
-  <div class="actions">
-   <button class="btn btn-back"
-    onclick="goStep(2)">
-    ← Kembali
-   </button>
-  </div>
-  <div style="margin-top:18px">
-   <a id="waLink" class="btn btn-wa"
-    href="#" target="_blank"
-    rel="noopener noreferrer">
-    Teruskan ke WhatsApp
-   </a>
-  </div>
- </section>
-</div>
-
-</div>
-</main>
-
-<script>
-"use strict";
-
-/* KONFIGURASI UTAMA */
-const PHONE = "601121561243";
-
-const GRADES = [
- "A+","A","A-","B+","B",
- "C+","C","D","E","G","TH"
-];
-
-const CREDITS = [
- "A+","A","A-","B+","B","C+","C"
-];
-
-const PASS_GRADES = [
- "A+","A","A-","B+","B",
- "C+","C","D","E"
-];
-
-/* SENARAI PROGRAM */
-const ASASI = [
- "Asasi Perniagaan",
- "Asasi Pengajian Komputer"
-];
-
-const DIPLOMA = [
- "Diploma Pengurusan Perladangan",
- "Diploma Geomatik",
- "Diploma Sistem Maklumat Geografi",
- "Diploma Penerbangan",
- "Diploma Pengurusan Hotel",
- "Diploma Pengurusan Pelancongan",
- "Diploma Pentadbiran Perniagaan",
- "Diploma Perakaunan",
- "Diploma Pendidikan Awal Kanak-Kanak",
- "Diploma Animasi",
- "Diploma Multimedia Kreatif",
- "Diploma Teknologi Pemasaran Digital",
- "Diploma Pengurusan Sekuriti",
- "Diploma Penyiasatan Jenayah",
- "Diploma Keselamatan & Kesihatan Pekerjaan",
- "Diploma Teknologi Penyelenggaraan Pesawat",
- "Diploma Pengurusan Kru Kabin Penerbangan"
-];
-
-/* SENARAI SUBJEK TAMBAHAN */
-const SUBJECTS = [
- "Pendidikan Islam",
- "Pendidikan Moral",
- "Sains",
- "Kesusasteraan Inggeris / Literature in English",
- "Kesusasteraan Melayu Komunikatif",
- "Bahasa Arab",
- "Bahasa Cina",
- "Bahasa Tamil",
- "Bahasa Iban",
- "Bahasa Kadazandusun",
- "Bahasa Semai",
- "Kesusasteraan Cina",
- "Kesusasteraan Tamil",
- "Bahasa Punjabi",
- "Geografi",
- "Pendidikan Seni Visual",
- "Pendidikan Muzik",
- "Prinsip Perakaunan",
- "Perniagaan",
- "Ekonomi",
- "Pengajian Keusahawanan",
- "Matematik Tambahan",
- "Fizik",
- "Kimia",
- "Biologi",
- "Sains Tambahan",
- "Sains Komputer",
- "Sains Rumah Tangga",
- "Grafik Komunikasi Teknikal",
- "Pertanian",
- "Reka Cipta",
- "Asas Kelestarian",
- "Sains Sukan",
- "Pengajian Kejuruteraan Mekanikal",
- "Pengajian Kejuruteraan Awam",
- "Pengajian Kejuruteraan Elektrik dan Elektronik",
- "Tasawwur Islam",
- "Pendidikan Al-Quran dan Al-Sunnah",
- "Pendidikan Syariah Islamiah",
- "Hifz Al-Quran",
- "Maharat Al-Quran",
- "Usul Al-Din",
- "Al-Syariah",
- "Al-Lughah Al-Arabiah Al-Mu'asirah",
- "Manahij Al-'Ulum Al-Islamiah",
- "Al-Adab Wa Al-Balaghah",
- "Turath Al-Quran dan Al-Sunnah",
- "Turath Dirasat Islamiah",
- "Turath Bahasa Arab",
- "Bible Knowledge",
- "Pembinaan Domestik",
- "Membuat Perabot",
- "Kerja Paip Domestik",
- "Pendawaian Domestik",
- "Kimpalan Arka dan Gas",
- "Menservis Automobil",
- "Menservis Motosikal",
- "Menservis Peralatan Penyejukan dan Penyamanan Udara",
- "Menservis Peralatan Elektrik Domestik",
- "Rekaan dan Jahitan Pakaian",
- "Katering dan Penyajian",
- "Pemprosesan Makanan",
- "Penjagaan Muka dan Penggayaan Rambut",
- "Asuhan dan Pendidikan Awal Kanak-Kanak",
- "Gerontologi Asas dan Geriatrik",
- "Landskap dan Nurseri",
- "Akuakultur dan Haiwan Rekreasi",
- "Tanaman Makanan",
- "Produksi Reka Tanda",
- "Hiasan Dalaman",
- "Produksi Multimedia",
- "Reka Bentuk Grafik Digital",
- "Seni Halus",
- "Reka Bentuk",
- "Muzik",
- "Tari",
- "Teater"
-];
-
-/* KUMPULAN SUBJEK SYARAT KHUSUS */
-const SCIENCE_SUBJECTS = [
- "Sains","Sains Tambahan","Fizik","Kimia","Biologi"
-];
-
-const OSH_SCIENCE_SUBJECTS = [
- "Biologi","Kimia","Fizik","Sains"
-];
-
-const TECHNICAL_SUBJECTS = [
- "Grafik Komunikasi Teknikal",
- "Lukisan Kejuruteraan",
- "Pengajian Kejuruteraan Awam",
- "Pengajian Kejuruteraan Mekanikal",
- "Pengajian Kejuruteraan Elektrik dan Elektronik",
- "Produksi Multimedia",
- "Reka Bentuk Grafik Digital"
-];
-
-const state = {
- grades:[],
- credits:0,
- eligible:[],
- selected:[],
- filter:"Semua"
-};
-
-/* BORANG SUBJEK SPM */
-function gradeOptions() {
- return '<option value="">Pilih gred</option>' +
- GRADES.map(g =>
-  `<option value="${g}">${g}</option>`
- ).join("");
-}
-
-function setupSubjects() {
- const main = [
-  "Bahasa Melayu",
-  "Bahasa Inggeris",
-  "Matematik",
-  "Sejarah"
- ];
-
- document.getElementById(
-  "mandatorySubjects"
- ).innerHTML = main.map(name => `
-  <div class="subjectrow fixed">
-   <input value="${name}" disabled
-    aria-label="Subjek ${name}">
-   <select class="grade" data-subject="${name}"
-    aria-label="Gred ${name}">
-    ${gradeOptions()}
-   </select>
-  </div>
- `).join("");
-
- addSubject("Pendidikan Islam");
- addSubject("Sains");
-}
-
-function addSubject(defaultSubject = "") {
- const wrap = document.getElementById(
-  "additionalSubjects"
- );
- const div = document.createElement("div");
- div.className = "subjectrow";
-
- const choices = SUBJECTS.map(s =>
-  `<option value="${s}" ${
-   s === defaultSubject ? "selected" : ""
-  }>${s}</option>`
- ).join("");
-
- div.innerHTML = `
-  <select class="subjectname"
-   aria-label="Nama subjek">
-   <option value="">Pilih subjek</option>
-   ${choices}
-  </select>
-  <select class="grade"
-   aria-label="Gred subjek tambahan">
-   ${gradeOptions()}
-  </select>
-  <button class="remove" type="button"
-   aria-label="Buang subjek">×</button>
- `;
-
- div.querySelector(".remove").onclick =
-  () => div.remove();
-
- wrap.appendChild(div);
-}
-
-function collectGrades() {
- const rows = [];
- const missing = [];
-
- document.querySelectorAll(
-  "#mandatorySubjects .subjectrow"
- ).forEach(row => {
-  const name = row.querySelector("input").value;
-  const grade = row.querySelector(".grade").value;
-  if (!grade) {
-   missing.push(name);
-  } else {
-   rows.push({name,grade});
-  }
- });
-
- document.querySelectorAll(
-  "#additionalSubjects .subjectrow"
- ).forEach(row => {
-  const name =
-   row.querySelector(".subjectname").value;
-  const grade =
-   row.querySelector(".grade").value;
-
-  if (!name && !grade) return;
-
-  if (!name || !grade) {
-   missing.push(name || "Subjek tambahan");
-  } else {
-   rows.push({name,grade});
-  }
- });
-
- if (missing.length) {
-  alert(
-   "Sila lengkapkan maklumat gred untuk: " +
-   missing.join(", ")
-  );
-  return null;
- }
-
- const names = rows.map(r => r.name);
- if (new Set(names).size !== names.length) {
-  alert(
-   "Terdapat subjek yang berulang. " +
-   "Sila semak semula."
-  );
-  return null;
- }
-
- return rows;
-}
-
-/* SEMAKAN KELAYAKAN */
-function getGrade(grades, subjectName) {
- const item = grades.find(
-  g => g.name.toLowerCase() ===
-  subjectName.toLowerCase()
- );
- return item ? item.grade : "";
-}
-
-function isPass(grades, subjectName) {
- return PASS_GRADES.includes(
-  getGrade(grades,subjectName)
- );
-}
-
-function isCredit(grades, subjectName) {
- return CREDITS.includes(
-  getGrade(grades,subjectName)
- );
-}
-
-function countCredits(grades) {
- return grades.filter(
-  g => CREDITS.includes(g.grade)
- ).length;
-}
-
-function hasPassedAny(grades,subjects) {
- return subjects.some(
-  subject => isPass(grades,subject)
- );
-}
-
-function countCreditsFrom(grades,subjects) {
- return subjects.filter(
-  subject => isCredit(grades,subject)
- ).length;
-}
-
-function hasPassedSPM(grades) {
- return (
-  isPass(grades,"Bahasa Melayu") &&
-  isPass(grades,"Sejarah")
- );
-}
-
-/* SYARAT SETIAP PROGRAM */
-function eligibleForProgram(
- name,type,grades,totalCredits
-) {
- if (!hasPassedSPM(grades)) return false;
-
- if (type === "Asasi") {
-  return totalCredits >= 5;
- }
-
- if (totalCredits < 3) return false;
-
- switch (name) {
-  case "Diploma Geomatik":
-   return (
-    isCredit(grades,"Matematik") &&
-    (
-     hasPassedAny(grades,SCIENCE_SUBJECTS) ||
-     isPass(grades,"Bahasa Inggeris") ||
-     hasPassedAny(grades,TECHNICAL_SUBJECTS)
-    )
-   );
-
-  case "Diploma Sistem Maklumat Geografi":
-   return isCredit(grades,"Matematik");
-
-  case "Diploma Perakaunan":
-   return (
-    isCredit(grades,"Matematik") &&
-    isPass(grades,"Bahasa Inggeris")
-   );
-
-  case "Diploma Keselamatan & Kesihatan Pekerjaan":
-   return (
-    isPass(grades,"Bahasa Inggeris") &&
-    isCredit(grades,"Matematik") &&
-    countCreditsFrom(
-     grades,OSH_SCIENCE_SUBJECTS
-    ) >= 2
-   );
-
-  case "Diploma Teknologi Penyelenggaraan Pesawat":
-   return (
-    isPass(grades,"Matematik") &&
-    hasPassedAny(grades,SCIENCE_SUBJECTS)
-   );
-
-  default:
-   return true;
- }
-}
-
-/* PROSES SEMAKAN */
-function calculate() {
- const grades = collectGrades();
- if (!grades) return;
-
- state.grades = grades;
- state.credits = countCredits(grades);
- state.selected = [];
- state.filter = "Semua";
-
- const spmPassed = hasPassedSPM(grades);
-
- const allPrograms = [
-  ...ASASI.map(name => ({name,type:"Asasi"})),
-  ...DIPLOMA.map(name => ({name,type:"Diploma"}))
- ];
-
- state.eligible = allPrograms.filter(
-  program => eligibleForProgram(
-   program.name,
-   program.type,
-   grades,
-   state.credits
-  )
- );
-
- document.getElementById(
-  "creditTotal"
- ).textContent = state.credits;
-
- document.getElementById(
-  "programTotal"
- ).textContent = state.eligible.length;
-
- document.getElementById("search").value = "";
-
- document.querySelectorAll(
-  "[data-filter]"
- ).forEach(btn => {
-  btn.classList.toggle(
-   "on",btn.dataset.filter === "Semua"
-  );
- });
-
- let title = "";
- let description = "";
- let message = "";
-
- if (!spmPassed) {
-  title = "Semakan Kelayakan SPM Anda";
-  description =
-   "Syarat asas kemasukan memerlukan " +
-   "lulus Bahasa Melayu dan Sejarah.";
-  message =
-   "Keputusan anda belum memenuhi syarat " +
-   "asas lulus SPM kerana Bahasa Melayu " +
-   "atau Sejarah belum lulus. Anda masih " +
-   "boleh mendapatkan konsultasi.";
-
- } else if (state.eligible.length > 0) {
-  title = "Tahniah! Ini pilihan program anda.";
-  description =
-   "Berdasarkan keputusan SPM anda, berikut " +
-   "ialah program yang memenuhi syarat " +
-   "akademik yang telah ditetapkan untuk " +
-   "semakan awal.";
-  message =
-   "Anda telah lulus Bahasa Melayu dan " +
-   "Sejarah serta memenuhi syarat akademik " +
-   "awal bagi program yang dipaparkan.";
-
- } else {
-  title = "Mari bincang pilihan pengajian anda.";
-  description =
-   "Keputusan anda belum memenuhi syarat " +
-   "program yang disenaraikan. Anda masih " +
-   "boleh mendapatkan konsultasi lanjut.";
-  message =
-   "Tiada program Asasi atau Diploma dalam " +
-   "senarai ini yang memenuhi syarat " +
-   "berdasarkan keputusan yang dimasukkan.";
- }
-
- document.getElementById(
-  "resultTitle"
- ).textContent = title;
-
- document.getElementById(
-  "resultDescription"
- ).textContent = description;
-
- const banner = document.getElementById(
-  "eligibilityBanner"
- );
- banner.textContent = message;
- banner.classList.toggle(
-  "warning",
-  !spmPassed || state.eligible.length === 0
- );
-
- document.getElementById(
-  "programArea"
- ).classList.toggle(
-  "hidden",
-  state.eligible.length === 0
- );
-
- renderPrograms();
- goStep(2);
-}
-
-/* CARIAN DAN PENAPIS */
-function filterPrograms(type) {
- state.filter = type;
- document.querySelectorAll(
-  "[data-filter]"
- ).forEach(btn => {
-  btn.classList.toggle(
-   "on",btn.dataset.filter === type
-  );
- });
- renderPrograms();
-}
-
-function renderPrograms() {
- const q = document.getElementById(
-  "search"
- ).value.toLowerCase().trim();
-
- const list = document.getElementById(
-  "programList"
- );
-
- const filtered = state.eligible.filter(p =>
-  (
-   state.filter === "Semua" ||
-   p.type === state.filter
-  ) &&
-  p.name.toLowerCase().includes(q)
- );
-
- document.getElementById(
-  "selectedCount"
- ).textContent =
-  `${state.selected.length} daripada 3 program dipilih`;
-
- document.getElementById(
-  "visibleCount"
- ).textContent =
-  `${filtered.length} dipaparkan`;
-
- if (!filtered.length) {
-  list.innerHTML = `
-   <div class="note">
-    Tiada program ditemui untuk carian ini.
-   </div>
-  `;
-  return;
- }
-
- list.innerHTML = filtered.map((p,i) => {
-  const selected = state.selected.includes(p.name);
-  return `
-   <div
-    class="program ${selected ? "selected" : ""}"
-    role="checkbox"
-    aria-checked="${selected}"
-    tabindex="0"
-    data-index="${i}">
-
-    <span class="circle">
-     <svg width="13" height="13"
-      viewBox="0 0 24 24"
-      fill="none" stroke="currentColor"
-      stroke-width="3">
-      <path d="M5 12l4 4L19 6"/>
-     </svg>
-    </span>
-
-    <span class="programbody">
-     <strong>${p.name}</strong>
-     <small>
-      ${p.type} · Tertakluk kepada syarat khusus
-     </small>
-    </span>
-   </div>
-  `;
- }).join("");
-
- list.querySelectorAll(".program").forEach(el => {
-  const program = filtered[
-   Number(el.dataset.index)
-  ];
-  const action = () => toggleProgram(
-   program.name
-  );
-  el.addEventListener("click",action);
-  el.addEventListener("keydown",e => {
-   if (e.key === "Enter" || e.key === " ") {
-    e.preventDefault();
-    action();
-   }
-  });
- });
-}
-
-function toggleProgram(name) {
- if (state.selected.includes(name)) {
-  state.selected = state.selected.filter(
-   x => x !== name
-  );
- } else {
-  if (state.selected.length >= 3) {
-   alert("Maksimum 3 program sahaja boleh dipilih.");
-   return;
-  }
-  state.selected.push(name);
- }
- renderPrograms();
-}
-
-/* INTEGRASI WHATSAPP */
-function prepareWhatsApp() {
- if (
-  state.eligible.length > 0 &&
-  state.selected.length === 0
- ) {
-  alert("Sila pilih sekurang-kurangnya satu program.");
-  return;
- }
-
- const subjects = state.grades.map(
-  g => `- ${g.name}: ${g.grade}`
- ).join("\n");
-
- const programs = state.selected.length
-  ? state.selected.map(
-   (p,i) => `${i+1}. ${p}`
-  ).join("\n")
-  : "Mohon cadangan program lain yang sesuai.";
-
- const message =
-`Salam, saya ingin mendapatkan maklumat lanjut tentang pengajian di North Borneo University College.
-
-KEPUTUSAN SPM
-${subjects}
-
-Jumlah kepujian: ${state.credits}
-
-PROGRAM PILIHAN
-${programs}
-
-Saya ingin mendapatkan maklumat lanjut tentang syarat kemasukan, yuran pengajian dan proses permohonan.
-
-Terima kasih.`;
-
- document.getElementById(
-  "messagePreview"
- ).textContent = message;
-
- document.getElementById(
-  "waLink"
- ).href =
-  `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`;
-
- goStep(3);
-}
-
-/* NAVIGASI TIGA LANGKAH */
-/* AUTO-SCROLL TELAH DIBUANG */
-function goStep(step) {
- document.querySelectorAll(
-  ".section"
- ).forEach((el,i) => {
-  el.classList.toggle(
-   "active",i === step-1
-  );
- });
-
- document.getElementById(
-  "stepLabel"
- ).textContent =
-  `Langkah ${step} daripada 3`;
-
- document.getElementById(
-  "percent"
- ).textContent =
-  Math.round(step/3*100) + "%";
-
- document.getElementById(
-  "progressFill"
- ).style.width =
-  (step/3*100) + "%";
-}
-
-/* MULAKAN BORANG */
-setupSubjects();
-</script>
+<body class="min-h-screen text-slate-800 font-sans pb-24 sm:pb-12 overflow-x-hidden relative">
+
+    <!-- Hiasan Awan Kartun Latar Belakang -->
+    <div class="fixed top-16 left-4 opacity-70 pointer-events-none z-0 animate-float hidden sm:block">
+        <svg width="110" height="60" viewBox="0 0 110 60" fill="none">
+            <path d="M25 50H85C96.0457 50 105 41.0457 105 30C105 19.654 97.1436 11.1437 87.0713 10.1059C82.466 4.00442 75.1583 0 66.9 0C55.4326 0 45.7728 7.64941 42.6687 18.1251C40.2683 17.394 37.7192 17 35.0769 17C21.2273 17 10 28.2273 10 42.0769C10 46.7988 16.5 50 25 50Z" fill="white"/>
+        </svg>
+    </div>
+    <div class="fixed top-28 right-6 opacity-60 pointer-events-none z-0 animate-float" style="animation-delay: 1.5s;">
+        <svg width="90" height="50" viewBox="0 0 110 60" fill="none">
+            <path d="M25 50H85C96.0457 50 105 41.0457 105 30C105 19.654 97.1436 11.1437 87.0713 10.1059C82.466 4.00442 75.1583 0 66.9 0C55.4326 0 45.7728 7.64941 42.6687 18.1251C40.2683 17.394 37.7192 17 35.0769 17C21.2273 17 10 28.2273 10 42.0769C10 46.7988 16.5 50 25 50Z" fill="white"/>
+        </svg>
+    </div>
+
+    <!-- Header / Navbar Kartun -->
+    <header class="bg-white/90 backdrop-blur-md border-b-4 border-sky-300 sticky top-0 z-40 px-3 sm:px-4 py-2.5 shadow-sm">
+        <div class="max-w-4xl mx-auto flex justify-between items-center gap-2">
+            <div class="flex items-center space-x-2.5 min-w-0">
+                <!-- Ikon Masjid Kartun -->
+                <div class="bg-gradient-to-b from-amber-300 to-amber-500 border-2 border-amber-600 text-amber-950 w-10 h-10 sm:w-12 sm:h-12 rounded-2xl shadow-md flex items-center justify-center text-xl sm:text-2xl shrink-0 animate-wiggle">
+                    🕌
+                </div>
+                <div class="truncate">
+                    <h1 class="font-cartoon font-bold text-lg sm:text-2xl tracking-wide text-sky-700 truncate">Pahlawan Solat</h1>
+                    <p class="text-[11px] sm:text-xs font-extrabold text-emerald-600 truncate">Misi 5 Waktu Cilik!</p>
+                </div>
+            </div>
+
+            <!-- XP & Syiling Badge Kartun -->
+            <div class="flex items-center space-x-2 sm:space-x-3 shrink-0">
+                <div class="bg-amber-100 border-2 border-amber-400 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full flex items-center space-x-1.5 shadow-sm">
+                    <span class="text-sm sm:text-base">⭐</span>
+                    <span id="header-xp" class="font-cartoon font-bold text-amber-700 text-xs sm:text-sm">0 XP</span>
+                </div>
+                <div class="bg-emerald-100 border-2 border-emerald-400 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full flex items-center space-x-1.5 shadow-sm">
+                    <span class="text-sm sm:text-base">🪙</span>
+                    <span id="header-coins" class="font-cartoon font-bold text-emerald-700 text-xs sm:text-sm">50</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Kandungan Utama -->
+    <main class="max-w-4xl mx-auto px-3 sm:px-4 pt-4 sm:pt-6 relative z-10">
+
+        <!-- Kad Profil Pahlawan & Bar Kemajuan Harian -->
+        <section class="bg-white rounded-3xl p-4 sm:p-5 card-cartoon border-sky-300 mb-5 relative">
+            <div class="flex items-center gap-3.5 sm:gap-4">
+                <!-- Bekas Avatar Watak + Butang Tukar Watak -->
+                <div class="relative shrink-0">
+                    <div id="hero-avatar-container" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-4 border-amber-400 bg-sky-100 overflow-hidden shadow-md animate-float"></div>
+                    <button onclick="openGenderModal()" title="Tukar Watak & Nama" class="btn-cartoon absolute -bottom-1 -right-1 bg-amber-400 hover:bg-amber-500 border-2 border-amber-600 text-amber-950 w-7 h-7 rounded-full flex items-center justify-center text-xs shadow">
+                        🔄
+                    </button>
+                </div>
+
+                <!-- Maklumat Tahap & Progress Bar -->
+                <div class="flex-1 min-w-0">
+                    <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
+                        <h2 id="hero-greeting" class="font-cartoon font-bold text-base sm:text-xl text-sky-900 truncate">Assalamualaikum, Pahlawan!</h2>
+                        <span id="hero-level-badge" class="bg-purple-100 text-purple-800 border-2 border-purple-300 text-[11px] sm:text-xs font-extrabold px-2.5 py-0.5 rounded-full shrink-0">Tahap 1 • Cilik Soleh</span>
+                    </div>
+                    <p id="daily-progress-text" class="text-xs font-extrabold text-slate-500 mb-2">Kemajuan Solat Hari Ini: 0 / 5 Waktu</p>
+                    
+                    <!-- Progress Bar Kartun -->
+                    <div class="w-full h-4 bg-sky-100 rounded-full border-2 border-sky-300 overflow-hidden p-0.5">
+                        <div id="daily-progress-bar" class="h-full bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full transition-all duration-500" style="width: 0%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigasi Tab Kartun 3D (Grid 2x2 pada Telefon, 5 Lajur pada Desktop) -->
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 sm:gap-2.5 mb-5 sm:mb-6">
+            <button onclick="switchTab('tracker')" id="tab-tracker" class="btn-cartoon py-3 px-2.5 rounded-2xl font-cartoon font-bold text-xs sm:text-sm bg-emerald-500 border-2 border-emerald-700 text-white flex items-center justify-center space-x-1.5">
+                <span class="text-base sm:text-lg">📋</span>
+                <span>Misi Solat</span>
+            </button>
+            <button onclick="switchTab('calendar')" id="tab-calendar" class="btn-cartoon py-3 px-2.5 rounded-2xl font-cartoon font-bold text-xs sm:text-sm bg-white border-2 border-sky-300 text-sky-800 flex items-center justify-center space-x-1.5">
+                <span class="text-base sm:text-lg">📅</span>
+                <span>Kalendar</span>
+            </button>
+            <button onclick="switchTab('castle')" id="tab-castle" class="btn-cartoon py-3 px-2.5 rounded-2xl font-cartoon font-bold text-xs sm:text-sm bg-white border-2 border-sky-300 text-sky-800 flex items-center justify-center space-x-1.5">
+                <span class="text-base sm:text-lg">🏰</span>
+                <span>Istana Saya</span>
+            </button>
+            <button onclick="switchTab('quiz')" id="tab-quiz" class="btn-cartoon py-3 px-2.5 rounded-2xl font-cartoon font-bold text-xs sm:text-sm bg-white border-2 border-sky-300 text-sky-800 flex items-center justify-center space-x-1.5">
+                <span class="text-base sm:text-lg">🧩</span>
+                <span>Kuiz Seronok</span>
+            </button>
+            <button onclick="switchTab('badges')" id="tab-badges" class="btn-cartoon col-span-2 sm:col-span-1 py-3 px-2.5 rounded-2xl font-cartoon font-bold text-xs sm:text-sm bg-white border-2 border-sky-300 text-sky-800 flex items-center justify-center space-x-1.5">
+                <span class="text-base sm:text-lg">🏅</span>
+                <span>Piala & Lencana</span>
+            </button>
+        </div>
+
+        <!-- TAB 1: TRACKER SOLAT -->
+        <div id="content-tracker" class="space-y-3 sm:space-y-4">
+            <div class="flex flex-wrap justify-between items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2.5 rounded-2xl border-2 border-sky-200">
+                <div>
+                    <h3 class="font-cartoon font-bold text-base sm:text-lg text-sky-800 flex items-center gap-2">
+                        <span>🌞</span> Senarai Solat Hari Ini
+                    </h3>
+                    <p id="today-date-label" class="text-[11px] sm:text-xs font-extrabold text-sky-600">Tarikh Hari Ini</p>
+                </div>
+                <button onclick="resetTodayTracker()" class="btn-cartoon text-xs bg-rose-100 hover:bg-rose-200 text-rose-700 border-2 border-rose-300 font-extrabold px-3 py-1.5 rounded-xl">
+                    🔄 Mula Semula
+                </button>
+            </div>
+
+            <div id="solat-cards-container" class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+                <!-- Kad solat dijana melalui JS -->
+            </div>
+        </div>
+
+        <!-- TAB BARU: KALENDAR REKOD SOLAT -->
+        <div id="content-calendar" class="hidden space-y-4 sm:space-y-5">
+            <div class="bg-white rounded-3xl p-4 sm:p-6 card-cartoon border-sky-300">
+                <div class="flex items-center justify-between mb-4">
+                    <button onclick="changeCalendarMonth(-1)" class="btn-cartoon bg-sky-100 hover:bg-sky-200 border-2 border-sky-300 text-sky-800 font-cartoon font-bold px-3.5 py-2 rounded-2xl text-xs sm:text-sm">
+                        ◀️ Lepas
+                    </button>
+                    <h3 id="calendar-month-title" class="font-cartoon text-lg sm:text-xl font-bold text-sky-800 text-center">Bulan & Tahun</h3>
+                    <button onclick="changeCalendarMonth(1)" class="btn-cartoon bg-sky-100 hover:bg-sky-200 border-2 border-sky-300 text-sky-800 font-cartoon font-bold px-3.5 py-2 rounded-2xl text-xs sm:text-sm">
+                        Depan ▶️
+                    </button>
+                </div>
+
+                <!-- Petunjuk Warna Kalendar -->
+                <div class="flex flex-wrap items-center justify-center gap-3 text-[11px] sm:text-xs font-extrabold mb-4 bg-sky-50 py-2 px-3 rounded-2xl border border-sky-200">
+                    <span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-emerald-400 inline-block"></span> Penuh (5/5)</span>
+                    <span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span> Sebahagian (1-4)</span>
+                    <span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-slate-200 inline-block"></span> Tiada Rekod</span>
+                </div>
+
+                <!-- Nama Hari -->
+                <div class="grid grid-cols-7 gap-1.5 text-center font-cartoon font-bold text-xs text-sky-700 mb-2">
+                    <div>Ahd</div>
+                    <div>Isn</div>
+                    <div>Sel</div>
+                    <div>Rab</div>
+                    <div>Kha</div>
+                    <div>Jum</div>
+                    <div>Sab</div>
+                </div>
+
+                <!-- Grid Tarikh Kalendar -->
+                <div id="calendar-grid" class="grid grid-cols-7 gap-1.5 sm:gap-2">
+                    <!-- Kotak hari dijana melalui JS -->
+                </div>
+            </div>
+
+            <!-- Paparan Butiran Hari Yang Dipilih -->
+            <div id="calendar-day-detail" class="bg-white rounded-3xl p-4 sm:p-6 card-cartoon border-amber-300">
+                <!-- Perincian solat pada tarikh dipilih dijana melalui JS -->
+            </div>
+        </div>
+
+        <!-- TAB 2: ISTANA SYURGA (REWARD / DECORATION) -->
+        <div id="content-castle" class="hidden space-y-5">
+            <div class="bg-white rounded-3xl p-4 sm:p-6 card-cartoon border-sky-300 text-center relative overflow-hidden">
+                <h3 class="font-cartoon text-xl sm:text-2xl font-bold text-purple-700 mb-1">🏰 Istana Impian Kamu</h3>
+                <p class="text-xs sm:text-sm font-bold text-slate-500 mb-4">Kumpul syiling emas untuk menghias istana kartun yang cantik!</p>
+                
+                <!-- Paparan Visual Istana Kartun SVG -->
+                <div id="castle-display" class="bg-gradient-to-b from-sky-300 via-sky-100 to-emerald-200 rounded-3xl p-4 sm:p-6 border-4 border-sky-400 min-h-[250px] flex flex-col items-center justify-center relative overflow-hidden">
+                    <!-- Elemen Istana Kartun SVG dijana melalui JS -->
+                </div>
+            </div>
+
+            <!-- Kedai Hiasan Istana -->
+            <div class="bg-white rounded-3xl p-4 sm:p-6 card-cartoon border-amber-300">
+                <h4 class="font-cartoon font-bold text-lg sm:text-xl text-amber-700 mb-4 flex items-center gap-2">
+                    <span>🎪</span> Kedai Hiasan Ajaib
+                </h4>
+                <div id="shop-items-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
+                    <!-- Item kedai dijana melalui JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 3: KUIZ SOLAT -->
+        <div id="content-quiz" class="hidden space-y-5">
+            <div class="bg-white rounded-3xl p-4 sm:p-6 card-cartoon border-purple-300">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-cartoon text-lg sm:text-xl font-bold text-purple-700">🧠 Cabaran Bijak Solat</h3>
+                    <span id="quiz-score-badge" class="bg-amber-100 text-amber-800 border-2 border-amber-400 text-xs px-3 py-1 rounded-full font-extrabold">⭐ Betul: 0</span>
+                </div>
+
+                <div id="quiz-card" class="bg-purple-50 rounded-2xl p-4 sm:p-6 border-2 border-purple-200">
+                    <!-- Bekas soalan aktif -->
+                    <div id="quiz-question-container">
+                        <span id="quiz-category" class="bg-purple-200 text-purple-800 text-xs px-3 py-1 rounded-full font-extrabold inline-block mb-3">Kategori Solat</span>
+                        <h4 id="quiz-question-text" class="font-cartoon text-base sm:text-xl font-bold text-slate-800 mb-4 leading-snug">Soalan akan muncul di sini...</h4>
+                        <div id="quiz-options" class="space-y-3">
+                            <!-- Pilihan jawapan dijana oleh JS -->
+                        </div>
+                    </div>
+                    <!-- Maklum balas jawapan kuiz -->
+                    <div id="quiz-feedback-container" class="hidden text-center py-6 animate-pop">
+                        <div id="quiz-result-icon" class="text-6xl mb-3">🎉</div>
+                        <h4 id="quiz-result-title" class="font-cartoon text-xl sm:text-2xl font-bold text-slate-800 mb-2">Tahniah!</h4>
+                        <p id="quiz-result-desc" class="text-slate-600 font-bold text-xs sm:text-sm mb-6">Anda berjaya menjawab soalan dengan betul.</p>
+                        <div id="quiz-action-buttons" class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                            <!-- Butang tindakan kuiz dijana melalui JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 4: LENCANA PENCAPAIAN -->
+        <div id="content-badges" class="hidden space-y-5">
+            <div class="bg-white rounded-3xl p-4 sm:p-6 card-cartoon border-amber-300">
+                <h3 class="font-cartoon text-lg sm:text-xl font-bold text-amber-700 mb-1">🏆 Bilik Piala & Pelekat</h3>
+                <p class="text-xs sm:text-sm font-bold text-slate-500 mb-5">Kumpul semua pelekat berkilat dengan menjadi anak yang rajin solat!</p>
+                
+                <div id="badges-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
+                    <!-- Lencana dijana melalui JS -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Modal Pop-up Kartun Ceria -->
+    <div id="custom-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white border-4 border-amber-400 rounded-3xl p-6 max-w-sm w-full text-center shadow-2xl animate-pop relative overflow-hidden">
+            <div class="bg-amber-100 w-24 h-24 rounded-full mx-auto flex items-center justify-center border-4 border-amber-300 mb-3">
+                <span id="modal-icon" class="text-5xl">🌟</span>
+            </div>
+            <h3 id="modal-title" class="font-cartoon text-2xl font-bold text-slate-800 mb-2">Hebat Sekali!</h3>
+            <p id="modal-desc" class="text-slate-600 font-bold text-sm mb-6">Anda mendapat +30 XP dan +15 Syiling!</p>
+            <button onclick="closeModal()" class="btn-cartoon w-full bg-emerald-500 hover:bg-emerald-600 border-2 border-emerald-700 text-white font-cartoon font-bold py-3.5 px-6 rounded-2xl text-base">
+                Yeay! Teruskan 🚀
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal Pemilihan Watak (Lelaki / Perempuan) Kali Pertama -->
+    <div id="gender-modal" class="fixed inset-0 bg-sky-900/75 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white border-4 border-sky-400 rounded-3xl p-5 sm:p-7 max-w-md w-full text-center shadow-2xl animate-pop relative overflow-hidden">
+            <span class="bg-amber-100 text-amber-800 border-2 border-amber-300 text-xs px-3 py-1 rounded-full font-extrabold inline-block mb-2">
+                ✨ Selamat Datang!
+            </span>
+            <h3 class="font-cartoon text-2xl sm:text-3xl font-bold text-sky-800 mb-1">Pilih Watak Kamu</h3>
+            <p class="text-slate-600 font-bold text-xs sm:text-sm mb-4">Masukkan nama dan pilih watak Pahlawan Solat!</p>
+
+            <!-- Ruang Input Nama Pengguna -->
+            <div class="mb-4 text-left">
+                <label for="player-name-input" class="block font-cartoon font-bold text-xs sm:text-sm text-sky-800 mb-1 ml-1">✏️ Nama Kamu:</label>
+                <input type="text" id="player-name-input" maxlength="20" placeholder="Contoh: Adam / Aisyah"
+                    class="w-full px-4 py-2.5 rounded-2xl border-3 border-sky-300 focus:border-sky-500 focus:outline-none font-extrabold text-slate-800 text-sm sm:text-base bg-sky-50/50 placeholder:text-slate-400">
+            </div>
+            
+            <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-4">
+                <!-- Pilihan Lelaki -->
+                <button onclick="selectGender('boy')" class="btn-cartoon bg-sky-50 hover:bg-sky-100 border-3 border-sky-400 rounded-3xl p-4 flex flex-col items-center group">
+                    <div id="gender-preview-boy" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-4 border-sky-400 bg-white overflow-hidden mb-3 shadow-sm group-hover:scale-105 transition-transform"></div>
+                    <span class="font-cartoon font-bold text-base sm:text-lg text-sky-900">Putera Soleh</span>
+                    <span class="text-[11px] font-extrabold text-sky-600 bg-sky-200/70 px-2.5 py-0.5 rounded-full mt-1">Lelaki 👦</span>
+                </button>
+
+                <!-- Pilihan Perempuan -->
+                <button onclick="selectGender('girl')" class="btn-cartoon bg-pink-50 hover:bg-pink-100 border-3 border-pink-400 rounded-3xl p-4 flex flex-col items-center group">
+                    <div id="gender-preview-girl" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-4 border-pink-400 bg-white overflow-hidden mb-3 shadow-sm group-hover:scale-105 transition-transform"></div>
+                    <span class="font-cartoon font-bold text-base sm:text-lg text-pink-900">Puteri Solehah</span>
+                    <span class="text-[11px] font-extrabold text-pink-600 bg-pink-200/70 px-2.5 py-0.5 rounded-full mt-1">Perempuan 👧</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Game Logic -->
+    <script>
+        // Pengurusan State Permainan
+        let gameState = {
+            name: '',
+            gender: null, // 'boy' atau 'girl'
+            xp: 0,
+            coins: 50,
+            level: 1,
+            lastActiveDate: '',
+            completedSolats: [],
+            solatHistory: {}, // Format: { 'YYYY-MM-DD': ['subuh', 'zohor', ...] }
+            purchasedItems: [],
+            badges: [],
+            totalSolatsCompleted: 0,
+            quizScore: 0
+        };
+
+        // Fungsi Dapatkan Tarikh Tempatan (YYYY-MM-DD)
+        function getTodayDateString() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        }
+
+        function formatMalayDate(dateStr) {
+            const months = ['Januari', 'Februari', 'Mac', 'April', 'Mei', 'Jun', 'Julai', 'Ogos', 'September', 'Oktober', 'November', 'Disember'];
+            const [y, m, d] = dateStr.split('-').map(Number);
+            return `${d} ${months[m - 1]} ${y}`;
+        }
+
+        let currentCalendarYear = new Date().getFullYear();
+        let currentCalendarMonth = new Date().getMonth();
+        let selectedCalendarDate = getTodayDateString();
+        let currentQuizIndex = 0;
+
+        // Senarai 5 Waktu Solat Fardhu
+        const solatList = [
+            { id: 'subuh', name: 'Solat Subuh', rakaat: '2 Rakaat', time: 'Waktu Pagi (Fajar)', icon: '🌅', color: 'sky', xp: 30, coins: 15 },
+            { id: 'zohor', name: 'Solat Zohor', rakaat: '4 Rakaat', time: 'Waktu Tengah Hari', icon: '☀️', color: 'amber', xp: 30, coins: 15 },
+            { id: 'asar', name: 'Solat Asar', rakaat: '4 Rakaat', time: 'Waktu Petang', icon: '🌤️', color: 'orange', xp: 30, coins: 15 },
+            { id: 'maghrib', name: 'Solat Maghrib', rakaat: '3 Rakaat', time: 'Waktu Senja', icon: '🌆', color: 'purple', xp: 30, coins: 15 },
+            { id: 'isyak', name: 'Solat Isyak', rakaat: '4 Rakaat', time: 'Waktu Malam', icon: '🌙', color: 'indigo', xp: 30, coins: 15 }
+        ];
+
+        // Senarai Item Kedai Hiasan Istana
+        const shopItems = [
+            { id: 'sun', name: 'Matahari Tersenyum', icon: '🌞', price: 30, desc: 'Menyinari langit istana dengan cahaya ceria!' },
+            { id: 'rainbow', name: 'Pelangi 7 Warna', icon: '🌈', price: 45, desc: 'Pelangi ajaib melengkung di atas istana.' },
+            { id: 'flag', name: 'Bendera Pahlawan', icon: '🚩', price: 40, desc: 'Berkibar megah di puncak menara tertinggi.' },
+            { id: 'garden', name: 'Taman Bunga Syurga', icon: '🌷', price: 50, desc: 'Bunga berwarna-warni di halaman istana.' },
+            { id: 'fountain', name: 'Air Pancut Berkilau', icon: '⛲', price: 65, desc: 'Air pancut jernih di tengah halaman.' },
+            { id: 'tower', name: 'Kubah Emas Diraja', icon: '👑', price: 80, desc: 'Menukar kubah istana menjadi emas berkilau!' }
+        ];
+
+        // 12 Koleksi Piala & Lencana Pencapaian
+        const badgeDefinitions = [
+            { id: 'first_solat', name: 'Langkah Pertama', icon: '🌟', desc: 'Tunaikan solat pertama kamu!', condition: s => s.totalSolatsCompleted >= 1 },
+            { id: 'subuh_hero', name: 'Wira Subuh', icon: '🌅', desc: 'Berjaya menunaikan Solat Subuh!', condition: s => s.completedSolats.includes('subuh') },
+            { id: 'zohor_champ', name: 'Juara Zohor', icon: '☀️', desc: 'Berjaya menunaikan Solat Zohor!', condition: s => s.completedSolats.includes('zohor') },
+            { id: 'asar_warrior', name: 'Pejuang Asar', icon: '🌤️', desc: 'Berjaya menunaikan Solat Asar!', condition: s => s.completedSolats.includes('asar') },
+            { id: 'maghrib_star', name: 'Bintang Maghrib', icon: '🌆', desc: 'Berjaya menunaikan Solat Maghrib!', condition: s => s.completedSolats.includes('maghrib') },
+            { id: 'isyak_knight', name: 'Kesatria Isyak', icon: '🌙', desc: 'Berjaya menunaikan Solat Isyak!', condition: s => s.completedSolats.includes('isyak') },
+            { id: 'full_day', name: 'Anak Soleh 5 Waktu', icon: '👑', desc: 'Lengkapkan semua 5 solat dalam sehari!', condition: s => s.completedSolats.length === 5 },
+            { id: 'solat_10', name: 'Rajin Beribadah', icon: '🕌', desc: 'Kumpul 10 solat keseluruhan!', condition: s => s.totalSolatsCompleted >= 10 },
+            { id: 'solat_25', name: 'Pahlawan Sejati', icon: '🛡️', desc: 'Kumpul 25 solat keseluruhan!', condition: s => s.totalSolatsCompleted >= 25 },
+            { id: 'quiz_master', name: 'Pintar Solat', icon: '🧠', desc: 'Jawab 5 soalan kuiz dengan betul!', condition: s => s.quizScore >= 5 },
+            { id: 'rich_coins', name: 'Jutawan Syiling', icon: '💰', desc: 'Simpan 100 syiling emas!', condition: s => s.coins >= 100 },
+            { id: 'castle_sultan', name: 'Sultan Istana', icon: '🏰', desc: 'Beli sekurang-kurangnya 3 hiasan istana!', condition: s => s.purchasedItems.length >= 3 }
+        ];
+
+        // 20 Soalan Kuiz Seronok
+        const quizQuestions = [
+            { category: 'Waktu Solat', question: 'Berapa kalikah umat Islam wajib menunaikan solat fardhu dalam sehari semalam?', options: ['3 kali', '5 kali', '7 kali'], answer: 1 },
+            { category: 'Rakaat Solat', question: 'Berapakah bilangan rakaat bagi Solat Subuh?', options: ['2 Rakaat', '3 Rakaat', '4 Rakaat'], answer: 0 },
+            { category: 'Rakaat Solat', question: 'Solat fardhu manakah yang mempunyai 3 rakaat?', options: ['Solat Asar', 'Solat Maghrib', 'Solat Isyak'], answer: 1 },
+            { category: 'Wuduk & Kebersihan', question: 'Apakah yang wajib kita lakukan sebelum menunaikan solat?', options: ['Berwuduk', 'Tidur sekejap', 'Makan banyak'], answer: 0 },
+            { category: 'Rukun Solat', question: 'Apakah bacaan pertama ketika mengangkat tangan memulakan solat?', options: ['Subhanallah', 'Allahu Akbar (Takbiratul Ihram)', 'Alhamdulillah'], answer: 1 },
+            { category: 'Bacaan Solat', question: 'Surah apakah yang wajib dibaca dalam setiap rakaat solat?', options: ['Surah Al-Fatihah', 'Surah Al-Kautsar', 'Surah An-Nas'], answer: 0 },
+            { category: 'Arah Kiblat', question: 'Ke arah manakah umat Islam menghadap ketika menunaikan solat?', options: ['Arah Matahari Terbit', 'Arah Kaabah (Kiblat)', 'Arah Bulan'], answer: 1 },
+            { category: 'Rukun Solat', question: 'Apakah nama perbuatan membongkokkan badan dengan tangan memegang lutut?', options: ['Sujud', 'Rukuk', 'Iktidal'], answer: 1 },
+            { category: 'Bacaan Rukuk', question: 'Apakah bacaan tasbih ketika sedang rukuk?', options: ['Subhana Rabbiyal A’la', 'Subhana Rabbiyal Azimi wabihamdih', 'Allahu Akbar'], answer: 1 },
+            { category: 'Bacaan Sujud', question: 'Apakah bacaan tasbih ketika sedang sujud?', options: ['Subhana Rabbiyal A’la wabihamdih', 'Subhana Rabbiyal Azim', 'Sami’allahu liman hamidah'], answer: 0 },
+            { category: 'Waktu Solat', question: 'Solat fardhu manakah yang ditunaikan pada waktu malam?', options: ['Solat Zohor', 'Solat Isyak', 'Solat Subuh'], answer: 1 },
+            { category: 'Wuduk & Kebersihan', question: 'Anggota manakah yang dibasuh selepas membasuh muka ketika berwuduk?', options: ['Kedua-dua belah tangan hingga siku', 'Kedua-dua belah kaki', 'Telinga'], answer: 0 },
+            { category: 'Azan & Iqamah', question: 'Apakah seruan yang menandakan telah masuknya waktu solat fardhu?', options: ['Azan', 'Takbir Raya', 'Selawat'], answer: 0 },
+            { category: 'Adab Solat', question: 'Bagaimanakah pandangan mata yang sunat dilakukan ketika berdiri solat?', options: ['Melihat ke tempat sujud', 'Melihat ke atas siling', 'Melihat kawan di sebelah'], answer: 0 },
+            { category: 'Penutup Solat', question: 'Dengan perbuatan apakah kita mengakhiri solat?', options: ['Memberi salam ke kanan dan kiri', 'Mengangkat tangan berdoa', 'Berdiri tegak'], answer: 0 },
+            { category: 'Solat Berjemaah', question: 'Siapakah yang mengetuai solat ketika solat berjemaah?', options: ['Bilal', 'Imam', 'Makmum'], answer: 1 },
+            { category: 'Rakaat Solat', question: 'Berapakah jumlah rakaat bagi Solat Zohor, Asar, dan Isyak?', options: ['2 Rakaat', '3 Rakaat', '4 Rakaat'], answer: 2 },
+            { category: 'Adab Masjid', question: 'Kaki manakah yang sunat didahulukan ketika melangkah masuk ke dalam masjid?', options: ['Kaki kanan', 'Kaki kiri', 'Lompat dua kaki'], answer: 0 },
+            { category: 'Syarat Sah Solat', question: 'Bagaimanakah keadaan pakaian dan tempat solat kita?', options: ['Bersih dan suci daripada najis', 'Mesti baju baru sahaja', 'Boleh kotor sedikit'], answer: 0 },
+            { category: 'Kelebihan Solat', question: 'Solat adalah tiang agama. Orang yang menjaga solat akan disayangi oleh...', options: ['Allah SWT', 'Syaitan', 'Orang jahat'], answer: 0 }
+        ];
+
+        // Ilustrasi Avatar Kartun SVG (Lelaki & Perempuan)
+        function getAvatarSVG(gender) {
+            if (gender === 'girl') {
+                return `
+                <svg viewBox="0 0 120 120" class="w-full h-full">
+                    <rect width="120" height="120" fill="#FCE7F3"/>
+                    <!-- Tudung Pink Kartun -->
+                    <path d="M22 65 C22 25, 98 25, 98 65 L105 115 H15 Z" fill="#F472B6" stroke="#DB2777" stroke-width="3"/>
+                    <!-- Muka -->
+                    <circle cx="60" cy="62" r="26" fill="#FDE68A" stroke="#D97706" stroke-width="2.5"/>
+                    <!-- Mata & Pipi Comel -->
+                    <circle cx="51" cy="58" r="3.5" fill="#1E293B"/>
+                    <circle cx="69" cy="58" r="3.5" fill="#1E293B"/>
+                    <circle cx="52" cy="57" r="1.2" fill="white"/>
+                    <circle cx="70" cy="57" r="1.2" fill="white"/>
+                    <ellipse cx="45" cy="65" rx="4" ry="2.5" fill="#FDA4AF"/>
+                    <ellipse cx="75" cy="65" rx="4" ry="2.5" fill="#FDA4AF"/>
+                    <!-- Senyuman -->
+                    <path d="M53 69 Q60 76 67 69" stroke="#92400E" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                    <!-- Reben Comel -->
+                    <circle cx="83" cy="38" r="5" fill="#FACC15" stroke="#CA8A04" stroke-width="2"/>
+                </svg>`;
+            }
+            return `
+            <svg viewBox="0 0 120 120" class="w-full h-full">
+                <rect width="120" height="120" fill="#E0F2FE"/>
+                <!-- Baju Melayu -->
+                <path d="M25 118 C25 92, 95 92, 95 118 Z" fill="#34D399" stroke="#059669" stroke-width="3"/>
+                <!-- Muka -->
+                <circle cx="60" cy="65" r="27" fill="#FDE68A" stroke="#D97706" stroke-width="2.5"/>
+                <!-- Kopiah Putih -->
+                <path d="M34 50 C34 30, 86 30, 86 50 Z" fill="#FFFFFF" stroke="#0284C7" stroke-width="3"/>
+                <rect x="33" y="46" width="54" height="7" rx="3" fill="#38BDF8" stroke="#0284C7" stroke-width="2"/>
+                <!-- Mata & Pipi -->
+                <circle cx="51" cy="63" r="3.5" fill="#1E293B"/>
+                <circle cx="69" cy="63" r="3.5" fill="#1E293B"/>
+                <circle cx="52" cy="62" r="1.2" fill="white"/>
+                <circle cx="70" cy="62" r="1.2" fill="white"/>
+                <ellipse cx="45" cy="70" rx="4" ry="2.5" fill="#FCA5A5"/>
+                <ellipse cx="75" cy="70" rx="4" ry="2.5" fill="#FCA5A5"/>
+                <!-- Senyuman -->
+                <path d="M53 74 Q60 81 67 74" stroke="#92400E" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            </svg>`;
+        }
+
+        // Modal Pemilihan Watak & Nama
+        function openGenderModal() {
+            document.getElementById('gender-preview-boy').innerHTML = getAvatarSVG('boy');
+            document.getElementById('gender-preview-girl').innerHTML = getAvatarSVG('girl');
+            document.getElementById('player-name-input').value = gameState.name || '';
+            document.getElementById('gender-modal').classList.remove('hidden');
+        }
+
+        function selectGender(gender) {
+            const inputName = document.getElementById('player-name-input').value.trim();
+            gameState.gender = gender;
+            gameState.name = inputName;
+            saveGameData();
+            document.getElementById('gender-modal').classList.add('hidden');
+            updateUI();
+        }
+
+        // Modal Pop-up Ganjaran
+        function showModal(icon, title, desc) {
+            document.getElementById('modal-icon').innerText = icon;
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-desc').innerText = desc;
+            document.getElementById('custom-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('custom-modal').classList.add('hidden');
+        }
+// ... existing code ... -->
+        // Kemas Kini Semua Elemen Antaramuka
+        function updateUI() {
+            document.getElementById('header-xp').innerText = `${gameState.xp} XP`;
+            document.getElementById('header-coins').innerText = gameState.coins;
+            document.getElementById('today-date-label').innerText = `📅 ${formatMalayDate(getTodayDateString())}`;
+
+            // Kemas kini avatar & sapaan mengikut jantina dan nama
+            const gender = gameState.gender || 'boy';
+            document.getElementById('hero-avatar-container').innerHTML = getAvatarSVG(gender);
+
+            const defaultTitle = gender === 'girl' ? 'Puteri Solehah' : 'Putera Soleh';
+            const displayName = gameState.name ? gameState.name : defaultTitle;
+            document.getElementById('hero-greeting').innerText = `Assalamualaikum, ${displayName}!`;
+
+            // Kira Tahap (Level)
+            const calculatedLevel = Math.floor(gameState.xp / 150) + 1;
+            gameState.level = calculatedLevel;
+            const rankTitle = gender === 'girl' ? 'Puteri Solehah' : 'Putera Soleh';
+            document.getElementById('hero-level-badge').innerText = `Tahap ${calculatedLevel} • ${rankTitle}`;
+
+            // Kemajuan harian
+            const doneCount = gameState.completedSolats.length;
+            const percent = Math.round((doneCount / 5) * 100);
+            document.getElementById('daily-progress-text').innerText = `Kemajuan Solat Hari Ini: ${doneCount} / 5 Waktu (${percent}%)`;
+            document.getElementById('daily-progress-bar').style.width = `${percent}%`;
+
+            renderSolatCards();
+            checkBadges();
+        }
+
+        // Papar Kad 5 Waktu Solat
+        function renderSolatCards() {
+            const container = document.getElementById('solat-cards-container');
+            container.innerHTML = '';
+
+            solatList.forEach(solat => {
+                const isDone = gameState.completedSolats.includes(solat.id);
+                const card = document.createElement('div');
+                card.className = `rounded-3xl p-4 card-cartoon transition-all flex flex-col justify-between gap-3 ${isDone ? 'bg-emerald-50 border-emerald-400' : 'bg-white border-sky-200'}`;
+
+                card.innerHTML = `
+                    <div class="flex items-center justify-between gap-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl ${isDone ? 'bg-emerald-200 border-emerald-400' : 'bg-sky-100 border-sky-300'} border-2 flex items-center justify-center text-2xl sm:text-3xl shrink-0">
+                                ${solat.icon}
+                            </div>
+                            <div>
+                                <h4 class="font-cartoon font-bold text-base sm:text-lg text-slate-800">${solat.name}</h4>
+                                <p class="text-xs font-extrabold text-slate-500">${solat.rakaat} • ${solat.time}</p>
+                            </div>
+                        </div>
+                        <div class="text-right shrink-0">
+                            <span class="block text-[11px] font-extrabold text-amber-600">+${solat.xp} XP</span>
+                            <span class="block text-[11px] font-extrabold text-emerald-600">+${solat.coins} 🪙</span>
+                        </div>
+                    </div>
+
+                    <button onclick="toggleSolat('${solat.id}')"
+                        class="btn-cartoon w-full py-3 px-4 rounded-2xl font-cartoon font-bold text-sm flex items-center justify-center gap-2 ${isDone ? 'bg-emerald-500 border-2 border-emerald-700 text-white' : 'bg-amber-400 hover:bg-amber-500 border-2 border-amber-600 text-amber-950'}">
+                        <span>${isDone ? '✅ Sudah Solat! (Batalkan)' : '⭐ Tandai Selesai Solat'}</span>
+                    </button>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Tandai atau Batal Solat
+        function toggleSolat(solatId) {
+            const solat = solatList.find(s => s.id === solatId);
+            if (!solat) return;
+
+            const idx = gameState.completedSolats.indexOf(solatId);
+            if (idx === -1) {
+                gameState.completedSolats.push(solatId);
+                gameState.xp += solat.xp;
+                gameState.coins += solat.coins;
+                gameState.totalSolatsCompleted += 1;
+
+                if (gameState.completedSolats.length === 5) {
+                    gameState.xp += 50;
+                    gameState.coins += 30;
+                    showModal('👑', 'Tahniah 5 Waktu Penuh!', 'Masya-Allah! Kamu berjaya melengkapkan semua 5 solat hari ini! Bonus +50 XP & +30 Syiling!');
+                } else {
+                    showModal(solat.icon, `${solat.name} Selesai!`, `Alhamdulillah! Kamu mendapat +${solat.xp} XP dan +${solat.coins} Syiling Emas!`);
+                }
+            } else {
+                gameState.completedSolats.splice(idx, 1);
+                gameState.xp = Math.max(0, gameState.xp - solat.xp);
+                gameState.coins = Math.max(0, gameState.coins - solat.coins);
+                gameState.totalSolatsCompleted = Math.max(0, gameState.totalSolatsCompleted - 1);
+            }
+
+            saveGameData();
+            updateUI();
+        }
+
+        // Simpan dan Muat Data Permainan (LocalStorage dengan sokongan tarikh harian)
+        function saveGameData() {
+            const today = getTodayDateString();
+            gameState.lastActiveDate = today;
+            gameState.solatHistory[today] = [...gameState.completedSolats];
+            localStorage.setItem('pahlawanSolatData_v2', JSON.stringify(gameState));
+        }
+
+        function loadGameData() {
+            const saved = localStorage.getItem('pahlawanSolatData_v2');
+            const today = getTodayDateString();
+            if (saved) {
+                try {
+                    gameState = { ...gameState, ...JSON.parse(saved) };
+                    if (!gameState.solatHistory) gameState.solatHistory = {};
+
+                    // Migrasi rekod sedia ada ke sejarah hari ini jika belum wujud
+                    if (gameState.lastActiveDate && gameState.completedSolats.length > 0 && !gameState.solatHistory[gameState.lastActiveDate]) {
+                        gameState.solatHistory[gameState.lastActiveDate] = [...gameState.completedSolats];
+                    }
+
+                    // Semak jika hari sudah bertukar -> Reset senarai solat harian secara automatik
+                    if (gameState.lastActiveDate && gameState.lastActiveDate !== today) {
+                        gameState.completedSolats = gameState.solatHistory[today] ? [...gameState.solatHistory[today]] : [];
+                        gameState.lastActiveDate = today;
+                        saveGameData();
+                    } else if (!gameState.lastActiveDate) {
+                        gameState.lastActiveDate = today;
+                        saveGameData();
+                    }
+                } catch (e) {
+                    console.error('Gagal memuat data simpanan:', e);
+                }
+            } else {
+                gameState.lastActiveDate = today;
+            }
+            selectedCalendarDate = today;
+        }
+
+        // Tukar Tab Navigasi
+        function switchTab(tabName) {
+            const tabs = ['tracker', 'calendar', 'castle', 'quiz', 'badges'];
+            tabs.forEach(t => {
+                document.getElementById(`content-${t}`).classList.add('hidden');
+                const btn = document.getElementById(`tab-${t}`);
+                const colSpanClass = t === 'badges' ? 'col-span-2 sm:col-span-1 ' : '';
+                btn.className = `btn-cartoon ${colSpanClass}py-3 px-2.5 rounded-2xl font-cartoon font-bold text-xs sm:text-sm bg-white border-2 border-sky-300 text-sky-800 flex items-center justify-center space-x-1.5`;
+            });
+
+            document.getElementById(`content-${tabName}`).classList.remove('hidden');
+            const activeBtn = document.getElementById(`tab-${tabName}`);
+            const activeColSpan = tabName === 'badges' ? 'col-span-2 sm:col-span-1 ' : '';
+            activeBtn.className = `btn-cartoon ${activeColSpan}py-3 px-2.5 rounded-2xl font-cartoon font-bold text-xs sm:text-sm bg-emerald-500 border-2 border-emerald-700 text-white flex items-center justify-center space-x-1.5`;
+
+            if (tabName === 'calendar') {
+                renderCalendar();
+                renderCalendarDayDetail(selectedCalendarDate);
+            } else if (tabName === 'castle') {
+                renderCastle();
+                renderShop();
+            } else if (tabName === 'badges') {
+                renderBadges();
+            } else if (tabName === 'quiz') {
+                renderQuiz();
+            }
+        }
+
+        // Reset Solat Hari Ini
+        function resetTodayTracker() {
+            gameState.completedSolats = [];
+            saveGameData();
+            updateUI();
+            showModal('🔄', 'Hari Baru Bermula!', 'Senarai solat hari ini telah ditetapkan semula. Jom kumpul pahala lagi!');
+        }
+
+        // Fungsi Kalendar Rekod Solat
+        function changeCalendarMonth(delta) {
+            currentCalendarMonth += delta;
+            if (currentCalendarMonth < 0) {
+                currentCalendarMonth = 11;
+                currentCalendarYear -= 1;
+            } else if (currentCalendarMonth > 11) {
+                currentCalendarMonth = 0;
+                currentCalendarYear += 1;
+            }
+            renderCalendar();
+        }
+
+        function selectCalendarDay(dateStr) {
+            selectedCalendarDate = dateStr;
+            renderCalendar();
+            renderCalendarDayDetail(dateStr);
+        }
+
+        function renderCalendar() {
+            const months = ['Januari', 'Februari', 'Mac', 'April', 'Mei', 'Jun', 'Julai', 'Ogos', 'September', 'Oktober', 'November', 'Disember'];
+            document.getElementById('calendar-month-title').innerText = `${months[currentCalendarMonth]} ${currentCalendarYear}`;
+
+            const grid = document.getElementById('calendar-grid');
+            grid.innerHTML = '';
+
+            const firstDayOfMonth = new Date(currentCalendarYear, currentCalendarMonth, 1).getDay();
+            const daysInMonth = new Date(currentCalendarYear, currentCalendarMonth + 1, 0).getDate();
+            const todayStr = getTodayDateString();
+
+            // Kotak kosong sebelum hari pertama bulan
+            for (let i = 0; i < firstDayOfMonth; i++) {
+                const emptyCell = document.createElement('div');
+                emptyCell.className = 'h-12 sm:h-14 rounded-2xl bg-slate-50/50';
+                grid.appendChild(emptyCell);
+            }
+
+            // Kotak setiap tarikh dalam bulan
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dateStr = `${currentCalendarYear}-${String(currentCalendarMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                const daySolats = dateStr === todayStr ? gameState.completedSolats : (gameState.solatHistory[dateStr] || []);
+                const count = daySolats.length;
+                const isSelected = dateStr === selectedCalendarDate;
+                const isToday = dateStr === todayStr;
+
+                let bgClass = 'bg-slate-100 border-slate-200 text-slate-700';
+                let badgeText = '0/5';
+                if (count === 5) {
+                    bgClass = 'bg-emerald-100 border-emerald-400 text-emerald-900';
+                    badgeText = '⭐ 5/5';
+                } else if (count > 0) {
+                    bgClass = 'bg-amber-100 border-amber-400 text-amber-900';
+                    badgeText = `${count}/5`;
+                }
+
+                const ringClass = isSelected ? 'ring-3 ring-sky-500 scale-105' : '';
+                const todayDot = isToday ? '<span class="w-1.5 h-1.5 rounded-full bg-rose-500 inline-block ml-0.5"></span>' : '';
+
+                const btn = document.createElement('button');
+                btn.onclick = () => selectCalendarDay(dateStr);
+                btn.className = `btn-cartoon h-12 sm:h-14 rounded-2xl border-2 ${bgClass} ${ringClass} flex flex-col items-center justify-center p-1 transition-all`;
+                btn.innerHTML = `
+                    <span class="font-cartoon font-bold text-xs sm:text-sm leading-none flex items-center">${day}${todayDot}</span>
+                    <span class="text-[9px] sm:text-[10px] font-extrabold mt-1 opacity-85">${badgeText}</span>
+                `;
+                grid.appendChild(btn);
+            }
+        }
+
+        function renderCalendarDayDetail(dateStr) {
+            const container = document.getElementById('calendar-day-detail');
+            const todayStr = getTodayDateString();
+            const daySolats = dateStr === todayStr ? gameState.completedSolats : (gameState.solatHistory[dateStr] || []);
+            const isToday = dateStr === todayStr;
+
+            const statusRows = solatList.map(solat => {
+                const done = daySolats.includes(solat.id);
+                return `
+                    <div class="flex items-center justify-between p-2.5 rounded-2xl border-2 ${done ? 'bg-emerald-50 border-emerald-300' : 'bg-slate-50 border-slate-200'}">
+                        <div class="flex items-center gap-2.5">
+                            <span class="text-xl">${solat.icon}</span>
+                            <div>
+                                <p class="font-cartoon font-bold text-xs sm:text-sm text-slate-800">${solat.name}</p>
+                                <p class="text-[10px] font-bold text-slate-500">${solat.rakaat}</p>
+                            </div>
+                        </div>
+                        <span class="text-xs font-extrabold px-2.5 py-1 rounded-full ${done ? 'bg-emerald-200 text-emerald-800' : 'bg-slate-200 text-slate-500'}">
+                            ${done ? '✅ Selesai' : '⬜ Belum'}
+                        </span>
+                    </div>
+                `;
+            }).join('');
+
+            container.innerHTML = `
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                    <div>
+                        <h4 class="font-cartoon font-bold text-base sm:text-lg text-amber-800">
+                            📖 Rekod Solat: ${formatMalayDate(dateStr)} ${isToday ? '(Hari Ini)' : ''}
+                        </h4>
+                        <p class="text-xs font-bold text-slate-500">Jumlah selesai: ${daySolats.length} daripada 5 waktu solat</p>
+                    </div>
+                    <span class="bg-amber-100 text-amber-800 border-2 border-amber-300 px-3 py-1 rounded-full font-cartoon font-bold text-xs">
+                        ${daySolats.length === 5 ? '👑 Lengkap 5 Waktu!' : `${daySolats.length} / 5 Waktu`}
+                    </span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    ${statusRows}
+                </div>
+            `;
+        }
+
+        // Papar Visual Istana Kartun
+        function renderCastle() {
+            const display = document.getElementById('castle-display');
+            const items = gameState.purchasedItems;
+
+            display.innerHTML = `
+                <!-- Langit & Hiasan Atas -->
+                ${items.includes('sun') ? '<div class="absolute top-3 right-4 text-5xl animate-spin" style="animation-duration: 18s;">🌞</div>' : ''}
+                ${items.includes('rainbow') ? '<div class="absolute top-4 left-4 text-5xl animate-float">🌈</div>' : ''}
+
+                <!-- Bangunan Istana SVG -->
+                <div class="relative z-10 flex flex-col items-center mt-4">
+                    ${items.includes('flag') ? '<div class="text-3xl -mb-2 animate-wiggle">🚩</div>' : ''}
+                    <svg width="200" height="145" viewBox="0 0 200 145" fill="none">
+                        <!-- Menara Kiri & Kanan -->
+                        <rect x="25" y="55" width="32" height="75" rx="4" fill="#FDE68A" stroke="#D97706" stroke-width="3"/>
+                        <path d="M21 55 L41 25 L61 55 Z" fill="#F43F5E" stroke="#BE123C" stroke-width="3"/>
+                        <rect x="143" y="55" width="32" height="75" rx="4" fill="#FDE68A" stroke="#D97706" stroke-width="3"/>
+                        <path d="M139 55 L159 25 L179 55 Z" fill="#F43F5E" stroke="#BE123C" stroke-width="3"/>
+                        <!-- Badan Utama Istana -->
+                        <rect x="52" y="45" width="96" height="85" rx="6" fill="#FEF3C7" stroke="#D97706" stroke-width="3"/>
+                        <!-- Kubah Tengah -->
+                        <path d="M68 45 C68 12, 132 12, 132 45 Z" fill="${items.includes('tower') ? '#FACC15' : '#38BDF8'}" stroke="#0369A1" stroke-width="3"/>
+                        <!-- Pintu Gerbang -->
+                        <path d="M84 130 V95 C84 84, 116 84, 116 95 V130 Z" fill="#92400E" stroke="#451A03" stroke-width="3"/>
+                        <!-- Tingkap -->
+                        <circle cx="72" cy="68" r="7" fill="#38BDF8" stroke="#0369A1" stroke-width="2"/>
+                        <circle cx="128" cy="68" r="7" fill="#38BDF8" stroke="#0369A1" stroke-width="2"/>
+                    </svg>
+                </div>
+
+                <!-- Hiasan Halaman Bawah -->
+                <div class="relative z-10 flex items-center justify-center gap-4 -mt-3 text-3xl">
+                    ${items.includes('garden') ? '<span>🌷🌼🌷</span>' : ''}
+                    ${items.includes('fountain') ? '<span class="animate-bounce">⛲</span>' : ''}
+                    ${items.includes('garden') ? '<span>🌻🌺🌻</span>' : ''}
+                </div>
+
+                <p class="mt-3 text-xs font-extrabold text-sky-900 bg-white/80 px-3 py-1 rounded-full">
+                    Hiasan Terpasang: ${items.length} / ${shopItems.length}
+                </p>
+            `;
+        }
+
+        // Papar Kedai Hiasan Istana
+        function renderShop() {
+            const container = document.getElementById('shop-items-container');
+            container.innerHTML = '';
+
+            shopItems.forEach(item => {
+                const owned = gameState.purchasedItems.includes(item.id);
+                const card = document.createElement('div');
+                card.className = `rounded-2xl p-4 border-3 ${owned ? 'bg-emerald-50 border-emerald-300' : 'bg-amber-50/60 border-amber-200'} flex flex-col justify-between text-center`;
+
+                card.innerHTML = `
+                    <div>
+                        <div class="text-4xl mb-2">${item.icon}</div>
+                        <h5 class="font-cartoon font-bold text-slate-800 text-sm sm:text-base">${item.name}</h5>
+                        <p class="text-xs text-slate-500 font-bold mt-1 mb-3">${item.desc}</p>
+                    </div>
+                    <button onclick="buyShopItem('${item.id}')" ${owned ? 'disabled' : ''}
+                        class="btn-cartoon w-full py-2.5 px-3 rounded-xl font-cartoon font-bold text-xs sm:text-sm ${owned ? 'bg-emerald-200 text-emerald-800 border-2 border-emerald-400 shadow-none' : 'bg-amber-400 hover:bg-amber-500 text-amber-950 border-2 border-amber-600'}">
+                        ${owned ? '✅ Dimiliki' : `🪙 Beli (${item.price})`}
+                    </button>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Beli Item Kedai
+        function buyShopItem(itemId) {
+            const item = shopItems.find(i => i.id === itemId);
+            if (!item || gameState.purchasedItems.includes(itemId)) return;
+
+            if (gameState.coins < item.price) {
+                showModal('🪙', 'Syiling Tidak Cukup!', `Kamu perlukan ${item.price} syiling emas. Jom solat atau jawab kuiz untuk kumpul lebih banyak syiling!`);
+                return;
+            }
+
+            gameState.coins -= item.price;
+            gameState.purchasedItems.push(itemId);
+            saveGameData();
+            updateUI();
+            renderCastle();
+            renderShop();
+            showModal(item.icon, 'Berjaya Dibeli!', `${item.name} kini menghiasi istana kamu!`);
+        }
+
+        // Papar Kuiz Solat
+        function renderQuiz() {
+            const q = quizQuestions[currentQuizIndex];
+            document.getElementById('quiz-score-badge').innerText = `⭐ Betul: ${gameState.quizScore}`;
+            document.getElementById('quiz-question-container').classList.remove('hidden');
+            document.getElementById('quiz-feedback-container').classList.add('hidden');
+
+            document.getElementById('quiz-category').innerText = `${q.category} (${currentQuizIndex + 1}/${quizQuestions.length})`;
+            document.getElementById('quiz-question-text').innerText = q.question;
+
+            const optionsContainer = document.getElementById('quiz-options');
+            optionsContainer.innerHTML = '';
+
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = 'btn-cartoon w-full text-left bg-white hover:bg-purple-100 border-2 border-purple-300 text-slate-800 font-bold py-3.5 px-4 rounded-2xl text-sm sm:text-base flex items-center gap-3';
+                btn.innerHTML = `<span class="w-7 h-7 rounded-full bg-purple-200 text-purple-800 font-cartoon flex items-center justify-center text-xs shrink-0">${['A', 'B', 'C'][idx]}</span> <span>${opt}</span>`;
+                btn.onclick = () => checkQuizAnswer(idx);
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        // Semak Jawapan Kuiz (Dengan Pilihan Cuba Lagi jika Salah)
+        function checkQuizAnswer(selectedIndex) {
+            const q = quizQuestions[currentQuizIndex];
+            const isCorrect = selectedIndex === q.answer;
+
+            document.getElementById('quiz-question-container').classList.add('hidden');
+            const feedbackContainer = document.getElementById('quiz-feedback-container');
+            feedbackContainer.classList.remove('hidden');
+
+            const actionBtns = document.getElementById('quiz-action-buttons');
+
+            if (isCorrect) {
+                gameState.quizScore += 1;
+                gameState.xp += 15;
+                gameState.coins += 10;
+                saveGameData();
+                updateUI();
+                document.getElementById('quiz-score-badge').innerText = `⭐ Betul: ${gameState.quizScore}`;
+
+                document.getElementById('quiz-result-icon').innerText = '🎉';
+                document.getElementById('quiz-result-title').innerText = 'Betul & Tepat!';
+                document.getElementById('quiz-result-desc').innerText = 'Masya-Allah pandainya! Kamu dapat +15 XP dan +10 Syiling Emas!';
+                actionBtns.innerHTML = `
+                    <button onclick="nextQuizQuestion()" class="btn-cartoon bg-emerald-500 hover:bg-emerald-600 border-2 border-emerald-700 text-white font-cartoon font-bold py-3 px-6 rounded-2xl text-sm">
+                        Soalan Seterusnya ➡️
+                    </button>
+                `;
+            } else {
+                document.getElementById('quiz-result-icon').innerText = '🤔';
+                document.getElementById('quiz-result-title').innerText = 'Kurang Tepat!';
+                document.getElementById('quiz-result-desc').innerText = 'Jangan putus asa! Cuba fikirkan semula dan pilih jawapan yang betul.';
+                actionBtns.innerHTML = `
+                    <button onclick="retryQuizQuestion()" class="btn-cartoon bg-amber-400 hover:bg-amber-500 border-2 border-amber-600 text-amber-950 font-cartoon font-bold py-3 px-6 rounded-2xl text-sm">
+                        🔄 Cuba Lagi
+                    </button>
+                    <button onclick="nextQuizQuestion()" class="btn-cartoon bg-slate-200 hover:bg-slate-300 border-2 border-slate-400 text-slate-700 font-cartoon font-bold py-3 px-5 rounded-2xl text-sm">
+                        Langkau ➡️
+                    </button>
+                `;
+            }
+        }
+
+        function retryQuizQuestion() {
+            renderQuiz();
+        }
+
+        function nextQuizQuestion() {
+            currentQuizIndex = (currentQuizIndex + 1) % quizQuestions.length;
+            renderQuiz();
+        }
+
+        // Semak & Papar 12 Koleksi Piala dan Lencana
+        function checkBadges() {
+            badgeDefinitions.forEach(badge => {
+                if (!gameState.badges.includes(badge.id) && badge.condition(gameState)) {
+                    gameState.badges.push(badge.id);
+                    saveGameData();
+                }
+            });
+        }
+
+        function renderBadges() {
+            checkBadges();
+            const container = document.getElementById('badges-container');
+            container.innerHTML = '';
+
+            badgeDefinitions.forEach(badge => {
+                const unlocked = gameState.badges.includes(badge.id);
+                const card = document.createElement('div');
+                card.className = `rounded-2xl p-3.5 border-3 text-center transition-all ${unlocked ? 'bg-gradient-to-b from-amber-50 to-yellow-100 border-amber-400 shadow-sm' : 'bg-slate-100 border-slate-200 opacity-60 grayscale'}`;
+
+                card.innerHTML = `
+                    <div class="text-4xl mb-2 ${unlocked ? 'animate-bounce' : ''}">${unlocked ? badge.icon : '🔒'}</div>
+                    <h5 class="font-cartoon font-bold text-xs sm:text-sm text-slate-800">${badge.name}</h5>
+                    <p class="text-[11px] font-bold text-slate-500 mt-1">${badge.desc}</p>
+                    <span class="inline-block mt-2 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full ${unlocked ? 'bg-emerald-200 text-emerald-800' : 'bg-slate-200 text-slate-600'}">
+                        ${unlocked ? '✨ Terbuka' : 'Terkunci'}
+                    </span>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Permulaan Aplikasi
+        window.onload = function () {
+            loadGameData();
+            updateUI();
+            if (!gameState.gender) {
+                openGenderModal();
+            }
+        };
+    </script>
 </body>
 </html>
