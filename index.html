@@ -4,6 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pengembaraan Solat: Pahlawan Solat Cilik</title>
+    
+    <!-- PWA Manifest & Meta Tags -->
+    <meta name="theme-color" content="#38BDF8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Pahlawan Solat">
+    
+    <!-- Dynamic Manifest Injection for PWA -->
+    <script>
+        const pwaManifest = {
+            "name": "Pahlawan Solat Cilik",
+            "short_name": "PahlawanSolat",
+            "start_url": window.location.href,
+            "display": "standalone",
+            "background_color": "#38BDF8",
+            "theme_color": "#38BDF8",
+            "icons": [
+                {
+                    "src": "https://placehold.co/192x192/0284c7/ffffff?text=PS",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                },
+                {
+                    "src": "https://placehold.co/512x512/0284c7/ffffff?text=PS",
+                    "sizes": "512x512",
+                    "type": "image/png"
+                }
+            ]
+        };
+        const stringManifest = JSON.stringify(pwaManifest);
+        const pwaBlob = new Blob([stringManifest], {type: 'application/json'});
+        const pwaManifestURL = URL.createObjectURL(pwaBlob);
+        const pwaLink = document.createElement('link');
+        pwaLink.rel = 'manifest';
+        pwaLink.href = pwaManifestURL;
+        document.head.appendChild(pwaLink);
+    </script>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Fredoka & Nunito (Gaya Kartun & Mesra Kanak-kanak) -->
@@ -1001,6 +1039,20 @@
             updateUI();
             if (!gameState.gender) {
                 openGenderModal();
+            }
+
+            // Pendaftaran Service Worker untuk PWA
+            if ('serviceWorker' in navigator) {
+                const swCode = `
+                    self.addEventListener('install', (e) => self.skipWaiting());
+                    self.addEventListener('activate', (e) => clients.claim());
+                    self.addEventListener('fetch', (e) => {
+                        e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
+                    });
+                `;
+                const swBlob = new Blob([swCode], {type: 'text/javascript'});
+                const swUrl = URL.createObjectURL(swBlob);
+                navigator.serviceWorker.register(swUrl).catch(err => console.log('PWA SW Ralat:', err));
             }
         };
     </script>
